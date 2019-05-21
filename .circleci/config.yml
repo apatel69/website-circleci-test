@@ -8,9 +8,6 @@ jobs:
     steps:
       - run:
           command: |
-            pwd
-            ls
-            find -L / -name "package.json"
             yarn
             yarn lint:scripts
             yarn lint:styles
