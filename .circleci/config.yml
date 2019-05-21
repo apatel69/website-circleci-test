@@ -12,6 +12,8 @@ jobs:
             yarn lint:scripts
             yarn lint:styles
             yarn build:production
+            pwd
+            ls
 
   installPHPPackages:
     docker:
