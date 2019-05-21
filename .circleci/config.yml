@@ -8,12 +8,12 @@ jobs:
     steps:
       - run:
           command: |
+            pwd
+            ls
             yarn
             yarn lint:scripts
             yarn lint:styles
             yarn build:production
-            pwd
-            ls
 
   installPHPPackages:
     docker:
