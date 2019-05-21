@@ -6,10 +6,9 @@ jobs:
     docker:
       - image: node:10
     steps:
-      - setup_remote_docker
+      - checkout 
       - run:
           command: |
-            docker ./package.json node:/root/project/
             yarn
             yarn lint:scripts
             yarn lint:styles
