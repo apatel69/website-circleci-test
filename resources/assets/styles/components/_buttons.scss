@@ -1,0 +1,110 @@
+button {
+    border-style: none;
+}
+
+.primary-cta {
+    display: inline-block;
+    padding: 18px 35px;
+    color: white;
+    font-size: 2rem;
+    line-height: calc(24 / 20);
+    text-decoration: none;
+    border-radius: 5px;
+    background-color: $cta-green;
+    text-align: center;
+
+    &.extra-padding {
+        padding-left: 85px;
+        padding-right: 85px;
+    }
+
+    &:hover {
+        background-color: $cta-green-hover;
+    }
+
+    @media screen and (max-width: $mobile) {
+        padding: 19px 29px 21px 24px;
+    }
+
+    &.full-width-cta {
+        width: 100%;
+    }
+
+    &.mobile-only-cta {
+        display: block;
+        margin: 0 auto;
+        width: 275px;
+    }
+}
+
+.ghost-button {
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    padding: 10px;
+    border: 2px solid $cta-ghost-border;
+    border-radius: 5px;
+    margin: 20px auto;
+    background-color: transparent;
+    color: $midnight-blue;
+    font-size: 1.8rem;
+    line-height: calc(28 / 18);
+
+    &.more-info {
+        width: 110px;
+    }
+
+    &.learn-more {
+        width: 160px;
+    }
+
+    &.no-width {
+        display: inline-block;
+        padding: 10px 35px;
+    }
+
+    &:hover {
+        background: $fresh-blue;
+        border-color: $cta-ghost-hover;
+        color: white;
+    }
+}
+
+.link-mail {
+    background-image: url("~images/icons/envelope-alt.svg");
+    background-repeat: no-repeat;
+    background-position: 0 4px;
+    background-size: 18px 13px;
+    padding-left: 25px;
+}
+
+.link-phone {
+    background-image: url("~images/icons/telephone-alt.svg");
+    background-repeat: no-repeat;
+    background-position: 0 1px;
+    background-size: 18px 16px;
+    padding-left: 25px;
+}
+
+.phone,
+.email,
+.twitter {
+    font-size: 1.8rem;
+
+    &::before {
+        margin-right: 10px;
+        vertical-align: middle;
+    }
+}
+
+.phone::before {
+    content: url("~images/icons/telephone-alt.svg");
+}
+
+.email::before {
+    content: url("~images/icons/envelope-alt.svg");
+}
+
+.twitter::before {
+    content: url("~images/icons/twitter-white.svg");
+}

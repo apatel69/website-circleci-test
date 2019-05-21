@@ -1,0 +1,44 @@
+.centered-content {
+    text-align: center;
+
+    &.left-align {
+        text-align: left;
+    }
+
+    section {
+        max-width: 780px;
+        position: relative;
+        margin: 0 auto;
+
+        @media screen and (max-width: $tablet) {
+            max-width: auto;
+            width: calc(100% - 100px);
+        }
+
+        @media screen and (max-width: $mobile) {
+            width: calc(100% - 10px);
+        }
+
+        &.wide-title {
+            max-width: 920px;
+        }
+
+        p,
+        li {
+            font-family: $font-book;
+            font-size: 18px;
+            line-height: (26 / 18);
+            max-width: 780px;
+            margin: 0 auto;
+        }
+
+        ul {
+            li {
+                background-image: none;
+                list-style: disc;
+                padding-left: 0;
+                margin-left: 20px;
+            }
+        }
+    }
+}

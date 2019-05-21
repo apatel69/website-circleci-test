@@ -1,0 +1,40 @@
+.lpat-support-section {
+    text-align: center;
+
+    &__description {
+        max-width: 684px;
+        margin: 0 auto;
+
+        p {
+            margin-bottom: 5px;
+        }
+    }
+
+    &__contact-us-title {
+        font-family: $font-med;
+    }
+
+    &__contact-us-title,
+    &__phone,
+    &__email {
+        margin-top: 0;
+        margin-bottom: 5px;
+    }
+
+    &__image-desktop {
+        @media screen and (max-width: $mobile) {
+            display: none;
+        }
+    }
+
+    &__image-mobile {
+        display: none;
+
+        @media screen and (max-width: $mobile) {
+            display: block;
+            max-width: 100%;
+            height: auto;
+            margin: 0 auto;
+        }
+    }
+}

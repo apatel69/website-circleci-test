@@ -1,0 +1,23 @@
+.custom-footer-centered {
+    margin: 0 auto;
+    padding: 0 20px;
+    text-align: center;
+
+    a {
+        margin: 0 auto 35px;
+    }
+
+    h2 {
+        margin-top: 0;
+    }
+
+    .featured-in {
+        max-width: 768px;
+        margin: 0 auto;
+        padding: 0 2em;
+    }
+
+    .copy {
+        text-transform: uppercase;
+    }
+}

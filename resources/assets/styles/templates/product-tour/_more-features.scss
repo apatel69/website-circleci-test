@@ -1,0 +1,132 @@
+.features-section {
+    padding-top: 40px;
+    padding-bottom: 40px;
+    justify-content: space-between;
+    width: 96.5%;
+    margin: 0 auto;
+
+    @media screen and (max-width: $desktop-sm) {
+        max-width: 967px;
+    }
+
+    h2 {
+        margin-top: 0;
+    }
+
+    ul {
+        margin: 0;
+    }
+
+    @media screen and (max-width: $tablet) {
+        flex-wrap: wrap;
+        justify-content: center;
+
+        h2 {
+            text-align: center;
+        }
+
+        ul {
+            margin-bottom: 25px;
+        }
+    }
+}
+
+.feature-details {
+    @media screen and (max-width: $tablet) {
+        width: 416px;
+    }
+
+    @media screen and (max-width: $mobile) {
+        max-width: 416px;
+        width: 100%;
+    }
+}
+
+.all-features {
+    display: block;
+    margin-top: 40px;
+
+    @media screen and (max-width: $tablet) {
+        margin: 25px 0;
+    }
+}
+
+.feature-link-copy {
+    color: $fresh-blue;
+    text-decoration: none;
+    font-size: 1.8rem;
+    line-height: calc(22 / 18);
+
+    &:hover {
+        color: $midnight-blue;
+
+        & > img {
+            filter: brightness(0);
+        }
+    }
+}
+
+.right-chevron {
+    height: 12px;
+    fill: $fresh-blue;
+    margin-left: 2px;
+}
+
+.cta-block {
+    padding-left: 35px;
+
+    @media screen and (max-width: $tablet) {
+        padding-left: 0;
+    }
+
+    @media screen and (max-width: $mobile) {
+        max-width: 416px;
+        width: 100%;
+    }
+}
+
+.cta-block-container {
+    width: 416px;
+    border-radius: 5px;
+    box-shadow: 4px 4px 0 rgba(6, 41, 66, 0.07);
+    margin: 0 auto;
+    border: 1px solid $med-grey;
+    padding: 30px 50px;
+    text-align: center;
+
+    h2 {
+        font-family: $font-script;
+        margin: 0;
+    }
+
+    .subtext {
+        color: $dark-grey;
+    }
+
+    @media screen and (max-width: $desktop-sm) {
+        width: 353px;
+        padding: 30px 7.5%;
+    }
+
+    @media screen and (max-width: $tablet) {
+        width: 416px;
+        padding: 30px 50px;
+    }
+
+    @media screen and (max-width: $mobile) {
+        padding: 30px 5%;
+        width: 100%;
+    }
+
+    .app-store-badge {
+        a {
+            text-decoration: none;
+        }
+    }
+}
+
+.cta-block-image {
+    max-width: 182px;
+    display: block;
+    margin: 0 auto;
+}

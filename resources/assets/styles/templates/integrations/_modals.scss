@@ -1,0 +1,114 @@
+.tax-integration_categories,
+.integrations {
+    .modal-filter {
+        position: fixed;
+        display: none;
+        top: 40px;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        background: #fff;
+        z-index: 2000;
+        overflow-y: scroll;
+
+        .btn-cancel {
+            position: absolute;
+            top: 17px;
+            right: 15px;
+            color: #8596a2;
+            font-size: 18px;
+            text-decoration: none;
+
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+
+        .modal-title {
+            font-size: 18px;
+            color: $midnight-blue;
+            line-height: 25px;
+            font-family: $font-med;
+            display: block;
+            border-bottom: solid 1px $rule-grey;
+            padding: 14px;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .controls-categories {
+            a {
+                padding-left: 18px;
+            }
+        }
+
+        .controls-sort {
+            padding-top: 16px;
+            border-top: solid 1px $rule-grey;
+            text-align: center;
+
+            .title {
+                text-align: left;
+            }
+
+            .btn-wrap {
+                display: inline-block;
+
+                a {
+                    display: inline-block;
+                    border-top: solid 2px #8595a1;
+                    border-bottom: solid 2px #8595a1;
+                    border-left: solid 1px #8595a1;
+                    border-right: solid 1px #8595a1;
+                    float: left;
+                    color: #8595a1;
+                    font-size: 17px;
+                    padding: 10px 20px;
+                    text-align: center;
+                    text-decoration: none;
+                    min-width: 100px;
+
+                    &:hover {
+                        text-decoration: underline;
+                    }
+
+                    &.active {
+                        background: #8595a1;
+                        color: #fff;
+
+                        &:hover {
+                            text-decoration: none;
+                        }
+                    }
+
+                    &:first-child {
+                        border-top-left-radius: 22px;
+                        border-bottom-left-radius: 22px;
+                        border-left: solid 2px #8595a1;
+                    }
+
+                    &:last-child {
+                        border-top-right-radius: 22px;
+                        border-bottom-right-radius: 22px;
+                        border-right: solid 2px #8595a1;
+                    }
+                }
+            }
+        }
+
+        .title {
+            font-size: 13px;
+            letter-spacing: 0.5px;
+            font-family: $font-med;
+            line-height: 13px;
+            color: #8596a2;
+            text-transform: uppercase;
+            margin: 10px 0;
+            display: block;
+        }
+
+        .inner-modal {
+            padding: 0 18px;
+        }
+    }
+}

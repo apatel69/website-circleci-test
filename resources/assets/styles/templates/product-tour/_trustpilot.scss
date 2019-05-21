@@ -1,0 +1,7 @@
+.trustpilot-widget {
+    margin-top: 40px;
+
+    @media screen and (max-width: $tablet) {
+        margin-top: 20px;
+    }
+}

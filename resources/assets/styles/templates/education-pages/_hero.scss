@@ -1,0 +1,6 @@
+@media screen and (max-width: $desktop-sm) and (min-width: 769px) {
+    .hero.lpat_hero #cpy-hero .hero_intro_heading h1,
+    .hero.lpat_hero #cpy-hero .content p {
+        max-width: 465px;
+    }
+}

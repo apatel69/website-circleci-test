@@ -1,0 +1,48 @@
+.support-details {
+    max-width: 877px;
+    margin: 70px auto;
+    justify-content: space-between;
+
+    @media (max-width: $tablet) {
+        display: block;
+        margin: 10px auto 25px;
+    }
+}
+
+.support-detail {
+    h2 {
+        @media (max-width: $tablet) {
+            max-width: 358px;
+            margin: 48px auto;
+        }
+    }
+
+    p {
+        margin: 0;
+
+        @media (max-width: $tablet) {
+            max-width: 405px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
+
+    img {
+        border-radius: 50%;
+        margin-right: 75px;
+
+        @media (max-width: $tablet) {
+            margin: 0 auto;
+            display: block;
+        }
+    }
+
+    &:last-child {
+        max-width: 654px;
+        margin: 0 auto;
+
+        @media (max-width: $tablet) {
+            text-align: center;
+        }
+    }
+}

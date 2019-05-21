@@ -1,0 +1,50 @@
+#root.show-app-true {
+    @media (max-width: $mobile) {
+        display: none;
+    }
+}
+
+#fic-mobile-modal {
+    display: none;
+    background-color: #fafafb;
+
+    &.show-modal--true {
+        @media (max-width: $mobile) {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: fixed;
+            z-index: 10000;
+            overflow: hidden;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    .fic-mobile-modal-content {
+        width: 80%;
+        position: absolute;
+        text-align: center;
+
+        h2,
+        h3 {
+            font-family: $font-med;
+        }
+
+        h2 {
+            color: $midnight-blue;
+            margin-top: 0;
+        }
+
+        h3 {
+            margin-bottom: 0;
+        }
+
+        .fic-mobile-modal-logo,
+        .fic-mobile-modal-footer-image {
+            margin: 2em 0;
+        }
+    }
+}

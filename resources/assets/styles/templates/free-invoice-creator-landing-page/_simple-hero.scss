@@ -1,0 +1,49 @@
+.simple-hero {
+    background-color: #e5f4fe;
+    background-position: right 1em bottom 1em;
+    background-repeat: no-repeat;
+    background-size: 50%;
+    padding: 5em;
+
+    @media (max-width: $tablet) {
+        background-position: center bottom 1em;
+    }
+
+    h1 {
+        color: $midnight-blue;
+        font-family: $font-med;
+        margin-bottom: 0;
+    }
+
+    p:empty {
+        display: none;
+    }
+
+    .simple-hero-content {
+        max-width: 45%;
+
+        @media (max-width: $tablet) {
+            max-width: none;
+            padding-bottom: 25%;
+            text-align: center;
+        }
+
+        .primary-cta {
+            margin-right: 0.5em;
+        }
+
+        .ghost-button {
+            border: $midnight-blue 2px solid;
+            color: $midnight-blue;
+            display: inline-block;
+            margin-left: 0.5em;
+            line-height: calc(24 / 20);
+            padding: 18px 35px;
+
+            &:hover {
+                color: #fff;
+                border-color: $fresh-blue;
+            }
+        }
+    }
+}

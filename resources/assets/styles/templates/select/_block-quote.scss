@@ -1,0 +1,234 @@
+.select-block-quote {
+    width: 70%;
+    max-width: 700px;
+    position: relative;
+    margin: 0 auto 8em 10em;
+    padding-right: 20px;
+
+    @media screen and (max-width: $tablet) {
+        max-width: 700px;
+    }
+
+    .row {
+        display: flex;
+        flex-flow: column;
+        max-height: 300px;
+        background-image: url('data:image/svg+xml;utf8,<svg width="78px" height="75px" viewBox="0 0 78 75" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g id="Final" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" fill-opacity="0.22"><g id="Desktop-(max-width:-1600px)" transform="translate(-204.000000, -787.000000)" fill="%23CDD4D9"><g id="Group" transform="translate(204.000000, 581.000000)"><path d="M0.318181818,281 L0.318181818,246.909091 L22.9421488,206 L35.9586777,206 L18.6033058,246.909091 L33.1694215,246.909091 L33.1694215,281 L0.318181818,281 Z M44.0165289,281 L44.0165289,246.909091 L66.6404959,206 L77.4876033,206 L61.3719008,246.909091 L77.4876033,246.909091 L77.4876033,281 L44.0165289,281 Z" id="“"></path></g></g></g></svg>');
+        background-repeat: no-repeat;
+        background-position: 0 0;
+        padding-left: 100px;
+
+        .text-col {
+            height: 50%;
+
+            h4 {
+                font-family: $font-main;
+                font-size: 23px;
+                color: $select-med-blue;
+                margin: 20px 0 10px;
+            }
+
+            i {
+                font-family: $font-main;
+                font-size: 18px;
+                color: $midnight-blue;
+                margin: 10px 0;
+                line-height: (26 / 18);
+            }
+        }
+
+        .author-col {
+            height: 50%;
+            display: inline-flex;
+            padding: 2em 0;
+
+            .box {
+                width: 115px;
+                height: 115px;
+                margin: 20px 3em auto 0;
+            }
+
+            .author {
+                margin: 35px 0 auto;
+
+                div {
+                    font-family: $font-med;
+                    font-size: 16px;
+                    text-transform: uppercase;
+                    color: $select-grey;
+                    line-height: (25 / 16);
+
+                    &.author-name {
+                        color: $select-med-blue;
+                    }
+                }
+            }
+        }
+    }
+
+    @media screen and (max-width: $mobile) {
+        width: 100%;
+        margin: 0;
+        padding-top: 10px;
+        padding-right: 0;
+
+        .row {
+            padding-left: 0;
+            height: auto;
+            background-position: 50% 30px;
+            display: block;
+            max-height: none;
+
+            .text-col,
+            .author-col {
+                width: 100%;
+                padding: 20px 32px 5px;
+
+                .author {
+                    margin-top: 15px;
+                }
+
+                .box {
+                    width: 85px;
+                    height: 85px;
+                    margin-right: 1.4em;
+                }
+            }
+
+            .text-col {
+                margin-top: 40px;
+                text-align: center;
+
+                i {
+                    font-size: 15px;
+                    line-height: (23 / 15);
+                }
+            }
+
+            .author-col {
+                .author {
+                    div {
+                        font-family: $font-dem;
+                        font-size: 15px;
+                        line-height: (25 / 15);
+                    }
+                }
+            }
+        }
+    }
+
+    @media screen and (min-width: $mobile) and (max-width: $tablet) {
+        margin: 5em auto 0;
+        width: auto;
+
+        .row {
+            padding-left: 0;
+            display: block;
+            width: 80%;
+            margin: 0 auto;
+            background-size: 6em;
+
+            .text-col {
+                text-align: center;
+                width: 100%;
+                margin: 0 auto;
+
+                h4 {
+                    font-size: 20px;
+                    line-height: (24 / 20);
+                }
+
+                i {
+                    font-size: 15px;
+                    line-height: (23 / 15);
+                    display: block;
+                    padding: 0 42px;
+                }
+            }
+
+            .author-col {
+                .author {
+                    div {
+                        font-family: $font-dem;
+                        font-size: 15px;
+                        line-height: (25 / 15);
+                    }
+                }
+            }
+        }
+    }
+
+    @media screen and (min-width: $tablet + 1) and (max-width: $desktop-sm) {
+        margin: 0;
+
+        .row {
+            width: 100%;
+            background-size: 6em;
+            max-height: none;
+            padding-left: 80px;
+
+            .text-col {
+                h4 {
+                    font-family: $font-book;
+                    font-size: 20px;
+                    line-height: (24 / 20);
+                }
+
+                i {
+                    font-family: $font-book;
+                    font-size: 15px;
+                    line-height: (23 / 15);
+                    display: block;
+                    padding: 0 5px;
+                }
+            }
+
+            .author-col {
+                .author {
+                    div {
+                        font-family: $font-dem;
+                        font-size: 15px;
+                        line-height: (25 / 15);
+                    }
+                }
+            }
+        }
+    }
+}
+
+.hero-simple {
+    .hero-additional {
+        .select-block-quote {
+            @media screen and (max-width: $mobile) {
+                .row {
+                    .author-col {
+                        .box {
+                            margin: 0 0 0 auto;
+                        }
+
+                        .author {
+                            margin: 0 auto 0 1.5em;
+                        }
+                    }
+                }
+            }
+
+            @media screen and (min-width: $mobile + 1) and (max-width: $tablet) {
+                .row {
+                    .author-col {
+                        width: 100%;
+                        margin: 0 auto;
+
+                        .box {
+                            margin: 0 0 0 auto;
+                        }
+
+                        .author {
+                            margin: 0 auto 0 3em;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

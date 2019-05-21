@@ -1,0 +1,253 @@
+.three-col-invoice-temp {
+    h2 {
+        text-align: center;
+        margin-bottom: 0;
+    }
+
+    .outer-content-wrapper {
+        display: flex;
+        align-items: flex-start;
+        text-align: center;
+        flex-wrap: wrap;
+
+        @media screen and (max-width: $tablet) {
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+
+    &__content-wrapper {
+        border-radius: 5px;
+        width: 33%;
+        max-width: 400px;
+        margin: 0 auto;
+        padding: 46px 20px 12px;
+
+        @media screen and (max-width: $tablet) {
+            width: 100%;
+        }
+
+        &.premium-panel {
+            background: $light-grey;
+            box-shadow: 5px 5px 0 1px $shadow-grey;
+            margin-top: 47px;
+            padding: 0 20px 38px;
+
+            h3 {
+                margin-bottom: 18px;
+            }
+
+            .thumbnail {
+                max-width: 277px;
+            }
+
+            .three-col-invoice-temp__download-title,
+            .three-col-invoice-temp__description,
+            .three-col-invoice-temp__downloads-wrapper {
+                display: none;
+            }
+
+            span.subtext {
+                display: block;
+            }
+
+            .three-col-invoice-temp__cta-btn {
+                margin: 11px 0 0;
+                font-size: 20px;
+                background-color: $cta-green;
+                border: none;
+                color: #fff;
+
+                &:hover {
+                    background-color: $cta-green-hover;
+                }
+            }
+        }
+    }
+
+    h3 {
+        color: $fresh-blue;
+        margin-bottom: 14px;
+        min-height: 68px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .thumbnail {
+        max-width: 224px;
+        width: 100%;
+    }
+
+    span.subtext {
+        display: none;
+    }
+
+    &__download-title {
+        margin-top: 18px;
+        margin-bottom: 11px;
+    }
+
+    &__downloads-wrapper {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+
+        &__item {
+            margin: 0 10px 20px;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        .icon {
+            max-width: 20px;
+            max-height: 20px;
+            min-height: 20px;
+        }
+
+        .icon-text {
+            font-family: $font-med;
+            font-weight: bold;
+            font-size: 11px;
+            letter-spacing: 1px;
+            color: $input-grey;
+            text-transform: uppercase;
+            margin-top: 5px;
+        }
+    }
+
+    &__cta-btn {
+        @extend .ghost-button;
+
+        font-size: 18px;
+        margin: 0;
+        display: inline-block;
+        padding: 15px;
+        width: 100%;
+        max-width: 275px;
+    }
+
+    .premium-btn-description {
+        display: none;
+    }
+
+    &.cta-invoice-temp.style-v2 {
+        .three-col-invoice-temp__content-wrapper {
+            width: 30%;
+            max-width: 440px;
+
+            &.premium-panel {
+                width: 40%;
+                padding: 0 20px 22px;
+
+                h3 {
+                    margin-bottom: 23px;
+                }
+
+                .thumbnail {
+                    max-width: 330px;
+                    border-color: transparent;
+                    box-shadow: none;
+                }
+
+                .three-col-invoice-temp__cta-btn {
+                    padding: 11px;
+                    max-width: 275px;
+                }
+
+                .premium-btn-description {
+                    display: block;
+                    position: relative;
+
+                    p {
+                        color: $fresh-blue;
+                        font-weight: bold;
+                        font-size: 16px;
+                        margin: 23px 0 13px;
+                    }
+
+                    .cta-arrow {
+                        position: absolute;
+                        top: 24px;
+                        left: 4px;
+
+                        @media screen and (max-width: 1060px) {
+                            left: -15px;
+                        }
+                    }
+                }
+            }
+        }
+
+        h3 {
+            min-height: 74px;
+        }
+
+        .three-col-invoice-temp__description {
+            margin-top: 9px;
+            min-height: 168px;
+        }
+
+        .thumbnail {
+            max-width: 203px;
+            border: 1px solid $shadow-grey;
+            box-shadow: 5px 4px 0 -2px $shadow-grey;
+        }
+
+        span.subtext {
+            margin-top: 6px;
+        }
+
+        .three-col-invoice-temp__cta-btn {
+            padding: 5px;
+            max-width: 188px;
+        }
+
+        @media screen and (max-width: $tablet) {
+            .three-col-invoice-temp__content-wrapper,
+            .three-col-invoice-temp__content-wrapper.premium-panel {
+                width: 100%;
+            }
+
+            .three-col-invoice-temp__content-wrapper {
+                padding-top: 20px;
+            }
+
+            h3,
+            .three-col-invoice-temp__description {
+                min-height: unset;
+            }
+
+            .premium-btn-description .cta-arrow {
+                display: none;
+            }
+        }
+    }
+
+    &.cta-invoice-temp.hide-sales {
+        .three-col-invoice-temp__content-wrapper {
+            &.premium-panel {
+                .premium-btn-description,
+                span.subtext {
+                    display: none;
+                }
+            }
+        }
+    }
+
+    &.cta-invoice-temp.style-v2.hide-sales {
+        .three-col-invoice-temp__content-wrapper {
+            &.premium-panel {
+                .three-col-invoice-temp__cta-btn {
+                    margin: 48px 0 30px;
+
+                    @media screen and (max-width: $tablet) {
+                        margin: 11px 0 5px;
+                    }
+                }
+            }
+        }
+    }
+}

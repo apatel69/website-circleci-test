@@ -1,0 +1,49 @@
+.thirds-headline {
+    text-align: center;
+    color: $midnight-blue;
+}
+
+.thirds {
+    max-width: 1067px;
+    margin: 2.5% auto;
+    align-items: flex-start;
+    justify-content: space-between;
+
+    @media (max-width: $tablet) {
+        display: block;
+    }
+
+    .third {
+        max-width: 295px;
+
+        @media (max-width: $desktop-sm) {
+            max-width: 295px;
+            display: flex;
+            flex-direction: column;
+            height: 456px;
+            justify-content: space-between;
+        }
+
+        @media (max-width: $tablet) {
+            max-width: 100%;
+            display: block;
+            height: 100%;
+        }
+
+        h3 {
+            color: $midnight-blue;
+            font-size: 2.4rem;
+        }
+
+        &:first-child,
+        &:nth-child(2) {
+            h3 {
+                max-width: 180px;
+
+                @media (max-width: $tablet) {
+                    max-width: 100%;
+                }
+            }
+        }
+    }
+}

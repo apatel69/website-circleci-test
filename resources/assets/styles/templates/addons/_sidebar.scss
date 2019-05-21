@@ -1,0 +1,109 @@
+.addons-categories {
+    background: white;
+
+    @media screen and (min-width: $tablet) {
+        width: 23%;
+        margin-left: 1%;
+        margin-right: 1%;
+        float: left;
+        box-sizing: border-box;
+        margin-top: -80px;
+        border-top: none;
+        padding: 0;
+    }
+
+    @media screen and (max-width: $tablet) {
+        padding: 0;
+        border: 0;
+        box-shadow: none;
+        margin: 0 -15px;
+    }
+
+    h2 {
+        color: #222;
+        padding-left: 30px;
+        margin: 0;
+        border-bottom: 1px solid #ccc;
+        line-height: 80px;
+        font-size: 24px;
+
+        @media screen and (max-width: $tablet) {
+            display: none;
+        }
+    }
+
+    ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        width: 100%;
+
+        @media screen and (min-width: $tablet) {
+            display: block;
+        }
+
+        @media screen and (max-width: $tablet) {
+            display: none;
+        }
+
+        li {
+            background-image: none;
+            padding-left: 0;
+            margin-bottom: 0;
+
+            @media screen and (max-width: $tablet) {
+                border-bottom: 1px solid #eee;
+                font-size: 16.2px;
+            }
+        }
+
+        a {
+            font-size: 18px;
+            padding: 10px 20px;
+            text-decoration: none;
+            color: #222;
+            display: block;
+            line-height: 23.94px;
+            font-family: $font-classic;
+
+            &.is-active {
+                background: #e6f3fc;
+            }
+
+            &:hover,
+            &:focus {
+                color: $fresh-blue;
+            }
+
+            @media screen and (min-width: $desktop-sm) {
+                padding: 15px 20px 15px 30px;
+                font-size: 20px;
+            }
+        }
+    }
+}
+
+.browse-categories {
+    display: none;
+    text-align: center;
+    width: 100%;
+    border-bottom: 1px solid #eee;
+    color: $fresh-blue;
+    text-decoration: none;
+    line-height: 60px;
+    font-family: $font-classic;
+    font-size: 23.4px;
+
+    @media screen and (max-width: $tablet) {
+        display: block;
+    }
+
+    &::after {
+        content: "\e611";
+        font-size: 16px;
+        line-height: 20px;
+        font-family: $font-icon;
+        color: $fresh-blue;
+        margin-left: 10px;
+    }
+}

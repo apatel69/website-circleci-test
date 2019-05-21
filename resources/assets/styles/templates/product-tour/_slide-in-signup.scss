@@ -1,0 +1,308 @@
+.slideInSignup {
+    $self: &;
+
+    &__slideIn {
+        display: none;
+    }
+
+    &.hero {
+        .cta-subtext-assurance {
+            @media screen and (max-width: $tablet) {
+                display: block;
+            }
+        }
+
+        .inline-form-hero {
+            @media screen and (max-width: $tablet) {
+                display: none;
+            }
+        }
+
+        #{$self}__slideIn {
+            opacity: 0;
+
+            h2 {
+                font-family: $font-med;
+                color: $midnight-blue;
+                text-align: center;
+                margin-bottom: 14px;
+            }
+
+            input:focus {
+                outline: none;
+            }
+
+            #{$self}__wrapper {
+                padding: 40px 118px;
+                display: flex;
+                flex-direction: column;
+                height: 100%;
+                overflow: auto;
+
+                @media screen and (max-width: $tablet) {
+                    padding: 40px;
+                }
+
+                @media screen and (max-width: $mobile) {
+                    padding-left: 15px;
+                    padding-right: 15px;
+                }
+            }
+
+            &.inline-form-hero {
+                opacity: 0;
+                position: fixed;
+                right: 0;
+                height: 100vh;
+                max-width: 660px;
+                width: 100%;
+                background: $off-white;
+                top: 0;
+                z-index: 110;
+                box-shadow: -10px 0 13px 0 rgba(6, 41, 66, 0.35);
+
+                .error-general {
+                    max-width: 100%;
+                }
+
+                .fieldset-password {
+                    display: block;
+                }
+
+                .fieldset {
+                    max-width: 100%;
+
+                    & > input[type="email"],
+                    & > input[type="password"] {
+                        &.error,
+                        &:invalid:not(:focus):not(:placeholder-shown) {
+                            border-bottom-right-radius: 0;
+                            border-bottom-left-radius: 0;
+
+                            & ~ .error-state {
+                                animation: errorReveal 0.3s ease-out;
+                                display: block;
+                                position: static;
+                                border-top-left-radius: 0;
+                                border-top-right-radius: 0;
+                                padding: 7px;
+                                box-shadow: 0 0 0;
+                                text-align: center;
+
+                                .error-message::before {
+                                    content: "";
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .cta-subtext {
+                    max-width: 100%;
+                }
+            }
+
+            .getapp {
+                background: transparent;
+                padding: 0;
+
+                strong {
+                    font-size: 16px;
+                    font-weight: normal;
+                }
+
+                &-widget {
+                    margin-top: 0;
+
+                    > * {
+                        padding: 0 3px;
+                    }
+                }
+
+                img {
+                    height: 18px;
+                }
+            }
+
+            #{$self}__close {
+                position: absolute;
+                top: 24px;
+                right: 24px;
+
+                &:hover {
+                    cursor: pointer;
+                }
+            }
+
+            #{$self}__logo {
+                display: block;
+                width: 140px;
+                margin: 0 auto 57px;
+
+                @media screen and (max-width: $tablet) {
+                    width: 100px;
+                }
+            }
+
+            #{$self}__testimonial {
+                border-top: 1px solid $rule-grey;
+                border-bottom: 1px solid $rule-grey;
+                padding: 20px 0;
+                display: flex;
+                align-items: center;
+
+                img {
+                    margin-right: 23px;
+                }
+
+                q {
+                    font-style: italic;
+                    color: $dark-grey;
+                    font-size: 15px;
+                    margin-bottom: 16px;
+                    display: block;
+                    line-height: 1.6;
+                    letter-spacing: -0.1px;
+                }
+
+                &Name,
+                &Job {
+                    text-transform: uppercase;
+                    color: $dark-grey;
+                    font-size: 13px;
+                    margin: 0;
+                    line-height: 1.38;
+                    letter-spacing: 0.2px;
+
+                    @media screen and (max-width: $mobile) {
+                        display: block;
+                    }
+                }
+
+                &Name {
+                    font-family: $font-med;
+                }
+            }
+
+            #{$self}__footer {
+                margin-top: auto;
+                padding-top: 40px;
+
+                p,
+                a {
+                    color: $dark-grey;
+                }
+
+                p {
+                    text-align: center;
+                    font-size: 13px;
+                    font-family: $font-book;
+                    margin: 0;
+
+                    @media screen and (max-width: $mobile) {
+                        display: block;
+                    }
+                }
+            }
+
+            &.animateIn {
+                animation: 0.5s ease-out 0s 1 slideInFromRight both;
+                display: block;
+            }
+
+            &.animateOut {
+                display: block;
+                animation: 0.5s ease-out 0s 1 slideOutToRight both;
+            }
+        }
+
+        #{$self}__slideUpOne {
+            opacity: 0;
+
+            &.animateIn {
+                animation: 1s ease-out 0.5s 1 slideInFromBottom both;
+            }
+
+            &.animateOut {
+                animation: 1s ease-out 0.25s 1 slideOutToBottom both;
+            }
+        }
+
+        #{$self}__slideUpTwo {
+            opacity: 0;
+
+            &.animateIn {
+                animation: 1s ease-out 1s 1 slideInFromBottom both;
+            }
+
+            &.animateOut {
+                animation: 1s ease-out 0s 1 slideOutToBottom both;
+            }
+        }
+    }
+}
+
+@keyframes slideInFromRight {
+    0% {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideOutToRight {
+    0% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateX(100%);
+        opacity: 0;
+        display: none;
+    }
+}
+
+@keyframes slideInFromBottom {
+    0% {
+        transform: translateY(100%);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideOutToBottom {
+    0% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateY(100%);
+        opacity: 0;
+    }
+}
+
+@keyframes errorReveal {
+    0% {
+        opacity: 0;
+        transform: translateY(-100%);
+    }
+
+    50% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

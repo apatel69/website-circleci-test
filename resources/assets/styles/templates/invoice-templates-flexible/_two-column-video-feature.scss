@@ -1,0 +1,126 @@
+@import "../../common/mixins";
+
+.two-column-video-feature-container {
+    background: bottom left no-repeat #fff;
+    background-size: 50%;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 2.5em 1em;
+
+    @media screen and (max-width: $tablet) {
+        background-size: 0;
+        display: block;
+    }
+
+    .two-column-video-feature-description {
+        border-radius: 5px;
+        flex: 1;
+        margin: 0 3em;
+
+        h2 {
+            padding-right: 3em;
+        }
+
+        p {
+            padding-right: 5em;
+        }
+
+        @media screen and (max-width: $tablet) {
+            padding: 2em 1.5em;
+            text-align: center;
+            width: calc(100% - 100px);
+            margin: 2em auto 0;
+
+            p {
+                margin-top: 0.1em;
+                padding-right: 0;
+            }
+
+            h1 {
+                padding-right: 0;
+            }
+
+            h2 {
+                padding-right: 0;
+            }
+
+            .primary-cta {
+                margin-top: 3em;
+            }
+        }
+
+        @media screen and (max-width: $mobile) {
+            margin: 0 auto;
+            width: calc(100% - 10px);
+        }
+    }
+
+    .two-column-video-feature-cta-title {
+        text-align: left;
+        width: 100%;
+        font-family: $font-med;
+        font-weight: normal;
+        color: $midnight-blue;
+        font-size: 40px;
+        line-height: 50px;
+        margin: 0 0 16px;
+
+        @media screen and (max-width: $tablet) {
+            text-align: center;
+        }
+    }
+
+    .two-column-video-feature-video {
+        flex: 1;
+
+        .responsive-video {
+            @include shadowBox;
+
+            iframe {
+                border-radius: 5px;
+            }
+        }
+    }
+
+    .two-column-video-feature-image {
+        @include shadowBox;
+    }
+
+    .two-column-video-feature-video,
+    .two-column-video-feature-image {
+        flex: 1;
+        margin-right: 3em;
+
+        @media screen and (max-width: $tablet) {
+            padding: 1em;
+            margin: 0 auto;
+            width: calc(100% - 120px);
+        }
+
+        @media screen and (max-width: $mobile) {
+            margin: 0 auto;
+            width: calc(100% - 10px);
+        }
+    }
+
+    @media screen and (min-device-width: 411px) and (max-device-height: 823px) and (orientation: landscape) {
+        .two-column-video-feature-description {
+            .two-column-video-feature-cta-title {
+                font-size: 36px;
+            }
+
+            h2 {
+                padding-right: 1em;
+            }
+
+            p {
+                padding-right: 1em;
+            }
+        }
+
+        .two-column-video-feature-video {
+            margin-right: 1em;
+            height: 245px;
+        }
+    }
+}

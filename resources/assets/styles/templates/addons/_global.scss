@@ -1,0 +1,126 @@
+body {
+    max-width: unset;
+    background: #fff;
+}
+
+section {
+    padding: 0;
+}
+
+header,
+main,
+footer {
+    float: none;
+}
+
+.clearfix {
+    clear: both;
+}
+
+@media screen and (max-width: $tablet) {
+    .nav-primary-overlay {
+        position: fixed;
+        opacity: 0;
+        z-index: -1;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        background: transparent;
+        transition: all 0.6s ease;
+    }
+
+    .nav-primary-overlay.is-active {
+        opacity: 1;
+        background: rgba(0, 0, 0, 0.85);
+        z-index: 999;
+        transition: opacity 0.4s ease;
+    }
+}
+
+.header-frame {
+    z-index: 1000;
+    position: relative;
+    width: 100%;
+}
+
+.header-blue {
+    background-color: $fresh-blue;
+    color: #fff;
+}
+
+.tax-addons_categories {
+    .addons-hero-image {
+        display: none;
+    }
+}
+
+.hero-background {
+    background: $fresh-blue;
+    text-align: center;
+    padding: 18px 0 36px;
+    margin: 0;
+
+    h1 {
+        max-width: 726px;
+        margin: 0 auto;
+        color: #fff;
+        font-size: 54px;
+        padding: 0 2%;
+        font-family: $font-classic;
+        line-height: 1.2;
+
+        @media screen and (max-width: 1070px) {
+            font-size: 50px;
+        }
+
+        @media screen and (max-width: 900px) {
+            font-size: 38.8px;
+        }
+
+        @media screen and (max-width: 640px) {
+            font-size: 27.6px;
+        }
+    }
+
+    .subheader {
+        font-family: $font-classic;
+        color: rgba(255, 255, 255, 0.6);
+        line-height: 1.6;
+        max-width: 500px;
+        margin: 16.2px auto;
+    }
+
+    img {
+        padding: 0 20px;
+        box-sizing: border-box;
+        max-height: 150px;
+        width: auto;
+    }
+}
+
+.a11y-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+}
+
+.tile {
+    border-radius: 4px;
+    box-shadow: 3px 3px 0 #ededed;
+    border: 1px solid #ccc;
+    padding: 15px;
+    margin-bottom: 20px;
+    line-height: 23.94px;
+}
+
+.wrapper {
+    max-width: 990px;
+    margin: 0 auto;
+    padding: 0 15px;
+}

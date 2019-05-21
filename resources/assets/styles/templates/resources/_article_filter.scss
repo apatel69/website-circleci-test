@@ -1,0 +1,116 @@
+.tax-resource_categories,
+.hub {
+    .btn-filter-sort {
+        display: none;
+        border: solid 2px $rule-grey;
+        color: $midnight-blue;
+        text-decoration: none;
+        border-radius: 2px;
+        font-size: 16px;
+        padding: 7px 14px 7px 35px;
+        background:
+            white
+            url("~images/icons/ico-filter.svg")
+            no-repeat
+            left
+            14px
+            center;
+        margin-bottom: 17px;
+
+        @media screen and (max-width: $tablet) {
+            display: inline-block;
+            float: right;
+        }
+    }
+
+    .sort-wrap {
+        float: right;
+        position: relative;
+        margin-bottom: 14px;
+
+        @media screen and (max-width: $tablet) {
+            display: none;
+        }
+
+        .visible {
+            float: right;
+            display: block;
+            text-transform: uppercase;
+            font-family: $font-med;
+            font-size: 13px;
+            line-height: 20px;
+            color: #8596a2;
+            text-decoration: none;
+            background-image: url("~images/icons/dropdown.svg");
+            background-repeat: no-repeat;
+            background-position: right center;
+            padding-right: 20px;
+
+            span {
+                font-family: $font-med;
+            }
+        }
+
+        &:hover {
+            .spacer {
+                display: block;
+            }
+        }
+
+        .label-tablet {
+            display: none;
+
+            @media screen and (max-width: $tablet) {
+                display: inline-block;
+            }
+        }
+
+        .label-desktop {
+            display: inline-block;
+
+            @media screen and (max-width: $tablet) {
+                display: none;
+            }
+        }
+    }
+
+    .spacer {
+        z-index: 1000;
+        position: absolute;
+        padding-top: 20px;
+        top: 0;
+        right: 0;
+        display: none;
+    }
+
+    .inner-sort {
+        display: inline-block;
+        padding: 12px;
+        border: solid 1px $rule-grey;
+        border-radius: 10px;
+        box-shadow: 4px 4px 0 0 rgba(6, 41, 66, 0.1);
+        min-width: 190px;
+        background: #fff;
+
+        a {
+            color: $midnight-blue;
+            white-space: nowrap;
+            display: block;
+            font-size: 17px;
+            line-height: 23px;
+            text-decoration: none;
+            padding-left: 15px;
+
+            &.active,
+            &:hover {
+                color: $fresh-blue;
+            }
+
+            &.active {
+                background-image: url("~images/icons/tested.svg");
+                background-repeat: no-repeat;
+                background-position: left center;
+            }
+        }
+    }
+}

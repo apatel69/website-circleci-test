@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="456" height="284" viewBox="0 0 456 284">
+    <defs>
+        <path id="a" d="M0 .204h455.467v228.651H0z"/>
+    </defs>
+    <g fill="none" fill-rule="evenodd">
+        <g transform="translate(0 -.204)">
+            <mask id="b" fill="#fff">
+                <use xlink:href="#a"/>
+            </mask>
+            <text fill="#062942" font-family="Helvetica" font-size="20" mask="url(#b)">
+                <tspan x="0" y="51">2017</tspan>
+            </text>
+            <text fill="#062942" font-family="Helvetica" font-size="20" mask="url(#b)">
+                <tspan x="0" y="130">2018</tspan>
+            </text>
+            <text fill="#062942" font-family="Helvetica" font-size="20" mask="url(#b)">
+                <tspan x="0" y="210">2019</tspan>
+            </text>
+            <path fill="#1565B0" d="M398.76 63.87H107.737c-17.582 0-31.833-14.252-31.833-31.833 0-17.58 14.251-31.833 31.833-31.833H398.76c17.581 0 31.833 14.252 31.833 31.833 0 17.581-14.252 31.833-31.833 31.833" mask="url(#b)"/>
+            <path fill="#062942" d="M217.871 63.87H107.738c-17.58 0-31.833-14.252-31.833-31.833 0-17.58 14.252-31.833 31.833-31.833h110.133c17.581 0 31.833 14.252 31.833 31.833 0 17.581-14.252 31.833-31.833 31.833" mask="url(#b)"/>
+            <path fill="#1565B0" d="M423.634 146.363H107.738c-17.582 0-31.833-14.252-31.833-31.833 0-17.581 14.251-31.833 31.833-31.833h315.896c17.581 0 31.833 14.252 31.833 31.833 0 17.58-14.252 31.833-31.833 31.833" mask="url(#b)"/>
+            <path fill="#062942" d="M205.444 146.363h-97.707c-17.58 0-31.833-14.252-31.833-31.833 0-17.581 14.252-31.833 31.833-31.833h97.707c17.581 0 31.833 14.252 31.833 31.833 0 17.58-14.252 31.833-31.833 31.833" mask="url(#b)"/>
+            <path fill="#1565B0" d="M395.102 228.856H111.396c-17.581 0-31.833-14.252-31.833-31.833 0-17.582 14.252-31.833 31.833-31.833h283.706c17.58 0 31.833 14.251 31.833 31.833 0 17.58-14.252 31.833-31.833 31.833" mask="url(#b)"/>
+            <path fill="#062942" d="M193.387 228.856h-85.65c-17.58 0-31.832-14.252-31.832-31.833 0-17.582 14.252-31.833 31.833-31.833h85.649c17.58 0 31.833 14.251 31.833 31.833 0 17.58-14.252 31.833-31.833 31.833" mask="url(#b)"/>
+        </g>
+        <text fill="#FFF" font-family="Helvetica" font-size="20" transform="translate(0 -1)">
+            <tspan x="107.593" y="46.991">$6</tspan> <tspan x="129.839" y="46.991" letter-spacing="-.1">9</tspan> <tspan x="140.862" y="46.991">,599</tspan>
+        </text>
+        <text fill="#FFF" font-family="Helvetica" font-size="20" transform="translate(0 -1)">
+            <tspan x="107.593" y="127.916">$6</tspan> <tspan x="129.839" y="127.916" letter-spacing=".35">5</tspan> <tspan x="141.312" y="127.916">,400</tspan>
+        </text>
+        <text fill="#FFF" font-family="Helvetica" font-size="20" transform="translate(0 -1)">
+            <tspan x="107.593" y="208.841">$60,243</tspan>
+        </text>
+        <g transform="translate(79 269.796)">
+            <ellipse cx="210.825" cy="6.704" fill="#0D83DD" rx="6.825" ry="6.5"/>
+            <ellipse cx="6.825" cy="6.704" fill="#062942" rx="6.825" ry="6.5"/>
+            <text fill="#1565B0" font-family="Helvetica" font-size="20">
+                <tspan x="224" y="19">M</tspan> <tspan x="240.66" y="19" letter-spacing="-.044">e</tspan> <tspan x="251.739" y="19">an </tspan> <tspan x="279.542" y="19" letter-spacing="-.33">R</tspan> <tspan x="293.655" y="19" letter-spacing="-.266">e</tspan> <tspan x="304.512" y="19" letter-spacing="-.33">v</tspan> <tspan x="314.182" y="19">enue</tspan>
+            </text>
+            <text fill="#062942" font-family="Helvetica" font-size="20">
+                <tspan x="21" y="19">Median </tspan> <tspan x="92.152" y="19" letter-spacing="-.33">R</tspan> <tspan x="106.266" y="19" letter-spacing="-.264">e</tspan> <tspan x="117.125" y="19" letter-spacing="-.33">v</tspan> <tspan x="126.795" y="19">enue</tspan>
+            </text>
+        </g>
+        <text fill="#FFF" font-family="Helvetica" font-size="20" transform="translate(0 -1)">
+            <tspan x="253.473" y="47.991"> $14</tspan> <tspan x="314.625" y="47.991" letter-spacing=".375">4</tspan> <tspan x="326.123" y="47.991">,000</tspan>
+        </text>
+        <text fill="#FFF" font-family="Helvetica" font-size="20" transform="translate(0 -1)">
+            <tspan x="253.473" y="128.916"> $15</tspan> <tspan x="336.852" y="128.916" letter-spacing=".323">2</tspan> <tspan x="348.297" y="128.916">,640</tspan>
+        </text>
+        <text fill="#FFF" font-family="Helvetica" font-size="20" transform="translate(0 -1)">
+            <tspan x="253.473" y="209.841"> $14</tspan> <tspan x="309.068" y="209.841" letter-spacing=".2">3</tspan> <tspan x="320.391" y="209.841">,000</tspan>
+        </text>
+    </g>
+</svg>

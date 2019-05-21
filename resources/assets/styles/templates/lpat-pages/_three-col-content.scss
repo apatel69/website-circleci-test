@@ -1,0 +1,29 @@
+.lpat-three-col-content {
+    padding-bottom: 0;
+
+    &__benefits-title,
+    &__benefit-content {
+        text-align: center;
+    }
+
+    &__benefits-list {
+        display: flex;
+        justify-content: space-between;
+        padding: 0 50px 10px;
+
+        @media screen and (max-width: $tablet) {
+            flex-direction: column;
+            padding: 0;
+        }
+    }
+
+    &__benefit-content {
+        width: 33.33%;
+        margin-right: 30px;
+
+        @media screen and (max-width: $tablet) {
+            width: 80%;
+            margin: 0 auto;
+        }
+    }
+}

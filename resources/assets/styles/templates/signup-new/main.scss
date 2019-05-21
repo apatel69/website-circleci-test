@@ -1,0 +1,453 @@
+@import "../../global";
+@import "header";
+@import "../../common/mixins";
+
+@media screen and (max-width: $tablet) {
+    html {
+        font-size: 62.5%;
+    }
+}
+
+body {
+    background: $fresh-blue;
+    max-width: none;
+}
+
+.signupContent {
+    margin: 2.5em;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    flex-wrap: nowrap;
+    height: 100vh;
+    align-items: center;
+    min-height: 520px;
+
+    .signup-row {
+        width: 100%;
+    }
+
+    a {
+        color: inherit;
+    }
+}
+
+.signupContainer {
+    background: #fff;
+    padding: 48px 40px;
+    max-width: 500px;
+    position: relative;
+    margin: 0 auto;
+    border: 2px solid $rule-grey;
+    border-radius: 5px;
+    box-shadow: 4px 4px rgba(6, 41, 66, 0.1);
+    text-align: center;
+
+    @media screen and (max-width: $desktop-lrg - 1) {
+        padding: 40px;
+        max-width: 450px;
+    }
+
+    @media screen and (max-width: $tablet - 1) {
+        padding: 32px;
+        max-width: 500px;
+        background: transparent;
+        border: none;
+        box-shadow: none;
+    }
+
+    .logo {
+        max-width: 160px;
+        height: 83px;
+        margin: auto;
+        background-image: url("~images/navigation/default-logo.svg");
+        background-repeat: no-repeat;
+        background-position: center;
+
+        @media screen and (max-width: $tablet - 1) {
+            height: 73px;
+            background-image: url("~images/navigation/white-logo.svg");
+        }
+    }
+
+    .header {
+        h2 {
+            font-family: $font-main;
+            font-size: 3rem;
+            line-height: (3.6 / 3);
+            margin: 30px 0 24px;
+
+            @media screen and (max-width: $desktop-lrg - 1) {
+                font-family: $font-book;
+                font-size: 2.6rem;
+                margin: 25px 0 20px;
+            }
+
+            @media screen and (max-width: $tablet - 1) {
+                color: #fff;
+                font-size: 2.4rem;
+                margin: 21px 0 16px;
+            }
+        }
+
+        p {
+            font-family: $font-book;
+            font-size: 1.8rem;
+            margin: 0 0 18px;
+            line-height: (2.4 / 1.8);
+
+            @media screen and (max-width: $desktop-lrg - 1) {
+                font-size: 1.6rem;
+                margin-bottom: 14px;
+            }
+
+            @media screen and (max-width: $tablet - 1) {
+                color: $additional-blue;
+                margin-bottom: 12px;
+            }
+        }
+    }
+
+    .signupForm {
+        .buttonPrimary {
+            background-color: $cta-green;
+            color: #fff;
+            font-size: 2.4rem;
+            line-height: 5rem;
+            border-radius: 5px;
+            width: 100%;
+            margin: 6px auto;
+            outline: none;
+            opacity: 1;
+            padding: 0;
+            border: 2px solid transparent;
+
+            @media screen and (max-width: $desktop-lrg - 1) {
+                font-size: 2rem;
+                line-height: 4.5rem;
+            }
+
+            @media screen and (max-width: $tablet - 1) {
+                margin: 18px 0 0;
+            }
+
+            &:focus {
+                outline: none;
+                background-color: #aad662;
+            }
+        }
+    }
+
+    .buttonSubtext {
+        font-family: $font-book;
+        font-size: 1.4rem;
+        line-height: (1.8 / 1.4);
+        color: $dark-grey;
+        margin: 0.6rem 0;
+
+        @media screen and (max-width: $desktop-lrg - 1) {
+            font-size: 1.2rem;
+            margin: 3px 0;
+        }
+
+        @media screen and (max-width: $tablet - 1) {
+            margin: 8px 0 0;
+            color: $additional-blue;
+        }
+    }
+}
+
+.accountLinks {
+    @media screen and (max-width: $tablet - 1) {
+        color: $additional-blue;
+    }
+
+    .textRow {
+        margin: 24px 0 0;
+        font-family: $font-book;
+        font-size: 1.8rem;
+
+        @media screen and (max-width: $desktop-lrg - 1) {
+            margin-top: 20px;
+            font-size: 1.6rem;
+        }
+
+        @media screen and (max-width: $tablet - 1) {
+            margin-top: 16px;
+        }
+
+        a {
+            color: $fresh-blue;
+            text-decoration: none;
+
+            &:hover {
+                color: #86c1ee;
+            }
+
+            @media screen and (max-width: $tablet - 1) {
+                color: #fff;
+            }
+        }
+    }
+
+    & :last-child {
+        margin-bottom: 0;
+    }
+}
+
+.formElement {
+    input {
+        font-family: $font-book;
+        width: 100%;
+        padding: 10px 12px;
+        margin: 6px 0;
+        border: 2px solid $rule-grey;
+        border-radius: 5px;
+        font-size: 2.4rem;
+        line-height: (3.2 / 2.4);
+        background: #fff;
+        outline: none;
+        color: $midnight-blue;
+
+        @media screen and (max-width: $desktop-lrg - 1) {
+            font-size: 2rem;
+            margin: 5px 0;
+        }
+
+        @include placeholder {
+            color: rgba(6, 41, 66, 0.35);
+        }
+
+        @media screen and (max-width: $tablet - 1) {
+            font-size: 1.8rem;
+            padding: 10px 0;
+            border: none;
+            border-radius: 0;
+            border-bottom: 1px solid $additional-blue;
+            background: transparent;
+            color: #fff;
+            margin: 4px 0;
+
+            @include placeholder {
+                color: $additional-blue;
+            }
+        }
+    }
+
+    input:-webkit-autofill,
+    input:-webkit-autofill:hover,
+    input:-webkit-autofill:focus,
+    input:-webkit-autofill:active {
+        transition: background-color 5000s ease-in-out 0s;
+        -webkit-text-fill-color: $midnight-blue !important;
+        color: $midnight-blue !important;
+
+        @media screen and (max-width: $tablet - 1) {
+            -webkit-text-fill-color: #fff !important;
+            color: #fff !important;
+        }
+    }
+
+    input:-webkit-autofill-selected,
+    input:-internal-autofill-selected {
+        background-color: transparent !important;
+    }
+}
+
+.signupFooter {
+    position: relative;
+    margin: auto;
+    text-align: center;
+    margin-top: 2.4rem;
+    font-family: $font-book;
+    color: #b6daf5;
+    font-size: 1.4rem;
+    line-height: (1.8 / 1.4);
+
+    @media screen and (max-width: $desktop-lrg - 1) {
+        margin-top: 2rem;
+        font-size: 1.2rem;
+    }
+
+    @media screen and (max-width: $tablet - 1) {
+        margin-top: 0;
+    }
+
+    .securityIcon {
+        position: relative;
+        top: 1px;
+        width: 9px;
+        opacity: 0.5;
+
+        @media screen and (max-width: $desktop-lrg - 1) {
+            width: 8px;
+        }
+    }
+}
+
+.errorGeneral {
+    display: none;
+    font-size: 2rem;
+    line-height: 1;
+    padding: 15px;
+    color: $midnight-blue;
+    background: $error-pink-light;
+    border: 2px solid $error-state;
+    border-radius: 5px;
+    margin-bottom: 7px;
+    background-image: url("~images/forms/icon_error.svg");
+    background-position: center right 10px;
+    background-repeat: no-repeat;
+    background-size: 25px;
+    font-family: $font-book;
+
+    @media screen and (max-width: $tablet - 1) {
+        font-size: 2.4rem;
+    }
+
+    @media screen and (max-width: $mobile) {
+        font-size: 1.8rem;
+    }
+}
+
+.fieldset {
+    margin: 0;
+
+    & > input[name="email"],
+    & > input[name="password"] {
+        &.error,
+        &:invalid:not(:placeholder-shown):focus {
+            & ~ .errorState {
+                display: inline-block;
+                animation: error-reveal-header 0.3s ease-out;
+
+                @media screen and (max-width: $tablet - 1) {
+                    display: block;
+                }
+            }
+
+            @media screen and (max-width: $tablet - 1) {
+                color: #fff;
+                border-bottom: 1px solid $error-pink;
+            }
+        }
+    }
+}
+
+.errorState {
+    font-family: $font-book;
+    font-size: 1.8rem;
+    line-height: 1.2;
+    background: $error-pink;
+    color: #fff;
+    padding: 13px 17px;
+    border-radius: 5px;
+    box-shadow: 2px 2px 0 rgba(6, 41, 66, 0.25);
+    display: none;
+
+    @media screen and (max-width: $tablet - 1) {
+        position: static;
+    }
+}
+
+.formError {
+    display: none;
+    transition: all 0.2s ease-in-out;
+    position: absolute;
+    left: 0;
+    bottom: 80px;
+
+    & ::before {
+        content: "";
+        position: absolute;
+        top: 100%;
+        left: -16px;
+        width: 0;
+        border-top: 29px solid $error-pink;
+        border-left: 29px solid transparent;
+        border-right: 29px solid transparent;
+
+        @media screen and (max-width: $tablet - 1) {
+            top: calc(100% - 2px);
+            left: 10px;
+        }
+    }
+}
+
+.errorMessage {
+    position: relative;
+    white-space: nowrap;
+
+    @media screen and (max-width: $tablet - 1) {
+        text-align: center;
+    }
+}
+
+.fieldset {
+    position: relative;
+
+    @media screen and (max-width: $tablet - 1) {
+        display: block;
+    }
+
+    & > input[name="email"],
+    & > input[name="password"] {
+        &:valid {
+            background-color: transparent;
+
+            & + label {
+                display: none;
+            }
+        }
+
+        &.error,
+        &:invalid:not(:placeholder-shown) {
+            background-color: $error-pink-light;
+            border: 2px solid $error-pink;
+
+            @media screen and (min-width: $tablet) {
+                @include placeholder {
+                    color: $error-state;
+                }
+            }
+
+            & ~ .errorState:not(:focus) {
+                .errorMessage {
+                    display: none;
+                }
+            }
+
+            &.error:not(:focus) {
+                ~ .errorState {
+                    display: none;
+                }
+            }
+
+            @media screen and (max-width: $tablet - 1) {
+                background-color: transparent;
+                border: none;
+                border-bottom: 1px solid $error-pink;
+            }
+
+            @include placeholder {
+                color: $error-pink;
+            }
+        }
+
+        &.error {
+            & ~ .errorState {
+                .errorMessage.serverMessage {
+                    display: block;
+                }
+            }
+        }
+
+        &:invalid:not(:placeholder-shown) {
+            & ~ .errorState {
+                .errorMessage.clientMessage {
+                    display: block;
+                }
+            }
+        }
+    }
+}

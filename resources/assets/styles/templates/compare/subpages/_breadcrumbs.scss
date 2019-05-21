@@ -1,0 +1,38 @@
+.breadcrumb-container {
+    & > section {
+        padding-top: 20px;
+    }
+
+    .breadcrumbs {
+        margin-left: 0;
+        font-size: 1.6rem;
+        color: $fresh-blue;
+
+        @media screen and (max-width: $desktop-sm) {
+            margin-left: 0;
+        }
+
+        @media screen and (max-width: $tablet) {
+            text-align: center;
+        }
+
+        a {
+            margin-right: 7px;
+            text-decoration: none;
+
+            &:hover {
+                color: $midnight-blue;
+            }
+        }
+
+        .current {
+            color: $dark-grey;
+        }
+
+        .arrow {
+            vertical-align: middle;
+            margin-right: 6px;
+            height: 16px;
+        }
+    }
+}

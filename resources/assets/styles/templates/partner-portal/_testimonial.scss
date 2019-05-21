@@ -1,0 +1,139 @@
+.twoColTestimonial {
+    $self: &;
+
+    &__container {
+        display: flex;
+        align-items: center;
+        padding: 107px 220px 91px;
+
+        @media screen and (max-width: $desktop-sm) {
+            padding: 79px 92px 81px;
+        }
+
+        @media screen and (max-width: $tablet) {
+            padding: 87px 22px 60px 65px;
+        }
+
+        @media screen and (max-width: $mobile) {
+            flex-direction: column;
+            padding: 84px 0 52px;
+        }
+    }
+
+    blockquote {
+        font-family: $font-main;
+        font-size: 29px;
+        line-height: 1.5;
+        letter-spacing: -0.1px;
+        text-indent: 0;
+        border: 0;
+        margin: 0;
+        padding: 0;
+        position: relative;
+        z-index: 1;
+        max-width: 413px;
+        margin-bottom: 37px;
+
+        @media screen and (max-width: $tablet) {
+            font-size: 25px;
+            line-height: 1.48;
+            max-width: 351px;
+            margin-bottom: 33px;
+        }
+
+        @media screen and (max-width: $mobile) {
+            max-width: unset;
+            font-size: 21px;
+            line-height: 1.48;
+            margin-bottom: 21px;
+        }
+
+        &::before {
+            content: "";
+            background: url("~images/testimonial/quotation-marks.svg");
+            position: absolute;
+            top: -35px;
+            left: -60px;
+            z-index: -1;
+            width: 84px;
+            height: 69px;
+            background-repeat: no-repeat;
+            background-size: 100%;
+
+            @media screen and (max-width: $tablet) {
+                width: 71px;
+                height: 59px;
+                top: -27px;
+                left: -50px;
+            }
+
+            @media screen and (max-width: $mobile) {
+                width: 59px;
+                height: 48px;
+                top: -32px;
+                left: -10px;
+            }
+        }
+    }
+
+    &__quote {
+        margin-right: 64px;
+
+        @media screen and (max-width: $tablet) {
+            margin-right: 55px;
+        }
+
+        @media screen and (max-width: $mobile) {
+            margin-right: 0;
+        }
+    }
+
+    &__image--desktop {
+        max-width: 280px;
+        width: 100%;
+
+        @media screen and (max-width: $tablet) {
+            max-width: 239px;
+        }
+
+        @media screen and (max-width: $mobile) {
+            display: none;
+        }
+    }
+
+    &__source--desktop {
+        p {
+            font-family: $font-med;
+            font-size: 15px;
+            line-height: 1.2;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+        }
+
+        @media screen and (max-width: $mobile) {
+            display: none;
+        }
+    }
+
+    &__imageSource--mobile {
+        display: flex;
+        margin-right: auto;
+
+        @media screen and (min-width: $mobile + 1) {
+            display: none;
+        }
+
+        p {
+            font-size: 13px;
+            line-height: 1.23;
+            text-transform: uppercase;
+            font-family: $font-med;
+            letter-spacing: 0.4px;
+        }
+
+        #{$self}__image--mobile {
+            width: 57px;
+            margin-right: 14px;
+        }
+    }
+}

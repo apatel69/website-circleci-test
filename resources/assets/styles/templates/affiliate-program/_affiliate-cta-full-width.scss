@@ -1,0 +1,11 @@
+.cta-full-wrap {
+    .cta-full-width {
+        .col img {
+            margin-top: 35px;
+
+            @media (max-width: $desktop-sm) {
+                margin-top: 0;
+            }
+        }
+    }
+}

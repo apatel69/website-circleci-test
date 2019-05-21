@@ -1,0 +1,47 @@
+$grey1: #edecec;
+
+.subNavigation {
+    padding: 0;
+    text-decoration: none;
+
+    @media screen and (max-width: $mobile) {
+        display: none;
+    }
+}
+
+.stickynav--true {
+    position: sticky;
+    top: 0;
+    z-index: 11;
+}
+
+.anchor-navigation {
+    border-left: 0;
+    border-right: 0;
+    border: $grey1 1px solid;
+    box-shadow: 0 4px 8px 0 rgba(237, 236, 236, 1), 0 6px 20px 0 rgba(237, 236, 236, 1);
+    padding: 2em 0;
+    position: relative;
+
+    .anchor-link {
+        color: $midnight-blue;
+        font-family: $font-med;
+        font-size: 1.4em;
+        line-height: 16px;
+        margin: 0 1.5em;
+        text-decoration: none;
+        text-transform: uppercase;
+    }
+
+    .active {
+        color: $fresh-blue;
+    }
+
+    .primary-cta {
+        margin: 0.5em 1.5em;
+        padding: 5px 16px 6px;
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+}

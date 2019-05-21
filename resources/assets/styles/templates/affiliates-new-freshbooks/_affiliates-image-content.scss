@@ -1,0 +1,67 @@
+.early-bird-details {
+    justify-content: space-between;
+    max-width: 1082px;
+
+    @media (max-width: $tablet) {
+        display: block;
+    }
+}
+
+.early-bird-detail,
+.support-detail {
+    h2 {
+        margin-top: 0;
+        font-size: 3.4rem;
+        line-height: calc(42 / 34);
+        color: $midnight-blue;
+        font-family: $font-med;
+    }
+
+    p {
+        font-family: $font-book;
+    }
+}
+
+.early-bird-detail {
+    img {
+        width: 531px;
+        height: auto;
+    }
+
+    ol li {
+        padding-left: 0;
+
+        p {
+            margin-bottom: 0;
+        }
+    }
+
+    li {
+        font-family: $font-med;
+
+        &::before {
+            font-family: $font-book;
+        }
+    }
+
+    &:first-child {
+        max-width: 531px;
+        margin-right: 50px;
+
+        @media (max-width: $tablet) {
+            margin: 0 auto;
+        }
+    }
+
+    &:last-child {
+        max-width: 496px;
+
+        @media (max-width: $tablet) {
+            margin: 0 auto;
+        }
+    }
+}
+
+ol.alpha-list > li > p {
+    margin: 0;
+}

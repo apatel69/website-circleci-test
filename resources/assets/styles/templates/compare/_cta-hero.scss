@@ -1,0 +1,69 @@
+.hero-short section {
+    padding: 50px 0;
+}
+
+.content {
+    text-align: center;
+
+    h1 {
+        font-family: $font-med;
+        color: $midnight-blue;
+        margin: 0 auto;
+    }
+
+    p {
+        display: block;
+        max-width: 660px;
+        margin: 18px auto 25px;
+        line-height: calc(28 / 18);
+        font-family: $font-book;
+
+        @media screen and (max-width: $tablet) {
+            width: 100%;
+        }
+    }
+}
+
+.cta-hero {
+    .content {
+        .hero_intro_heading {
+            h2 {
+                @media screen and (max-width: $desktop-sm) {
+                    width: 81%;
+                }
+
+                @media screen and (max-width: $tablet) {
+                    width: 90%;
+                }
+
+                @media screen and (max-width: $mobile) {
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
+
+.assurance-cta-subtext {
+    width: 275px;
+    margin: 0 auto;
+    position: relative;
+    text-align: center;
+
+    .cta-assurance {
+        display: block;
+        margin-left: 0;
+        margin-bottom: 10px;
+        text-align: center;
+
+        @media screen and (min-width: 768px) {
+            position: absolute;
+            right: -200px;
+            top: 15px;
+        }
+    }
+
+    .primary-cta {
+        min-width: 275px;
+    }
+}

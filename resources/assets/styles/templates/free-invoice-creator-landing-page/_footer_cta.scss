@@ -1,0 +1,22 @@
+.footer-cta {
+    background: #0d83dd;
+    color: #fff;
+    padding: 4em;
+    margin-top: 5em;
+
+    .footer-cta-content {
+        margin: 0 auto;
+        max-width: 600px;
+        text-align: center;
+        width: 60%;
+
+        h3,
+        .subtext {
+            color: #fff;
+        }
+
+        h3 {
+            margin-top: 0;
+        }
+    }
+}

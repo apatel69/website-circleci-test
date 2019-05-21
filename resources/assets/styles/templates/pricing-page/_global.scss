@@ -1,0 +1,117 @@
+.getapp {
+    section {
+        padding: 0 0 60px;
+
+        .getapp-widget {
+            padding-top: 10px;
+            margin-top: 0;
+        }
+    }
+}
+
+.featured-in {
+    background: #fff;
+
+    section {
+        max-width: 980px;
+        margin: 0 auto;
+        height: 72px;
+        border-top: 1px solid $rule-grey;
+        border-bottom: 1px solid $rule-grey;
+        padding: 0 8rem;
+
+        .copy {
+            font-family: $font-med;
+            padding-top: 25px;
+        }
+
+        img {
+            max-height: 30px;
+            top: 50%;
+            position: relative;
+            transform: translateY(-50%);
+        }
+
+        #cnet {
+            height: 30px;
+        }
+
+        #forbes {
+            height: 18px;
+        }
+
+        #bloomberg {
+            height: 27px;
+        }
+
+        #nytimes {
+            height: 26px;
+        }
+    }
+
+    @media screen and (min-width: $mobile + 1) and (max-width: $tablet) {
+        section {
+            img {
+                max-height: 22px;
+            }
+
+            #bloomberg,
+            #nytimes {
+                padding-top: 2px;
+            }
+        }
+    }
+
+    @media screen and (max-width: $mobile) {
+        section {
+            padding: 0 1rem;
+
+            .copy {
+                font-size: 1.3rem;
+                padding-top: 30px;
+            }
+
+            #cnet {
+                height: 24px;
+            }
+
+            #forbes {
+                height: 15px;
+            }
+
+            #bloomberg {
+                height: 18px;
+                padding-top: 2px;
+            }
+        }
+    }
+}
+
+.call-toll-free {
+    width: 98px;
+    height: auto;
+    margin-top: 14px;
+    margin-right: 2px;
+    vertical-align: middle;
+}
+
+.support-number {
+    margin-left: 0;
+    vertical-align: middle;
+}
+
+.nav-wrapper {
+    ul li {
+        padding-left: 28px;
+    }
+
+    nav .header-text {
+        p {
+            margin: 0 auto;
+        }
+
+        @media (max-width: $tablet) {
+            display: none;
+        }
+    }
+}

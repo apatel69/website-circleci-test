@@ -1,0 +1,178 @@
+.heroTwoColCta {
+    padding-top: 0;
+
+    @media screen and (max-width: $mobile) {
+        overflow-x: hidden;
+    }
+
+    h1 {
+        font-family: $font-med;
+        font-size: 48px;
+        line-height: 1.06;
+        letter-spacing: -0.2px;
+        color: $midnight-blue;
+        max-width: 580px;
+        margin: 0;
+
+        @media screen and (min-width: $tablet + 1) and (max-width: $desktop-sm) {
+            font-size: 42px;
+            line-height: 1.07;
+        }
+
+        @media screen and (max-width: $tablet) {
+            max-width: 100%;
+        }
+
+        @media screen and (max-width: $mobile) {
+            font-size: 28px;
+            line-height: 1.25;
+            letter-spacing: -0.1px;
+        }
+    }
+
+    &__content {
+        display: flex;
+        padding-bottom: 0;
+
+        @media screen and (max-width: $tablet) {
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+    }
+
+    &__columnOne {
+        padding-top: 36px;
+        padding-bottom: 46px;
+
+        @media screen and (max-width: $desktop-sm) {
+            max-width: 400px;
+            width: 100%;
+        }
+
+        @media screen and (max-width: $tablet) {
+            max-width: 575px;
+            padding-bottom: 40px;
+        }
+
+        @media screen and (max-width: $mobile) {
+            padding-top: 20px;
+            padding-bottom: 20px;
+        }
+    }
+
+    &__columnTwo {
+        align-items: flex-end;
+        display: flex;
+        max-width: 636px;
+
+        @media screen and (max-width: $tablet) {
+            max-width: 524px;
+        }
+
+        @media screen and (max-width: $mobile) {
+            margin-left: -30px;
+            margin-right: -30px;
+        }
+    }
+
+    &__description {
+        max-width: 490px;
+        font-family: $font-book;
+        line-height: 1.35;
+        letter-spacing: -0.1px;
+        color: $midnight-blue;
+        font-size: 20px;
+        margin-top: 24px;
+        margin-bottom: 30px;
+
+        @media screen and (max-width: $desktop-sm) {
+            margin-top: 13px;
+            margin-bottom: 28px;
+        }
+
+        @media screen and (max-width: $tablet) {
+            margin: 21px auto;
+        }
+
+        @media screen and (max-width: $mobile) {
+            display: none;
+        }
+    }
+
+    &__button {
+        font-family: $font-book;
+        font-size: 24px;
+        padding: 15px 39px;
+
+        @media screen and (max-width: $desktop-sm) {
+            font-size: 20px;
+        }
+
+        @media screen and (max-width: $tablet) {
+            padding: 12px 33px;
+        }
+
+        @media screen and (max-width: $mobile) {
+            margin-top: 18px;
+        }
+    }
+
+    .getapp {
+        background: none;
+        max-width: 260px;
+        padding: 0;
+
+        @media screen and (max-width: $desktop-sm) {
+            margin-top: 8px;
+        }
+
+        @media screen and (max-width: $tablet) {
+            max-width: 100%;
+        }
+
+        .getapp-widget {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+
+            @media screen and (max-width: $tablet) {
+                justify-content: center;
+            }
+        }
+
+        strong {
+            font-size: 18px;
+            letter-spacing: -0.1px;
+            margin-right: 12px;
+        }
+
+        span {
+            display: block;
+            font-size: 14.6px;
+            letter-spacing: -0.1px;
+            color: $dark-grey;
+            font-family: $font-book;
+            margin-top: 15px;
+
+            @media screen and (max-width: $desktop-sm) {
+                margin-top: 10px;
+            }
+
+            @media screen and (max-width: $tablet) {
+                margin-top: 0;
+                margin-left: 11px;
+            }
+
+            @media screen and (max-width: $mobile) {
+                margin-left: 0;
+                margin-top: 12px;
+            }
+
+            a {
+                color: $dark-grey;
+                font-family: $font-book;
+            }
+        }
+    }
+}

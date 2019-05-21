@@ -1,0 +1,92 @@
+.two-col-podcast {
+    section {
+        display: flex;
+        flex-wrap: nowrap;
+        padding: 12rem 1rem 4.4rem;
+
+        h2 {
+            font-family: $font-book;
+            font-size: 3.6rem;
+            color: $fresh-blue;
+        }
+
+        p {
+            font-family: $font-book;
+            font-size: 1.8rem;
+            color: $midnight-blue;
+
+            a > img {
+                max-height: 40px;
+                width: auto;
+                margin: 0 15px 0 -5px;
+            }
+        }
+
+        .col {
+            width: 50%;
+            padding: 2rem;
+
+            > img {
+                max-height: 453px;
+            }
+
+            ~ .col {
+                h2 {
+                    margin-top: 0;
+                    margin-bottom: 0;
+                }
+            }
+        }
+
+        @media screen and (max-width: $tablet - 1) {
+            padding: 0;
+
+            .col {
+                width: 100%;
+                display: none;
+
+                ~ .col {
+                    display: block;
+                    text-align: center;
+
+                    h2 {
+                        font-size: 3.6rem;
+                        line-height: (46 / 36);
+                        margin-top: 3rem;
+                    }
+
+                    p {
+                        font-size: 1.6rem;
+                        line-height: (26 / 16);
+                        padding: 0.8em;
+
+                        a > img {
+                            max-height: 55px;
+                            display: block;
+                            margin: 1em auto;
+                            width: auto;
+                        }
+
+                        img {
+                            width: 100%;
+                            height: auto;
+                        }
+                    }
+
+                    .mobile-large {
+                        max-width: 220px;
+                        margin: 0 auto;
+                    }
+                }
+            }
+        }
+    }
+
+    .show-mobile {
+        display: none;
+
+        @media screen and (max-width: $tablet - 1) {
+            display: block;
+        }
+    }
+}

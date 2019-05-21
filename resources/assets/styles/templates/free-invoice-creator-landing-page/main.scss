@@ -1,0 +1,79 @@
+/* Begin Re-Import Of Global SCSS */
+
+@import "../../common/variables";
+@import "../../common/media-queries";
+@import "../../common/fonts";
+@import "../../layouts/header";
+@import "../../layouts/footer";
+@import "../../components/buttons";
+@import "../../components/mobile-app-buttons";
+@import "../../layouts/mobile_nav";
+
+/* End Re-Import Of Global SCSS */
+
+@import "fic-global";
+@import "../../flexible-content/global/faq-accordion";
+@import "../../components/android-smart-banner";
+@import "../../flexible-content/global/custom-header";
+@import "../../flexible-content/global/toll-free-header";
+@import "../../flexible-content/global/toll-free-header";
+@import "../../flexible-content/global/cta-full-width";
+@import "../../flexible-content/global/jump-links";
+@import "../../flexible-content/global/cta-invoice-templates";
+@import "simple-hero";
+@import "centered_content";
+@import "two_col_content";
+@import "footer_cta";
+@import "mobile_modal";
+
+.main-container {
+    min-width: 768px;
+
+    @media (max-width: $mobile) {
+        min-width: 0;
+    }
+}
+
+/* Body Overrides */
+.main,
+.container {
+    background-color: #f4fafe;
+}
+
+/* Header Overrides */
+header {
+    .nav-wrapper {
+        #menu-visit-freshbooks {
+            display: none;
+        }
+
+        .header-text {
+            font-size: 1.6em;
+            border: none;
+
+            a {
+                color: #8495a2;
+                margin: 0 1em;
+            }
+        }
+    }
+}
+
+/* FAQ Overrides */
+
+.faq-container {
+    h2 {
+        font-weight: $font-med;
+    }
+
+    h2,
+    h3 {
+        color: $midnight-blue;
+    }
+}
+
+/* Footer Overrides */
+
+footer .rule {
+    display: none;
+}

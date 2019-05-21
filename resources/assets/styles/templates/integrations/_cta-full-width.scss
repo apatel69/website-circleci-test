@@ -1,0 +1,40 @@
+.tax-integration_categories,
+.single-integrations,
+.integrations {
+    .addons-footer {
+        background: $fresh-blue;
+        text-align: center;
+
+        section {
+            padding: 63px 0;
+        }
+
+        h2 {
+            font-family: $font-med;
+            font-size: 36px;
+            line-height: 44px;
+            margin-top: 0;
+        }
+
+        h2,
+        p,
+        a {
+            color: white;
+            max-width: 590px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        img {
+            margin-top: 22px;
+        }
+
+        a {
+            text-decoration: underline;
+
+            &:hover {
+                text-decoration: none;
+            }
+        }
+    }
+}

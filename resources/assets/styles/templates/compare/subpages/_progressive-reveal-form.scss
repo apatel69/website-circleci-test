@@ -1,0 +1,143 @@
+.progressiveRevealForm {
+    text-align: center;
+    background: #fff;
+    position: relative;
+
+    .progressiveRevealForm-content {
+        @include shadowBox;
+
+        padding: 0 2.5em 1.5em;
+        background: #fafdff;
+        margin: 0 auto;
+        max-width: 542px;
+        width: calc(100% - 300px);
+
+        @media screen and (max-width: $tablet) {
+            width: calc(100% - 30px);
+        }
+    }
+
+    h3 {
+        color: $midnight-blue;
+        font-family: $font-med;
+        font-size: 2.4rem;
+        margin-bottom: 0;
+        padding-bottom: 0;
+    }
+
+    span {
+        color: $dark-grey;
+        font-size: 1.8rem;
+    }
+
+    .progressiveRevealForm-miceType {
+        padding-bottom: 1px;
+
+        .mice-type {
+            display: inline-flex;
+            margin: 10px auto;
+
+            small {
+                margin-right: 25px;
+
+                & ~ small {
+                    margin-left: 25px;
+                }
+            }
+
+            @media screen and (max-width: $mobile) {
+                display: block;
+
+                small {
+                    margin-right: 0;
+
+                    & ~ small {
+                        margin-left: 0;
+                    }
+                }
+            }
+        }
+    }
+
+    .inline-form {
+        margin: 2em auto;
+        max-width: 440px;
+
+        .primary-cta {
+            width: 100%;
+            line-height: 1;
+            padding: 17px 35px;
+        }
+    }
+
+    .recommend-image {
+        position: absolute;
+        top: 90px;
+        right: calc(50% - 350px);
+
+        @media screen and (max-width: $tablet) {
+            display: none;
+        }
+    }
+}
+
+.progressiveRevealForm-successMessage {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(6, 41, 66, 0.8); // $midnight-blue @ 80%
+
+    .progressiveRevealForm-successMessage-content {
+        position: relative;
+        margin: 0 auto;
+        background: #fff;
+        border-radius: 8px;
+        max-height: 449px;
+        max-width: 640px;
+        text-align: center;
+        padding: 50px;
+        top: 50%;
+        transform: translateY(-50%);
+
+        .confirmation-image {
+            height: 73px;
+            margin-bottom: 40px;
+        }
+
+        h4 {
+            font-family: $font-med;
+            font-size: 30px;
+            line-height: (36 / 30);
+            max-width: 420px;
+            margin: 0 auto;
+        }
+
+        p {
+            max-width: 400px;
+            margin: 1em auto;
+        }
+
+        .btn-ghost-select {
+            font-family: $font-main;
+            font-size: 2.2rem;
+            border: 2px solid $midnight-blue;
+            border-radius: 8px;
+            background: transparent;
+            color: $midnight-blue;
+            padding: 11px 43px;
+            margin-top: 14px;
+
+            &:hover {
+                background: $fresh-blue;
+                border: 2px solid $fresh-blue;
+                color: #fff;
+            }
+        }
+    }
+}
+
+.hidden {
+    display: none !important;
+}

@@ -1,0 +1,50 @@
+.third {
+    text-align: center;
+
+    @media (max-width: $tablet) {
+        margin-bottom: 50px;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    h3 {
+        font-size: 2.4rem;
+        line-height: calc(34 / 24);
+        color: $midnight-blue;
+    }
+}
+
+.thirds {
+    max-width: 1067px;
+    margin: 2.5% auto;
+    align-items: flex-start;
+    justify-content: space-between;
+
+    @media (max-width: $tablet) {
+        display: block;
+    }
+}
+
+.third {
+    p {
+        br {
+            content: "";
+            display: block;
+            margin: 1.8rem 0;
+        }
+    }
+
+    width: 30%;
+
+    @media (max-width: $tablet) {
+        width: 100%;
+        text-align: center;
+
+        img {
+            display: block;
+            margin: 0 auto;
+        }
+    }
+}

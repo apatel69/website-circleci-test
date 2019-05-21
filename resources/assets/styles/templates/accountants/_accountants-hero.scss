@@ -1,0 +1,79 @@
+.hero {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top center;
+    height: auto;
+
+    @media (max-width: $tablet) {
+        background-image: none !important;
+        background-color: $background-blue;
+    }
+
+    h1 {
+        width: 80%;
+        margin-bottom: 32px;
+
+        @media (max-width: $tablet) {
+            margin: 0 auto 32px;
+            width: 100%;
+        }
+    }
+
+    section {
+        padding: 45px 0;
+
+        .content {
+            width: 46%;
+            margin-left: 20px;
+
+            @media (max-width: $desktop-sm) {
+                margin-left: 0;
+            }
+
+            @media (max-width: $tablet) {
+                width: 100%;
+                text-align: center;
+            }
+
+            p {
+                font-size: 1.8rem;
+                line-height: 1.55555556;
+                margin-bottom: 25px;
+            }
+
+            .contact-details-title {
+                font-size: 2rem;
+                line-height: 1.3;
+                font-family: $font-book;
+            }
+        }
+    }
+
+    .contact-details {
+        display: block;
+        margin: 0;
+        width: 260px;
+
+        @media (max-width: $tablet) {
+            margin: 0 auto;
+        }
+
+        .phone::before {
+            content: url("~images/icons/telephone-alt.svg");
+        }
+
+        .email::before {
+            content: url("~images/icons/envelope-alt.svg");
+        }
+    }
+
+    .contact-details a {
+        display: inline-block;
+        margin-bottom: 10px;
+        color: $fresh-blue;
+
+        &:hover {
+            text-decoration: none;
+        }
+    }
+}

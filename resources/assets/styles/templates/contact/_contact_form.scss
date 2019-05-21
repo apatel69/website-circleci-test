@@ -1,0 +1,116 @@
+.thank-you-msg {
+    background: $background-blue;
+    border-radius: 5px;
+    padding: 30px;
+    margin-top: 50px;
+    display: none;
+}
+
+.error-msg {
+    padding: 20px;
+    border-radius: 4px;
+    margin-bottom: 30px;
+    border: 2px solid $error-state;
+    background: #feecee;
+    display: none;
+}
+
+.contact-form {
+    background: $background-blue;
+    border-radius: 5px;
+    padding: 30px;
+
+    h2 {
+        margin: 0;
+
+        @media screen and (max-width: $tablet) {
+            text-align: center;
+        }
+    }
+
+    p {
+        @media screen and (max-width: $tablet) {
+            text-align: center;
+        }
+    }
+
+    .primary-cta {
+        cursor: pointer;
+
+        @media screen and (max-width: $tablet) {
+            display: block;
+            margin: 0 auto;
+        }
+
+        @media screen and (max-width: $mobile) {
+            width: 100%;
+        }
+    }
+
+    .form-container {
+        font-size: 1.8rem;
+        line-height: calc(28 / 18);
+    }
+
+    .form-input {
+        max-width: 100%;
+    }
+
+    .form-input,
+    textarea {
+        padding: 18px 14px 14px;
+        border-radius: 5px;
+        border: 1px solid $med-grey;
+        width: 100%;
+        vertical-align: top;
+    }
+
+    .req {
+        color: $red;
+        margin-top: 0;
+    }
+
+    .fieldset {
+        margin-bottom: 20px;
+
+        .has-error {
+            background: #feecee;
+            border: solid 2px $error-state;
+            border-bottom-left-radius: 0;
+            border-bottom-right-radius: 0;
+        }
+
+        .error {
+            display: none;
+            width: 100%;
+            background-color: $error-state;
+            color: #fff;
+            font-size: 1.5rem;
+            line-height: 1.5;
+            padding: 5px 10px 7px;
+            border-bottom-left-radius: 5px;
+            border-bottom-right-radius: 5px;
+        }
+
+        .error-invalid-email {
+            @extend .error;
+        }
+
+        .g-recaptcha-error {
+            border: 1px solid $error-state;
+            border-radius: 5px;
+        }
+
+        label {
+            display: block;
+        }
+
+        &:last-child {
+            display: inline-block;
+        }
+    }
+
+    .g-recaptcha {
+        overflow: hidden;
+    }
+}

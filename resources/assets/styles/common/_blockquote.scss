@@ -1,0 +1,97 @@
+blockquote {
+    font-family: Georgia, serif;
+    color: $midnight-blue;
+    vertical-align: middle;
+    text-align: left;
+    font-size: 2.8rem;
+    line-height: calc(43 / 28);
+    text-indent: -1.05rem;
+    border-top: 1px solid $med-grey;
+    border-bottom: 1px solid $med-grey;
+    padding: 20px 11px 20px 21.5px;
+    margin: 35px 0;
+
+    @media screen and (max-width: $desktop-sm) {
+        margin: 0;
+    }
+
+    @media screen and (max-width: $tablet) {
+        margin: 35px 0;
+    }
+
+    @media screen and (max-width: $mobile) {
+        margin: 0;
+    }
+
+    &.long {
+        width: 44%;
+
+        @media screen and (max-width: $desktop-sm) {
+            width: 100%;
+        }
+
+        @media screen and (max-width: $tablet) {
+            width: 44%;
+        }
+
+        @media screen and (max-width: $mobile) {
+            width: 100%;
+        }
+    }
+
+    &.short {
+        width: 32%;
+
+        @media screen and (max-width: $desktop-sm) {
+            width: 100%;
+        }
+
+        @media screen and (max-width: $tablet) {
+            width: 32%;
+        }
+
+        @media screen and (max-width: $mobile) {
+            width: 100%;
+        }
+    }
+}
+
+.quote-left {
+    float: left;
+    margin-right: 12%;
+
+    @media screen and (max-width: $desktop-sm) {
+        margin-right: 0;
+        float: none;
+    }
+
+    @media screen and (max-width: $tablet) {
+        margin-right: 12%;
+        float: left;
+    }
+
+    @media screen and (max-width: $mobile) {
+        margin-right: 0;
+        float: none;
+    }
+}
+
+.quote-right {
+    margin-left: 12%;
+    float: right;
+
+    @media screen and (max-width: $desktop-sm) {
+        margin-left: 0;
+        float: none;
+    }
+
+    @media screen and (max-width: $tablet) {
+        margin-left: 12%;
+        float: right;
+    }
+
+    @media screen and (max-width: $mobile) {
+        margin-left: 0;
+        float: none;
+    }
+}

@@ -1,0 +1,82 @@
+.pci-compliance {
+    display: flex;
+    flex-wrap: nowrap;
+    border-top: 1px solid $select-outline;
+    border-bottom: 1px solid $select-outline;
+    align-items: center;
+    position: relative;
+    bottom: -22px;
+    padding: 1em 2em 1em 0;
+    margin-bottom: 4em;
+
+    .col-icon {
+        width: 50px;
+        padding: 1px;
+
+        svg {
+            width: 28px;
+            height: auto;
+        }
+    }
+
+    .col-text {
+        width: calc(100% - 30px);
+        padding: auto 0.5em;
+
+        // The p tag in front of the class is necessary!
+        p.pci-text {
+            color: $select-med-blue;
+            font-size: 18px;
+            line-height: (26 / 18);
+            font-family: $font-book;
+        }
+    }
+
+    @media screen and (max-width: $mobile) {
+        flex-wrap: wrap;
+        justify-content: center;
+        padding: 1.5em 0 3em;
+
+        .col-text {
+            text-align: center;
+            padding: 0;
+            width: 100%;
+
+            p.pci-text {
+                font-size: 16px;
+                line-height: (21 / 16);
+            }
+        }
+
+        .col-icon {
+            margin: 1em auto;
+            width: auto;
+        }
+    }
+
+    @media screen and (min-width: $mobile) and (max-width: $tablet) {
+        bottom: -19px;
+        padding: 1em 50px 1em 0;
+
+        .col-icon {
+            svg {
+                height: 34px;
+            }
+        }
+
+        .col-text {
+            p.pci-text {
+                font-size: 16px;
+                line-height: (21 / 16);
+            }
+        }
+    }
+
+    @media screen and (min-width: $tablet + 1) and (max-width: $desktop-sm) {
+        bottom: -21px;
+
+        .col-text {
+            padding: 0.5em 1em 0.5em 0;
+        }
+    }
+}

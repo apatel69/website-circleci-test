@@ -1,0 +1,28 @@
+.call-toll-free {
+    width: 98px;
+    height: auto;
+    margin-top: 14px;
+    margin-right: 2px;
+    vertical-align: middle;
+}
+
+.support-number {
+    margin-left: 0;
+    vertical-align: middle;
+}
+
+.nav-wrapper {
+    ul li {
+        padding-left: 28px;
+    }
+
+    nav .header-text {
+        p {
+            margin: 0 auto;
+        }
+
+        @media (max-width: $tablet) {
+            display: none;
+        }
+    }
+}

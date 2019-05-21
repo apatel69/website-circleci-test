@@ -1,0 +1,112 @@
+
+.legacy-invoice-content {
+    .hero,
+    .hero-bg-img {
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: top center;
+
+        section {
+            padding: 45px 0;
+
+            &.zero-bottom-padding {
+                padding-bottom: 0;
+            }
+        }
+
+        .content {
+            width: 45%;
+            margin-left: 20px;
+
+            @media screen and (max-width: $desktop-sm) {
+                margin-left: 0;
+            }
+        }
+
+        h1 {
+            margin-bottom: 32px;
+        }
+
+        p {
+            font-size: 1.8rem;
+            line-height: calc(28 / 18);
+            margin-bottom: 25px;
+
+            br {
+                content: "";
+                display: block;
+                margin: 1.8rem 0;
+            }
+        }
+
+        .primary-cta {
+            min-width: 275px;
+            display: inline-block;
+            vertical-align: middle;
+
+            @media screen and (max-width: $mobile-sm) {
+                min-width: 0;
+                max-width: 275px;
+            }
+        }
+
+        .subtext {
+            color: $dark-grey;
+            max-width: 275px;
+            margin: 10px 0 0;
+        }
+
+        .two-col {
+            display: flex;
+            justify-content: space-between;
+
+            @media screen and (max-width: $tablet) {
+                display: block;
+            }
+        }
+
+        @media screen and (max-width: $tablet) {
+            background-color: $background-blue;
+            background-image: none;
+
+            .content {
+                text-align: center;
+                width: 100%;
+            }
+        }
+
+        .mobile-apps-buttons {
+            a:nth-child(1) {
+                margin-right: 20px;
+            }
+
+            a {
+                text-decoration: none;
+            }
+        }
+
+        .hero-image {
+            width: 46%;
+            align-self: flex-end;
+            margin-right: 0;
+
+            @media screen and (max-width: $desktop-sm) {
+                align-self: center;
+            }
+
+            @media screen and (max-width: $tablet) {
+                align-self: flex-end;
+                margin: 0 auto;
+                width: 450px;
+            }
+
+            @media screen and (max-width: $mobile) {
+                width: 100%;
+            }
+
+            img {
+                display: block;
+            }
+        }
+    }
+}

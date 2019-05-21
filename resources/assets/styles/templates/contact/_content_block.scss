@@ -1,0 +1,134 @@
+.column-parent {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    justify-content: space-between;
+    align-items: flex-start;
+
+    @media screen and (max-width: $tablet) {
+        flex-wrap: wrap;
+    }
+}
+
+.contact-column {
+    h2 {
+        margin-top: 0;
+
+        @media screen and (max-width: $tablet) {
+            text-align: center;
+        }
+    }
+
+    &:first-child {
+        width: 60%;
+
+        @media screen and (max-width: $tablet) {
+            width: 100%;
+        }
+    }
+
+    &:last-child {
+        width: 30%;
+
+        @media screen and (max-width: $tablet) {
+            width: 100%;
+            margin: 0 auto;
+        }
+    }
+}
+
+.container.column-parent::after {
+    content: none;
+}
+
+address {
+    font-style: normal;
+    font-size: 1.8rem;
+    line-height: calc(28 / 18);
+    font-family: $font-main;
+    display: flex;
+
+    p {
+        margin: 0;
+    }
+
+    @media screen and (max-width: $tablet) {
+        flex-wrap: wrap;
+    }
+
+    .address {
+        width: 172px;
+
+        @media screen and (max-width: $tablet) {
+            width: 100%;
+        }
+    }
+
+    .number {
+        @media screen and (max-width: $tablet) {
+            margin-top: 25px;
+        }
+    }
+
+    .office {
+        margin-top: 25px;
+    }
+}
+
+.card-container {
+    display: block;
+
+    @media screen and (max-width: $tablet) {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .card {
+        width: 100%;
+        text-align: left;
+        margin-top: 25px;
+        margin-left: auto;
+        margin-right: auto;
+
+        a {
+            display: inline;
+            white-space: nowrap;
+        }
+
+        &:first-child {
+            margin-top: 0;
+        }
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+
+        @media screen and (max-width: $tablet) {
+            margin-top: 0;
+            width: 45%;
+        }
+
+        @media screen and (max-width: $mobile) {
+            width: 100%;
+        }
+    }
+}
+
+.card-content {
+    padding: 0 25px;
+
+    h3 {
+        margin-bottom: 0;
+    }
+
+    ul {
+        margin-left: 20px;
+    }
+
+    @media screen and (max-width: $tablet) {
+        min-height: 316px;
+    }
+
+    @media screen and (max-width: $mobile) {
+        min-height: 0;
+    }
+}

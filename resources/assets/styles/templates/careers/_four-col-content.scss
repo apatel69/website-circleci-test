@@ -1,0 +1,23 @@
+.four-col-wrapper {
+    justify-content: space-between;
+    align-items: stretch;
+    flex-wrap: wrap;
+
+    .four-col-column {
+        text-align: center;
+        width: 23%;
+
+        @media screen and (max-width: $desktop-sm) {
+            width: 48%;
+        }
+
+        @media screen and (max-width: $tablet) {
+            width: 85%;
+            margin: 0 auto;
+        }
+
+        @media screen and (max-width: $mobile) {
+            width: 100%;
+        }
+    }
+}

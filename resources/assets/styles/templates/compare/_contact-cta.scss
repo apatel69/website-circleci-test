@@ -1,0 +1,33 @@
+.contact-cta {
+    h2,
+    p {
+        margin-left: auto;
+        margin-right: auto;
+        width: 654px;
+        text-align: center;
+        overflow-wrap: break-word;
+
+        @media screen and (max-width: $tablet) {
+            width: 85.16%;
+        }
+
+        @media screen and (max-width: $mobile) {
+            width: 100%;
+        }
+    }
+
+    h2 {
+        font-family: $font-med;
+        color: $midnight-blue;
+        font-size: 3rem;
+    }
+
+    img {
+        display: block;
+        margin: 4% auto 6%;
+
+        &.additional-bottom-margin {
+            margin-bottom: 6%;
+        }
+    }
+}

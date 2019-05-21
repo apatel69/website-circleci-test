@@ -1,0 +1,80 @@
+.anchored-content {
+    background-color: #fff;
+    position: relative;
+    overflow-x: hidden;
+
+    section {
+        position: relative;
+        z-index: 10;
+    }
+
+    .two-col {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        padding: 0 4%;
+
+        @media screen and (max-width: $tablet) {
+            padding-top: 0;
+            display: block;
+        }
+
+        .col {
+            width: 50%;
+            float: left;
+
+            &:first-child {
+                text-align: left;
+                padding: 0 10% 0 5%;
+
+                @media screen and (max-width: $desktop-sm) {
+                    padding: 0 4%;
+                }
+            }
+
+            @media screen and (max-width: $tablet) {
+                width: 100%;
+                text-align: center;
+                margin-bottom: 20px;
+
+                h2 {
+                    margin-top: 48px;
+                }
+
+                &:first-child {
+                    text-align: center;
+                    margin-top: 0;
+                    width: 100%;
+                }
+            }
+        }
+    }
+
+    .primary-cta {
+        padding: 7px 28px 8px 25px;
+    }
+
+    .content-img {
+        display: inline-block;
+        vertical-align: text-bottom;
+
+        @media screen and (max-width: $tablet) {
+            margin-top: 0 !important;
+            width: 75%;
+
+            &.no-mobile-image {
+                display: none;
+            }
+        }
+
+        @media screen and (max-width: $mobile) {
+            width: 80%;
+        }
+    }
+
+    &.content-right {
+        .two-col {
+            flex-direction: row-reverse;
+        }
+    }
+}

@@ -1,0 +1,420 @@
+.modernWorkforce {
+    background-image: linear-gradient($sky-blue 50%, $fresh-blue 50%);
+    position: relative;
+    overflow: hidden;
+    transform: translateY(-50px);
+    margin-bottom: -50px;
+    padding-bottom: 100px;
+
+    &::before {
+        content: "";
+        background: #fff;
+        width: 250%;
+        height: 101%;
+        position: absolute;
+        z-index: -1;
+        right: -35px;
+        top: -20px;
+        border-radius: 2000px;
+
+        @media screen and (max-width: 991px) {
+            width: 300%;
+            right: -300px;
+            top: 0;
+            height: 100%;
+        }
+
+        @media screen and (max-width: 500px) {
+            right: -30%;
+        }
+    }
+
+    // Modifier
+    &--contained {
+        margin-left: 101px;
+
+        @media screen and (max-width: 991px) {
+            margin-left: 78px;
+        }
+
+        @media screen and (max-width: 767px) {
+            margin-left: 46px;
+            margin-right: 46px;
+        }
+    }
+
+    &__sun {
+        position: absolute;
+        left: 850px;
+        top: 13.5%;
+        width: 96px;
+        height: 96px;
+        border-radius: 50%;
+        background-color: #ffe473;
+
+        @media screen and (max-width: 1200px) {
+            left: 77%;
+            top: 15.5%;
+        }
+
+        @media screen and (max-width: 991px) {
+            left: 500px;
+            top: 4.5%;
+            width: 68px;
+            height: 65px;
+        }
+
+        @media screen and (max-width: 767px) {
+            width: 35px;
+            height: 35px;
+            left: unset;
+            right: 20px;
+        }
+    }
+
+    &__smallCloud,
+    &__bigCloud {
+        position: absolute;
+        right: 0;
+        transform: translateX(8%);
+    }
+
+    &__smallCloud {
+        max-width: 13%;
+        top: 145px;
+
+        @media screen and (max-width: 767px) {
+            display: none;
+        }
+    }
+
+    &__bigCloud {
+        max-width: 27.2%;
+        top: 275px;
+
+        @media screen and (max-width: 991px) {
+            display: none;
+        }
+    }
+
+    // Main Content - includes the sections title & descripion
+    &__mainContent {
+        max-width: 571px;
+        padding-top: 175px;
+
+        @media screen and (max-width: 767px) {
+            max-width: 100%;
+            margin-right: 46px;
+            padding-top: 130px;
+        }
+
+        h2 {
+            font-size: 60px;
+            font-family: $font-dem;
+            line-height: 1.03;
+            color: $midnight-blue;
+            margin-bottom: 24px;
+
+            @media screen and (max-width: 991px) {
+                font-size: 45px;
+                line-height: 1.11;
+            }
+
+            @media screen and (max-width: 767px) {
+                font-size: 30px;
+                margin-bottom: 11px;
+            }
+        }
+
+        p {
+            font-size: 18px;
+            font-family: $font-book;
+            line-height: 1.44;
+            color: $midnight-blue;
+            margin-bottom: 26px;
+            margin-top: 0;
+
+            &:last-of-type {
+                margin-bottom: 0;
+            }
+
+            @media screen and (max-width: 767px) {
+                line-height: 1.39;
+            }
+        }
+    }
+
+    // Control Over Your Career - includes title, description and chart
+    &__controlOverCareer {
+        margin-top: 129px;
+        text-align: center;
+
+        @media screen and (max-width: 991px) {
+            margin-top: 75px;
+        }
+
+        @media screen and (max-width: 767px) {
+            margin-top: 45px;
+        }
+
+        h3 {
+            font-size: 30px;
+            font-family: $font-dem;
+            line-height: 0.87;
+            color: $midnight-blue;
+            margin-bottom: 12px;
+
+            @media screen and (max-width: 991px) {
+                margin-right: 45px;
+                margin-left: 65px;
+            }
+
+            @media screen and (max-width: 767px) {
+                margin: 0 46px;
+                font-size: 20px;
+                line-height: 1.25;
+            }
+        }
+
+        p {
+            font-size: 18px;
+            font-family: $font-book;
+            line-height: 1.44;
+            color: $midnight-blue;
+            margin-top: 0;
+            margin-bottom: 0;
+
+            @media screen and (max-width: 991px) {
+                margin-right: 76px;
+            }
+
+            @media screen and (max-width: 767px) {
+                margin: 0 46px;
+            }
+        }
+    }
+
+    // Two Column section - includes content and image of tthe car
+    &__twoColumn {
+        display: flex;
+        margin-top: 123px;
+        margin-left: 101px;
+
+        @media screen and (max-width: 991px) {
+            margin-top: 55px;
+            margin-left: 75px;
+        }
+
+        @media screen and (max-width: 700px) {
+            margin-top: 33px;
+            display: block;
+            margin-left: 46px;
+        }
+
+        p {
+            flex: 1 0 45%;
+            max-width: 45%;
+
+            @media screen and (max-width: 991px) {
+                flex-basis: 40%;
+                max-width: 40%;
+            }
+        }
+
+        img {
+            flex: 1 0 55%;
+            max-width: 55%;
+            margin-left: 22px;
+
+            @media screen and (max-width: 991px) {
+                flex-basis: 60%;
+                max-width: 60%;
+            }
+
+            @media screen and (max-width: 700px) {
+                padding-top: 21px;
+            }
+        }
+
+        p,
+        img {
+            align-self: center;
+
+            @media screen and (max-width: 700px) {
+                max-width: 100%;
+                margin-left: 0;
+                margin-right: 0;
+            }
+        }
+    }
+
+    // Truly Driving Section - includes 2 column title and list item
+    &__trulyDriving {
+        margin-top: 59px;
+
+        @media screen and (max-width: 991px) {
+            margin-right: 78px;
+        }
+
+        @media screen and (max-width: 700px) {
+            margin-right: 46px;
+        }
+
+        p {
+            margin: 30px 0 0;
+            font-size: 18px;
+            font-family: $font-book;
+            font-style: italic;
+            line-height: 1.44;
+            color: $midnight-blue;
+
+            @media screen and (max-width: 700px) {
+                margin-left: 0;
+            }
+        }
+
+        &List {
+            flex: 1 0 373px;
+            max-width: calc(50% - 78px);
+            margin: 0 39px 60px 0;
+
+            &:nth-last-child(2),
+            &:last-of-type {
+                margin-bottom: 0;
+            }
+
+            &:nth-last-child(2) {
+                @media screen and (max-width: 700px) {
+                    margin-bottom: 23.2px;
+                }
+            }
+
+            &:nth-of-type(2n) {
+                margin-right: 0;
+            }
+
+            @media screen and (max-width: 991px) {
+                max-width: calc(50% - 20px);
+            }
+
+            @media screen and (max-width: 700px) {
+                max-width: 100%;
+                margin: 0 0 23.2px;
+            }
+
+            h3 {
+                font-size: 30px;
+                font-family: $font-dem;
+                line-height: 1;
+                margin-bottom: 10px;
+
+                @media screen and (max-width: 991px) {
+                    line-height: normal;
+                }
+
+                @media screen and (max-width: 700px) {
+                    font-size: 20px;
+                    line-height: 1.25;
+                }
+            }
+
+            ul {
+                list-style-type: initial;
+
+                li {
+                    font-size: 18px;
+                    font-family: $font-book;
+                    line-height: normal;
+                    background-image: none;
+                    padding-left: 0;
+                    margin-bottom: 0;
+                    margin-left: 20px;
+                    text-indent: -5px;
+                }
+            }
+
+            &Wrapper {
+                display: flex;
+                max-width: 1025px;
+                width: 100%;
+                flex-wrap: wrap;
+
+                @media screen and (max-width: 991px) {
+                    max-width: 100%;
+                }
+
+                @media screen and (max-width: 700px) {
+                    display: block;
+                }
+            }
+        }
+    }
+
+    &__conclusion {
+        margin-top: 59px;
+        margin-bottom: 72px;
+        padding-bottom: 100px;
+
+        @media screen and (max-width: 991px) {
+            margin-right: 58px;
+        }
+
+        @media screen and (max-width: 700px) {
+            margin-left: 46px;
+            margin-right: 46px;
+        }
+
+        h3 {
+            font-size: 30px;
+            font-family: $font-dem;
+            line-height: 1.53;
+            color: $midnight-blue;
+
+            @media screen and (max-width: 700px) {
+                font-size: 20px;
+                line-height: 2.3;
+            }
+        }
+
+        p {
+            font-size: 18px;
+            font-family: $font-book;
+            color: $midnight-blue;
+            letter-spacing: 0.2px;
+            margin-top: 0;
+            margin-bottom: 26px;
+
+            &:last-of-type {
+                margin-bottom: 0;
+            }
+
+            @media screen and (max-width: 700px) {
+                line-height: 1.39;
+            }
+        }
+    }
+
+    &__conclusionCurve {
+        width: 80%;
+        height: 625px;
+        float: right;
+        box-sizing: border-box;
+        shape-outside: polygon(600px -4%, 100% 100%, 0 100%);
+
+        @media screen and (max-width: 991px) {
+            shape-outside: polygon(600px 35%, 100% 100%, 0 100%);
+        }
+
+        @media screen and (max-width: 767px) {
+            display: none;
+        }
+    }
+
+    &__image {
+        width: 100%;
+
+        @media screen and (max-width: 991px) {
+            margin-top: 30px;
+        }
+    }
+}

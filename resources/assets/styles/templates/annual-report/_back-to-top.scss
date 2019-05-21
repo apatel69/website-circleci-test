@@ -1,0 +1,28 @@
+.backToTop {
+    max-width: 84px;
+    z-index: 100;
+    right: 7%;
+    bottom: 50px;
+
+    a {
+        display: none;
+
+        &:active {
+            transform: translateY(4px);
+        }
+    }
+
+    &__btnImage {
+        @media screen and (max-width: 991px) {
+            width: 64px;
+        }
+    }
+
+    &.animate {
+        position: fixed;
+
+        a {
+            display: block;
+        }
+    }
+}

@@ -1,0 +1,40 @@
+.sitemap-content {
+    display: flex;
+    justify-content: flex-start;
+    align-items: stretch;
+    flex-flow: row wrap;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.sitemap-section {
+    width: 25%;
+    padding: 0 20px;
+
+    @media (max-width: $desktop-sm) {
+        width: 33.33%;
+    }
+
+    @media (max-width: $tablet) {
+        width: 50%;
+    }
+
+    @media (max-width: $mobile) {
+        width: 100%;
+    }
+
+    span {
+        display: block;
+        margin: 10px 0;
+    }
+}
+
+.sitemap-section-title {
+    font-size: 2.4rem;
+}
+
+.sitemap-link {
+    display: inline-block;
+    line-height: calc(20 / 16);
+    font-size: 1.6rem;
+}

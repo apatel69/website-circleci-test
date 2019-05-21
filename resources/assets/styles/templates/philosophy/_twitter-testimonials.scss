@@ -1,0 +1,90 @@
+.tweets {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+
+    @media screen and (max-width: $desktop-sm) {
+        flex-wrap: wrap;
+    }
+
+    @media screen and (max-width: $tablet) {
+        display: block;
+    }
+}
+
+.tweet {
+    text-align: left;
+    width: 30%;
+    padding: 25px 20px;
+    border-radius: 5px;
+    box-shadow: 4px 4px 0 rgba(6, 41, 66, 0.07);
+    border: 1px solid $med-grey;
+    background-color: white;
+    min-height: 247px;
+
+    @media screen and (max-width: $desktop-sm) {
+        max-width: 376px;
+        width: 48%;
+
+        &:last-child {
+            margin-top: 20px;
+        }
+    }
+
+    @media screen and (max-width: $tablet) {
+        margin: 20px auto;
+        width: 376px;
+
+        &:first-child {
+            margin-top: 0;
+        }
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    @media screen and (max-width: $mobile) {
+        width: 100%;
+    }
+}
+
+.twitter-info {
+    display: flex;
+    align-items: center;
+
+    a {
+        text-decoration: none;
+    }
+
+    @media screen and (max-width: $mobile) {
+        display: block;
+        text-align: center;
+    }
+
+    .twitter-photo {
+        border-radius: 50%;
+        height: 60px;
+        margin-right: 30px;
+
+        @media screen and (max-width: $mobile) {
+            margin-right: 0;
+        }
+    }
+
+    .twitter-user-name {
+        font-size: 24px;
+        color: $fresh-blue;
+        display: block;
+    }
+
+    .twitter-icon-handle {
+        margin-top: 10px;
+    }
+
+    .twitter-handle {
+        margin-left: 12px;
+        font-size: 18px;
+        color: $midnight-blue;
+    }
+}

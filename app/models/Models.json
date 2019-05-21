@@ -1,0 +1,696 @@
+[
+    {
+        "active": true,
+        "type": "taxonomy",
+        "name": "accounting_software_categories",
+        "links": [
+            "accounting_software"
+        ],
+        "labels": {
+            "has_one": "Category",
+            "has_many": "Categories"
+        },
+        "config": {
+            "hierarchical": true,
+            "show_admin_column": true,
+            "query_var": true,
+            "show_in_rest": true,
+            "capabilities": {
+                "manage_terms": "manage_accounting_software_categories",
+                "edit_terms": "edit_accounting_software_categories",
+                "delete_terms": "delete_accounting_software_categories",
+                "assign_terms": "assign_accounting_software_categories"
+            },
+            "rewrite": {
+                "slug": "accounting-software/category",
+                "with_front": false
+            }
+        }
+    },
+    {
+        "active": true,
+        "type": "taxonomy",
+        "name": "addons_categories",
+        "links": [
+            "addons"
+        ],
+        "labels": {
+            "has_one": "Category",
+            "has_many": "Categories"
+        },
+        "config": {
+            "hierarchical": true,
+            "show_admin_column": true,
+            "query_var": true,
+            "show_in_rest": true,
+            "capabilities": {
+                "manage_terms": "manage_addons_categories",
+                "edit_terms": "edit_addons_categories",
+                "delete_terms": "delete_addons_categories",
+                "assign_terms": "assign_addons_categories"
+            },
+            "rewrite": {
+                "slug": "addons/category",
+                "with_front": false
+            }
+        }
+    },
+    {
+        "active": true,
+        "type": "taxonomy",
+        "name": "integration_categories",
+        "links": [
+            "integrations"
+        ],
+        "labels": {
+            "has_one": "Category",
+            "has_many": "Categories"
+        },
+        "config": {
+            "hierarchical": true,
+            "show_admin_column": true,
+            "query_var": true,
+            "show_in_rest": true,
+            "capabilities": {
+                "manage_terms": "manage_integration_categories",
+                "edit_terms": "edit_integration_categories",
+                "delete_terms": "delete_integration_categories",
+                "assign_terms": "assign_integration_categories"
+            },
+            "rewrite": {
+                "slug": "integrations",
+                "with_front": false
+            }
+        }
+    },
+    {
+        "active": true,
+        "type": "taxonomy",
+        "name": "integration_tags",
+        "links": [
+            "integrations"
+        ],
+        "labels": {
+            "has_one": "Tag",
+            "has_many": "Tags"
+        },
+        "config": {
+            "hierarchical": false,
+            "show_admin_column": true,
+            "query_var": true,
+            "show_in_rest": true,
+             "capabilities": {
+                "manage_terms": "manage_integration_tags",
+                "edit_terms": "edit_integration_tags",
+                "delete_terms": "delete_integration_tags",
+                "assign_terms": "assign_integration_tags"
+            },
+            "rewrite": false
+        }
+    },
+    {
+        "active": true,
+        "type": "taxonomy",
+        "name": "invoice_templates_categories",
+        "links": [
+            "invoice_templates"
+        ],
+        "labels": {
+            "has_one": "Category",
+            "has_many": "Categories"
+        },
+        "config": {
+            "hierarchical": true,
+            "show_admin_column": true,
+            "query_var": true,
+            "show_in_rest": true,
+            "capabilities": {
+                "manage_terms": "manage_invoice_templates_categories",
+                "edit_terms": "edit_invoice_templates_categories",
+                "delete_terms": "delete_invoice_templates_categories",
+                "assign_terms": "assign_invoice_templates_categories"
+            },
+            "rewrite": {
+                "slug": "invoice-templates/category",
+                "with_front": false
+            }
+        }
+    },
+    {
+        "active": true,
+        "type": "taxonomy",
+        "name": "resource_categories",
+        "links": [
+            "resources"
+        ],
+        "labels": {
+            "has_one": "Category",
+            "has_many": "Categories"
+        },
+        "config": {
+            "hierarchical": true,
+            "show_admin_column": true,
+            "query_var": true,
+            "show_in_rest": true,
+            "capabilities": {
+                "manage_terms": "manage_resource_categories",
+                "edit_terms": "edit_resource_categories",
+                "delete_terms": "delete_resource_categories",
+                "assign_terms": "assign_resource_categories"
+            },
+            "rewrite": {
+                "slug": "hub",
+                "with_front": false
+            }
+        }
+    },
+    {
+        "active": true,
+        "type": "taxonomy",
+        "name": "support_categories",
+        "links": [
+            "support"
+        ],
+        "labels": {
+            "has_one": "Category",
+            "has_many": "Categories"
+        },
+        "config": {
+            "hierarchical": true,
+            "show_admin_column": true,
+            "query_var": true,
+            "show_in_rest": true,
+            "capabilities": {
+                "manage_terms": "manage_support_categories",
+                "edit_terms": "edit_support_categories",
+                "delete_terms": "delete_support_categories",
+                "assign_terms": "assign_support_categories"
+            },
+            "rewrite": {
+                "slug": "support/categories",
+                "with_front": false
+            }
+        }
+    },
+        {
+        "active": true,
+        "type": "post-type",
+        "name": "integrations",
+        "labels": {
+            "text_domain": "freshbooks",
+            "has_one": "Integration",
+            "has_many": "Integrations",
+            "overrides": {
+                "menu_name": "Integrations"
+            }
+        },
+        "supports": [
+            "editor",
+            "page-attributes",
+            "revisions",
+            "thumbnail",
+            "title"
+        ],
+        "config": {
+            "public": true,
+            "exclude_from_search": true,
+            "query_var": true,
+            "show_in_rest": true,
+            "map_meta_cap": true,
+            "hierarchical": false,
+            "menu_icon": "dashicons-id-alt",
+            "menu_position": null,
+            "capabilities": {
+                "create_posts": "create_all_integrations"
+            },
+            "capability_type": [
+                "integrations",
+                "all_integrations"
+            ],
+            "taxonomies": [
+                "integration_categories",
+                "integration_tags"
+            ],
+            "rewrite": {
+                "slug": "integrations/pages",
+                "with_front": false
+            }
+        }
+    },
+    {
+        "active": true,
+        "type": "post-type",
+        "name": "addons",
+        "labels": {
+            "text_domain": "freshbooks",
+            "has_one": "Addon",
+            "has_many": "Addons",
+            "overrides": {
+                "menu_name": "Addons (Classic)"
+            }
+        },
+        "supports": [
+            "editor",
+            "page-attributes",
+            "revisions",
+            "title"
+        ],
+        "config": {
+            "public": true,
+            "exclude_from_search": true,
+            "query_var": true,
+            "show_in_rest": true,
+            "map_meta_cap": true,
+            "hierarchical": false,
+            "menu_icon": "dashicons-id-alt",
+            "menu_position": null,
+            "capabilities": {
+                "create_posts": "create_all_addons"
+            },
+            "capability_type": [
+                "addons",
+                "all_addons"
+            ],
+            "taxonomies": [
+                "addons_categories"
+            ],
+            "rewrite": {
+                "slug": "addons",
+                "with_front": false
+            }
+        }
+    },
+    {
+        "active": true,
+        "type": "post-type",
+        "name": "education",
+        "labels": {
+            "text_domain": "freshbooks",
+            "has_one": "Education Page",
+            "has_many": "Education Pages",
+            "overrides": {
+                "menu_name": "Education"
+            }
+        },
+        "supports": [
+            "editor",
+            "page-attributes",
+            "revisions",
+            "title"
+        ],
+        "config": {
+            "public": true,
+            "exclude_from_search": true,
+            "query_var": true,
+            "show_in_rest": true,
+            "map_meta_cap": true,
+            "hierarchical": false,
+            "menu_icon": "dashicons-id-alt",
+            "menu_position": null,
+            "capabilities": {
+                "create_posts": "create_all_education"
+            },
+            "capability_type": [
+                "education",
+                "all_education"
+            ],
+            "rewrite": {
+                "slug": "education",
+                "with_front": false
+            }
+        }
+    },
+    {
+        "active": true,
+        "type": "post-type",
+        "name": "lpat_pages",
+        "labels": {
+            "text_domain": "freshbooks",
+            "has_one": "LPAT Page",
+            "has_many": "LPAT Pages",
+            "overrides": {
+                "menu_name": "LPAT Pages"
+            }
+        },
+        "supports": [
+            "editor",
+            "page-attributes",
+            "revisions",
+            "title"
+        ],
+        "config": {
+            "public": true,
+            "exclude_from_search": true,
+            "query_var": true,
+            "show_in_rest": true,
+            "map_meta_cap": true,
+            "hierarchical": false,
+            "menu_icon": "dashicons-id-alt",
+            "menu_position": null,
+            "capabilities": {
+                "create_posts": "create_all_lpat_pages"
+            },
+            "capability_type": [
+                "lpat_pages",
+                "all_lpat_pages"
+            ],
+            "rewrite": {
+                "slug": "pages",
+                "with_front": false
+            }
+        }
+    },
+    {
+        "active": true,
+        "type": "post-type",
+        "name": "press_releases",
+        "labels": {
+            "text_domain": "freshbooks",
+            "has_one": "Press Release",
+            "has_many": "Press Releases",
+            "overrides": {
+                "menu_name": "Press Releases"
+            }
+        },
+        "supports": [
+            "editor",
+            "page-attributes",
+            "revisions",
+            "title"
+        ],
+        "config": {
+            "public": true,
+            "exclude_from_search": true,
+            "query_var": true,
+            "show_in_rest": true,
+            "map_meta_cap": true,
+            "hierarchical": false,
+            "menu_icon": "dashicons-megaphone",
+            "menu_position": null,
+            "capabilities": {
+                "create_posts": "create_all_press_releases"
+            },
+            "capability_type": [
+                "press_releases",
+                "all_press_releases"
+            ],
+            "rewrite": {
+                "slug": "press/releases",
+                "with_front": false
+            }
+        }
+    },
+    {
+        "active": true,
+        "type": "post-type",
+        "name": "data_research",
+        "labels": {
+            "text_domain": "freshbooks",
+            "has_one": "Data and Research",
+            "has_many": "Data and Research",
+            "overrides": {
+                "menu_name": "Data & Research"
+            }
+        },
+        "supports": [
+            "editor",
+            "page-attributes",
+            "revisions",
+            "title"
+        ],
+        "config": {
+            "public": true,
+            "exclude_from_search": true,
+            "query_var": true,
+            "show_in_rest": true,
+            "map_meta_cap": true,
+            "hierarchical": false,
+            "menu_icon": "dashicons-megaphone",
+            "menu_position": null,
+            "capabilities": {
+                "create_posts": "create_all_data_research"
+            },
+            "capability_type": [
+                "data_research",
+                "all_data_research"
+            ],
+            "rewrite": {
+                "slug": "press/data-research",
+                "with_front": false
+            }
+        }
+    },
+    {
+        "active": true,
+        "type": "post-type",
+        "name": "accounting_software",
+        "labels": {
+            "text_domain": "freshbooks",
+            "has_one": "Accounting Software",
+            "has_many": "Accounting Software",
+            "overrides": {
+                "menu_name": "Accounting Software"
+            }
+        },
+        "supports": [
+            "editor",
+            "page-attributes",
+            "revisions",
+            "title"
+        ],
+        "config": {
+            "public": true,
+            "exclude_from_search": true,
+            "query_var": true,
+            "show_in_rest": true,
+            "map_meta_cap": true,
+            "hierarchical": true,
+            "menu_icon": "dashicons-networking",
+            "menu_position": null,
+            "capabilities": {
+                "create_posts": "create_all_accounting_software"
+            },
+            "capability_type": [
+                "accounting_software",
+                "all_accounting_software"
+            ],
+            "taxonomies": [
+                "accounting_software_categories"
+            ],
+            "rewrite": {
+                "slug": "accounting-software",
+                "with_front": false
+            }
+        }
+    },
+    {
+        "active": true,
+        "type": "post-type",
+        "name": "invoice_templates",
+        "labels": {
+            "text_domain": "freshbooks",
+            "has_one": "Invoice Template",
+            "has_many": "Invoice Templates",
+            "overrides": {
+                "menu_name": "Invoice Templates"
+            }
+        },
+        "supports": [
+            "editor",
+            "page-attributes",
+            "revisions",
+            "title"
+        ],
+        "config": {
+            "public": true,
+            "exclude_from_search": true,
+            "query_var": true,
+            "show_in_rest": true,
+            "map_meta_cap": true,
+            "hierarchical": true,
+            "menu_icon": "dashicons-networking",
+            "menu_position": null,
+            "capabilities": {
+                "create_posts": "create_all_invoice_templates"
+            },
+            "capability_type": [
+                "invoice_templates",
+                "all_invoice_templates"
+            ],
+            "taxonomies": [
+                "invoice_templates_categories"
+            ],
+            "rewrite": {
+                "slug": "invoice-templates",
+                "with_front": false
+            }
+        }
+    },
+    {
+        "active": true,
+        "type": "post-type",
+        "name": "resources",
+        "labels": {
+            "text_domain": "freshbooks",
+            "has_one": "Resource",
+            "has_many": "Resources",
+            "overrides": {
+                "menu_name": "Resource Hub"
+            }
+        },
+        "supports": [
+            "editor",
+            "page-attributes",
+            "revisions",
+            "thumbnail",
+            "title"
+        ],
+        "config": {
+            "public": true,
+            "exclude_from_search": false,
+            "query_var": true,
+            "show_in_rest": true,
+            "map_meta_cap": true,
+            "hierarchical": false,
+            "menu_icon": "dashicons-networking",
+            "menu_position": null,
+            "capabilities": {
+                "create_posts": "create_all_resources"
+            },
+            "capability_type": [
+                "resources",
+                "all_resources"
+            ],
+            "taxonomies": [
+                "resource_categories"
+            ],
+            "rewrite": {
+                "slug": "hub/%resource_categories%",
+                "with_front": false
+            }
+        }
+    },
+    {
+        "active": true,
+        "type": "post-type",
+        "name": "api",
+        "labels": {
+            "text_domain": "freshbooks",
+            "has_one": "API Page",
+            "has_many": "API Pages",
+            "overrides": {
+                "menu_name": "API"
+            }
+        },
+        "supports": [
+            "editor",
+            "page-attributes",
+            "revisions",
+            "title"
+        ],
+        "config": {
+            "public": true,
+            "exclude_from_search": true,
+            "query_var": true,
+            "show_in_rest": true,
+            "map_meta_cap": true,
+            "hierarchical": true,
+            "menu_icon": "dashicons-editor-code",
+            "menu_position": null,
+            "capabilities": {
+                "create_posts": "create_all_api"
+            },
+            "capability_type": [
+                "api",
+                "all_api"
+            ],
+            "rewrite": {
+                "slug": "api",
+                "with_front": false
+            }
+        }
+    },
+    {
+        "active": true,
+        "type": "post-type",
+        "name": "developers",
+        "labels": {
+            "text_domain": "freshbooks",
+            "has_one": "Developer Resource",
+            "has_many": "Developer Resources",
+            "overrides": {
+                "menu_name": "API (Classic)"
+            }
+        },
+        "supports": [
+            "editor",
+            "page-attributes",
+            "revisions",
+            "title"
+        ],
+        "config": {
+            "public": true,
+            "exclude_from_search": true,
+            "query_var": true,
+            "show_in_rest": true,
+            "map_meta_cap": true,
+            "hierarchical": true,
+            "menu_icon": "dashicons-editor-code",
+            "menu_position": null,
+            "capabilities": {
+                "create_posts": "create_all_developers"
+            },
+            "capability_type": [
+                "developers",
+                "all_developers"
+            ],
+            "rewrite": {
+                "slug": "classic-api",
+                "with_front": false
+            }
+        }
+    },
+    {
+        "active": true,
+        "type": "post-type",
+        "name": "support",
+        "labels": {
+            "text_domain": "freshbooks",
+            "has_one": "Support Page",
+            "has_many": "Support Pages",
+            "overrides": {
+                "menu_name": "Support"
+            }
+        },
+        "supports": [
+            "editor",
+            "page-attributes",
+            "revisions",
+            "title"
+        ],
+        "config": {
+            "public": true,
+            "exclude_from_search": true,
+            "query_var": true,
+            "show_in_rest": true,
+            "map_meta_cap": true,
+            "hierarchical": false,
+            "menu_icon": "dashicons-sos",
+            "menu_position": null,
+            "capabilities": {
+                "create_posts": "create_all_support"
+            },
+            "capability_type": [
+                "support",
+                "all_support"
+            ],
+            "taxonomies": [
+                "support_categories"
+            ],
+            "rewrite": {
+                "slug": "support",
+                "with_front": false
+            }
+        }
+    }
+]

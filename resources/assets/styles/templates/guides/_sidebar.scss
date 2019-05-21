@@ -1,0 +1,35 @@
+.sidebar-content {
+    float: left;
+    width: 165px;
+    padding-right: 24px;
+    margin-right: 10.4%;
+    border-right: solid 1px $rule-grey;
+
+    &.sticky {
+        position: fixed;
+        margin-top: 45px;
+    }
+
+    ul {
+        margin: 0;
+    }
+
+    li {
+        padding-left: 0;
+        background: none;
+    }
+
+    a {
+        color: $midnight-blue;
+        text-decoration: none;
+        font-size: 16px;
+
+        &:hover {
+            color: $fresh-blue;
+        }
+    }
+
+    @media screen and (max-width: $tablet) {
+        display: none;
+    }
+}

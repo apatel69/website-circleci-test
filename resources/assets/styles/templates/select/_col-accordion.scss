@@ -1,0 +1,107 @@
+.select-col-accordion {
+    width: 85%;
+    padding-bottom: 2em;
+
+    .item {
+        padding: 24px 0;
+        border-top: 1px solid $select-outline;
+        background: $white;
+        cursor: pointer;
+
+        &:last-child {
+            border-bottom: 1px solid $med-grey;
+        }
+
+        .question {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            text-align: left;
+
+            &::after {
+                transition: 0.5s ease;
+                content: url("~images/faqs/faq-arrow.svg");
+                text-decoration: none;
+                float: right;
+                vertical-align: middle;
+                margin-right: 10px;
+            }
+
+            &.expanded::after {
+                transform: rotate(180deg);
+            }
+        }
+
+        h3 {
+            font-family: $font-book;
+            font-size: 20px;
+            font-weight: 600;
+            line-height: (26px / 20px);
+            color: $midnight-blue;
+            margin: 0;
+        }
+
+        .answer {
+            ul {
+                display: none;
+            }
+        }
+
+        .answer > p {
+            font-family: $font-book;
+            display: none;
+            margin: 0;
+            padding: 20px 86px 10px 0;
+        }
+    }
+
+    @media screen and (max-width: $mobile) {
+        min-height: auto;
+        width: 100%;
+        padding-bottom: 0;
+        margin: 3em auto;
+    }
+
+    @media screen and (min-width: $mobile + 1) and (max-width: $tablet) {
+        width: 100%;
+        min-height: auto;
+        margin: 0;
+        padding-bottom: 0;
+        padding-right: 40px;
+
+        .item {
+            padding: 18px 0;
+
+            h3 {
+                font-family: $font-med;
+                font-size: 16px;
+                line-height: (24 / 16);
+                font-weight: 500;
+            }
+        }
+    }
+
+    @media screen and (min-width: $tablet + 1) and (max-width: $desktop-sm) {
+        width: 100%;
+        min-height: auto;
+        margin: 0;
+        padding-bottom: 0;
+
+        .item {
+            padding: 18px 0;
+
+            h3 {
+                font-family: $font-med;
+                font-size: 18px;
+                line-height: (26 / 18);
+                font-weight: 500;
+            }
+        }
+    }
+}
+
+.flipped {
+    .select-col-accordion {
+        width: 100%;
+    }
+}

@@ -1,0 +1,25 @@
+.lpat-custom-header-nav {
+    @media screen and (max-width: $tablet) {
+        #menu-visit-freshbooks {
+            display: none;
+        }
+    }
+
+    .btn-trial {
+        border: solid 2px rgba(6, 41, 66, 0.2);
+        border-radius: 5px;
+        padding: 9px 26px 8px 23px;
+        font-size: 1.8rem;
+        margin-left: 30px;
+
+        &:hover {
+            border-color: $cta-green;
+            background-color: $cta-green;
+            color: #fff !important;
+        }
+
+        @media screen and (max-width: $mobile) {
+            padding: 9px 5px;
+        }
+    }
+}

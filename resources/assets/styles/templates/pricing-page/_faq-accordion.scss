@@ -1,0 +1,13 @@
+.faq-container {
+    h2 {
+        color: $midnight-blue;
+        font-size: 3rem;
+        line-height: calc(46 / 30);
+        font-family: $font-med;
+
+        h3,
+        .faq-answer > p {
+            font-family: $font-book;
+        }
+    }
+}

@@ -1,0 +1,287 @@
+/* stylelint-disable */
+@import "../../global";
+
+// css from live site
+.u-clearfix:before {
+    content: " ";
+    display: table
+}
+
+.u-clearfix:after {
+    clear: both
+}
+
+.u-hidden {
+    display: none
+}
+
+@media screen and (max-width:768px) {
+    .u-hidden-tablet {
+        display: none
+    }
+}
+
+@media screen and (max-width:480px) {
+    .u-hidden-mobile {
+        display: none
+    }
+}
+
+@media screen and (min-width:768px) and (max-width:1200px) {
+    .u-hidden-desktop {
+        display: none
+    }
+}
+
+.u-float-right {
+    float: right
+}
+
+.u-float-left {
+    float: left
+}
+
+.u-text-center {
+    text-align: center
+}
+
+.u-text-left {
+    text-align: left
+}
+
+.u-list-blank {
+    list-style: none;
+    margin: 0 0 24px;
+    padding: 0
+}
+
+.u-list-inline li {
+    display: inline-block
+}
+
+.letter-date {
+    font-size: 2rem
+}
+
+.letter-intro {
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-align-items: flex-start;
+    -ms-flex-align: start;
+    -ms-grid-row-align: flex-start;
+    align-items: flex-start;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row
+}
+
+@media screen and (max-width:768px) {
+    .letter-intro {
+        -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+        flex-direction: column
+    }
+}
+
+.letter-intro .content {
+    width: 80%;
+    margin-right: 25px
+}
+
+.letter-intro .content.data {
+    width: 50%
+}
+
+@media screen and (max-width:768px) {
+
+    .letter-intro .content,
+    .letter-intro .content.data {
+        margin-right: 0;
+        width: 100%
+    }
+}
+
+.info-box {
+    -webkit-order: 1;
+    -ms-flex-order: 1;
+    order: 1;
+    border: 1px solid #c5c7ce;
+    width: 250px;
+    padding: 15px;
+    border-radius: 5px
+}
+
+.info-box.data {
+    width: 50%
+}
+
+@media screen and (max-width:768px) {
+    .info-box.data {
+        width: 100%
+    }
+
+    .info-box {
+        -webkit-order: 0;
+        -ms-flex-order: 0;
+        order: 0;
+        margin: 0 auto
+    }
+}
+
+.info-box ul {
+    padding-left: 10px
+}
+
+.info-box li {
+    font-size: 1.6rem;
+    line-height: 1.5
+}
+
+.info-box .rule {
+    margin: 25px 0
+}
+
+.info-box img {
+    width: 60%;
+    margin: 0 auto;
+    display: block;
+    opacity: .5
+}
+
+.info-box img.data {
+    width: 300px;
+    margin-top: 20px;
+    opacity: 1
+}
+
+.info-box-title {
+    display: block;
+    color: #0d83dd;
+    font-size: 2.4rem;
+    line-height: 1.16666667;
+    text-align: center;
+    margin: 10px 0
+}
+
+.info-box-content,
+span.info-box-highlight {
+    font-size: 1.6rem;
+    line-height: 1.375;
+    display: block;
+    text-align: center
+}
+
+span.info-box-highlight {
+    font-family: "FreshBooksScript-Regular" !important;
+    font-size: 7.2rem;
+    line-height: 1;
+    color: #0d83dd
+}
+
+.screenshot {
+    max-width: 540px;
+    margin: 0 auto;
+    display: block
+}
+
+@media screen and (max-width:768px) {
+    .screenshot {
+        width: 75%
+    }
+}
+
+@media screen and (max-width:480px) {
+    .screenshot {
+        width: 100%
+    }
+}
+
+.chart {
+    width: 600px;
+    margin: 0 auto;
+    display: block
+}
+
+@media screen and (max-width:768px) {
+    .chart {
+        width: 90%
+    }
+}
+
+@media screen and (max-width:480px) {
+    .chart {
+        width: 100%
+    }
+}
+
+.collab-img {
+    float: right;
+    margin-left: 20px
+}
+
+.new-features-list {
+    margin: 0 auto;
+    width: 50%;
+    -webkit-align-items: flex-start;
+    -ms-flex-align: start;
+    -ms-grid-row-align: flex-start;
+    align-items: flex-start;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap
+}
+
+@media screen and (max-width:1024px) {
+    .new-features-list {
+        width: 75%
+    }
+}
+
+@media screen and (max-width:768px) {
+    .new-features-list {
+        width: 100%
+    }
+}
+
+@media screen and (max-width:480px) {
+    .new-features-list {
+        width: 80%
+    }
+}
+
+.new-features-list li {
+    width: 50%
+}
+
+@media screen and (max-width:480px) {
+    .new-features-list li {
+        width: 100%
+    }
+}
+
+.themes {
+    margin: 0 auto;
+    width: 85%
+}
+
+.center-tight p,
+.social-media {
+    text-align: center
+}
+
+.social-media a {
+    text-decoration: none
+}
+
+.social-media a img {
+    margin: 0 25px
+}
+
+.center-tight p {
+    width: 60%;
+    margin: 20px auto 50px
+}

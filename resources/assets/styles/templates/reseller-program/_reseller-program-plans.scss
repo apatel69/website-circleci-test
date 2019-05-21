@@ -1,0 +1,288 @@
+.accounting-solutions {
+    position: relative;
+    padding: 0 75px 20px;
+
+    @media (max-width: $desktop-sm) {
+        padding-left: 45px;
+        padding-right: 45px;
+    }
+
+    @media (max-width: $tablet) {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    .blue-background {
+        padding: 0 100px;
+        border-radius: 10px;
+
+        @media (max-width: $desktop-sm) {
+            padding: 0 40px;
+        }
+
+        @media (max-width: $tablet) {
+            padding: 0 15px;
+        }
+
+        hr {
+            border: none;
+            border-bottom: solid 1.5px rgba(13, 131, 221, 0.2);
+        }
+    }
+}
+
+.program-info {
+    padding: 57px;
+
+    @media (max-width: $tablet) {
+        padding: 57px 15px;
+    }
+
+    h2 {
+        text-align: center;
+        color: $midnight-blue;
+        margin: 0;
+    }
+
+    p {
+        max-width: 618px;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+    }
+
+    .partner-cta {
+        text-align: center;
+        margin-top: 32px;
+    }
+}
+
+.affiliate-reseller-details {
+    justify-content: space-between;
+    align-items: center;
+    max-width: 729px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 38px;
+    padding-bottom: 38px;
+
+    h3 {
+        color: $midnight-blue;
+        font-size: 2.4rem;
+    }
+
+    .affiliate-price {
+        position: relative;
+        z-index: 1;
+        height: 253px;
+        width: 253px;
+
+        &::before {
+            content: "";
+            width: 253px;
+            height: 253px;
+            background: white;
+            display: block;
+            position: absolute;
+            border-radius: 50%;
+            z-index: 0;
+            right: 0;
+        }
+
+        @media (max-width: $desktop-sm) {
+            margin: 0 auto;
+        }
+
+        &-container {
+            transform: translateX(calc(-50% + 40px)) translateY(-50%);
+            position: absolute;
+            display: block;
+            top: 50%;
+            width: 100%;
+            left: 50%;
+        }
+    }
+
+    @media (max-width: $desktop-sm) {
+        display: block;
+    }
+}
+
+.affiliate-reseller-content {
+    max-width: 400px;
+
+    p {
+        font-size: 1.6rem;
+        line-height: 1.38;
+    }
+
+    ul {
+        margin-left: 15px;
+
+        li.no-check {
+            margin-bottom: 5px;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+
+    li {
+        font-size: 1.6rem;
+        line-height: calc(22 / 16);
+    }
+
+    @media (max-width: $desktop-sm) {
+        text-align: center;
+        margin: 0 auto;
+    }
+}
+
+.affiliate-price-text,
+.affiliate-feature-headline {
+    font-size: 1.6rem;
+    font-family: $font-med;
+    margin: 0;
+    text-transform: uppercase;
+}
+
+.affiliate-feature-headline {
+    text-align: center;
+    line-height: calc(19 / 16);
+}
+
+.affiliate-price-cost {
+    font-size: 7.5rem;
+    color: $fresh-blue;
+    display: inline-block;
+}
+
+.affiliate-price-length {
+    font-size: 1.6rem;
+    font-family: $font-book;
+    display: inline-block;
+    line-height: calc(19 / 16);
+}
+
+.affiliate-features-testimonial-details {
+    max-width: 947px;
+    margin: 0 auto;
+    padding: 68px 0 65px;
+
+    h2 {
+        margin-top: 0;
+        margin-left: auto;
+        margin-right: auto;
+        color: $midnight-blue;
+        max-width: 590px;
+        text-align: center;
+    }
+}
+
+.affiliate-features-testimonial {
+    align-items: flex-start;
+    justify-content: space-between;
+
+    @media (max-width: $tablet) {
+        flex-wrap: wrap;
+    }
+}
+
+.affiliate-features {
+    max-width: 590px;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-right: 49px;
+
+    @media (max-width: $tablet) {
+        margin-right: 0;
+        max-width: 100%;
+    }
+
+    @supports (display: grid) {
+        display: grid;
+        grid-template-columns: [column] 1fr [column] 1fr [column];
+        grid-gap: 45px 70px;
+
+        @media (max-width: $tablet) {
+            margin-bottom: 30px;
+        }
+
+        @media (max-width: $mobile) {
+            grid-template-columns: [column] 1fr [column];
+        }
+    }
+}
+
+.affiliate-feature {
+    flex-grow: 1;
+
+    img {
+        display: block;
+        margin: 0 auto;
+    }
+
+    p {
+        font-size: 1.6rem;
+        font-family: $font-book;
+        text-align: center;
+        margin-top: 5px;
+
+        @supports (display: grid) {
+            margin-bottom: 0;
+        }
+    }
+}
+
+.affiliate-testimonial {
+    background: white;
+    border: 1px solid $med-grey;
+    max-width: 308px;
+    border-radius: 8px;
+    padding: 23px 29px;
+
+    @media (max-width: $tablet) {
+        max-width: 100%;
+    }
+}
+
+.affiliate-testimonial-quote {
+    font-size: 2.4rem;
+    line-height: calc(34 / 24);
+    border: 0;
+    font-family: $font-main;
+    margin: 0;
+    text-indent: 0;
+    padding: 0;
+
+    &::before,
+    &::after {
+        content: "";
+    }
+}
+
+.affiliate-testimonial-name-org {
+    margin-top: 20px;
+    margin-bottom: 37px;
+    margin-left: 7px;
+}
+
+.affiliate-testimonial-name,
+.affiliate-testimonial-org {
+    display: block;
+    font-size: 1.4rem;
+    font-family: $font-med;
+    text-transform: uppercase;
+    line-height: calc(19 / 14);
+}
+
+.affiliate-testimonial-name {
+    text-indent: -1.4rem;
+
+    &::before {
+        content: "\2014";
+        margin-right: 5px;
+    }
+}

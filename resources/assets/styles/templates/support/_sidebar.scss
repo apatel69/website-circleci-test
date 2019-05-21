@@ -1,0 +1,50 @@
+.support-sidebar > * {
+    @include shadowBox();
+
+    padding: 30px;
+    margin-bottom: 30px;
+}
+
+.support-contact-callout {
+    text-align: center;
+
+    .support-contact-callout-title {
+        font-size: 2.4rem;
+        line-height: (34 / 24);
+        color: $midnight-blue;
+        font-family: $font-main;
+        margin: 0;
+    }
+
+    a {
+        display: block;
+        margin-top: 20px;
+        font-size: 1.8rem;
+        line-height: (22 / 18);
+        font-family: $font-book;
+    }
+}
+
+.support-categories {
+    a {
+        display: block;
+        font-size: 2rem;
+        text-decoration: none;
+        color: #888;
+        line-height: 1.5;
+
+        & + a {
+            margin-top: 22px;
+        }
+
+        &:hover,
+        &.active {
+            color: #333;
+
+            span {
+                border-bottom: solid 3px $cta-green;
+                font-family: $font-med;
+            }
+        }
+    }
+}

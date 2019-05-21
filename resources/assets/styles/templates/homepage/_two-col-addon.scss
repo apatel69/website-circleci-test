@@ -1,0 +1,33 @@
+.column-parent {
+    &.addons {
+        flex-direction: row-reverse;
+        justify-content: space-around;
+
+        @media screen and (max-width: $desktop-sm) {
+            display: block;
+        }
+    }
+}
+
+.addons > .content {
+    width: 40%;
+    margin-right: 5%;
+    padding-left: 5%;
+
+    @media screen and (max-width: $desktop-sm) {
+        width: 100%;
+        padding-left: 0;
+        margin: 0 auto;
+        text-align: center;
+    }
+}
+
+.addons-img {
+    margin-left: 5%;
+    text-align: center;
+
+    @media screen and (max-width: $desktop-sm) {
+        padding-left: 0;
+        margin: 10px auto 0;
+    }
+}

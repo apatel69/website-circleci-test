@@ -1,0 +1,214 @@
+# Check our guides at https://confluence.atlassian.com/x/5Q4SMw for more examples.
+# Only use spaces to indent your .yml configuration.
+# -----
+# You can specify a custom docker image from Docker Hub as your build environment.
+image: node:10
+
+pipelines:
+  default:
+    - parallel:
+      - step:
+          name: Build Production Theme
+          image: node:10
+          caches:
+            - node
+          script:
+              - yarn
+              - yarn lint:scripts
+              - yarn lint:styles
+              - yarn build:production
+      - step:
+          name: Install PHP Packages
+          image: php:7.2
+          caches:
+            - composer
+          script:
+              - apt-get update && apt-get install -y unzip curl libmcrypt-dev mysql-client
+              - docker-php-ext-install pdo_mysql
+              - curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
+              - composer install --no-ansi --no-dev --no-interaction --no-progress --optimize-autoloader --no-scripts
+  branches:
+    develop:
+      - step:
+          deployment: staging
+          name: Build Production Theme
+          image: node:10
+          caches:
+            - node
+          script:
+              - yarn
+              - yarn build:production
+          artifacts:
+              - dist/**
+      - step:
+          name: Deploy to FreshBooks Staging (Kinsta)
+          image: php:7.2
+          caches:
+          - composer
+          script:
+            - apt-get update && apt-get install -y unzip curl libmcrypt-dev mysql-client rsync ssh
+            - docker-php-ext-install pdo_mysql
+            - curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
+            - composer install --no-ansi --no-dev --no-interaction --no-progress --optimize-autoloader --no-scripts
+            - rsync -avzp --exclude="node_modules" --exclude="/*.*" ./* -e 'ssh -p '$SSH_PORT_STAGING $SSH_USER@$HOST:$SSH_PATH_STAGING/wp-content/themes/freshbooks --delete
+    master:
+      - step:
+          deployment: production
+          name: Build Production Theme
+          image: node:10
+          caches:
+            - node
+          script:
+              - yarn
+              - yarn build:production
+          artifacts:
+              - dist/**
+      - step:
+          name: Deploy to FreshBooks Production (Kinsta)
+          image: php:7.2
+          caches:
+          - composer
+          script:
+            - apt-get update && apt-get install -y unzip curl libmcrypt-dev mysql-client rsync ssh
+            - docker-php-ext-install pdo_mysql
+            - curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
+            - composer install --no-ansi --no-dev --no-interaction --no-progress --optimize-autoloader --no-scripts
+            - rsync -avzp --exclude="node_modules" --exclude="/*.*" ./* -e 'ssh -p '$SSH_PORT $SSH_USER@$HOST:$SSH_PATH_PROD/wp-content/themes/freshbooks --delete
+    fbseo-develop:
+      - step:
+          name: Build Production Theme
+          image: node:10
+          caches:
+            - node
+          script:
+              - yarn
+              - yarn build:production
+          artifacts:
+              - dist/**
+      - step:
+          name: Deploy Invoice Templates Gallery Feature to invoicetemplates.kinsta.cloud
+          image: php:7.2
+          caches:
+          - composer
+          script:
+            - apt-get update && apt-get install -y unzip curl libmcrypt-dev mysql-client rsync ssh
+            - docker-php-ext-install pdo_mysql
+            - curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
+            - composer install --no-ansi --no-dev --no-interaction --no-progress --optimize-autoloader --no-scripts
+            - rsync -avzp --exclude="node_modules" ./* -e 'ssh -p '$IT_SSH_PORT_STAGING $IT_SSH_USER@$IT_HOST:/www/invoicetemplate_289/public/wp-content/themes/freshbooks --delete
+  custom:
+    deploy-to-prod:
+      - step:
+          deployment: production
+          name: Build Production Theme
+          image: node:10
+          caches:
+            - node
+          script:
+              - yarn
+              - yarn build:production
+          artifacts:
+              - dist/**
+      - step:
+          name: Deploy to FreshBooks Production (Kinsta)
+          image: php:7.2
+          caches:
+          - composer
+          script:
+            - apt-get update && apt-get install -y unzip curl libmcrypt-dev mysql-client rsync ssh
+            - docker-php-ext-install pdo_mysql
+            - curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
+            - composer install --no-ansi --no-dev --no-interaction --no-progress --optimize-autoloader --no-scripts
+            - rsync -avzp --exclude="node_modules" --exclude="/*.*" ./* -e 'ssh -p '$SSH_PORT $SSH_USER@$HOST:$SSH_PATH_PROD/wp-content/themes/freshbooks --delete
+    deploy-to-staging:
+      - step:
+          deployment: staging
+          name: Build Production Theme
+          image: node:10
+          caches:
+            - node
+          script:
+              - yarn
+              - yarn build:production
+          artifacts:
+              - dist/**
+      - step:
+          name: Deploy to FreshBooks Staging (Kinsta)
+          image: php:7.2
+          caches:
+          - composer
+          script:
+            - apt-get update && apt-get install -y unzip curl libmcrypt-dev mysql-client rsync ssh
+            - docker-php-ext-install pdo_mysql
+            - curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
+            - composer install --no-ansi --no-dev --no-interaction --no-progress --optimize-autoloader --no-scripts
+            - rsync -avzp --exclude="node_modules" --exclude="/*.*" ./* -e 'ssh -p '$SSH_PORT_STAGING $SSH_USER@$HOST:$SSH_PATH_STAGING/wp-content/themes/freshbooks --delete
+    deploy-to-uat:
+      - step:
+          deployment: test
+          name: Build Production Theme
+          image: node:10
+          caches:
+            - node
+          script:
+              - yarn
+              - yarn build:production
+          artifacts:
+              - dist/**
+      - step:
+          name: Deploy to FreshBooks UAT (Kinsta)
+          caches:
+          - composer
+          image: php:7.2
+          script:
+            - apt-get update && apt-get install -y unzip curl libmcrypt-dev mysql-client rsync ssh
+            - docker-php-ext-install pdo_mysql
+            - curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
+            - composer install --no-ansi --no-dev --no-interaction --no-progress --optimize-autoloader --no-scripts
+            - rsync -avzp --exclude="node_modules" --exclude="/*.*" ./* -e 'ssh -p '$SSH_PORT_UAT $SSH_USER_UAT@$HOST:$SSH_PATH_UAT/wp-content/themes/freshbooks --delete
+    deploy-to-clstaging:
+      - step:
+          deployment: staging
+          name: Build Production Theme
+          image: node:10
+          caches:
+            - node
+          script:
+              - yarn
+              - yarn build:production
+          artifacts:
+              - dist/**
+      - step:
+          name: Deploy to clstaging.kinsta.com
+          image: php:7.2
+          caches:
+          - composer
+          script:
+            - apt-get update && apt-get install -y unzip curl libmcrypt-dev mysql-client rsync ssh
+            - docker-php-ext-install pdo_mysql
+            - curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
+            - composer install --no-ansi --no-dev --no-interaction --no-progress --optimize-autoloader --no-scripts
+            - rsync -avzp --exclude="node_modules" ./* -e 'ssh -p '$SSH_PORT_CL_STAGING $SSH_USER_CL_STAGING@$SSH_HOST_CL_STAGING:/www/clstaging_876/public/wp-content/themes/freshbooks --delete
+    deploy-to-freshdev:
+      - step:
+          deployment: test
+          name: Build Production Theme
+          image: node:10
+          caches:
+            - node
+          script:
+              - yarn
+              - yarn build:production
+          artifacts:
+              - dist/**
+      - step:
+          name: Deploy to freshdev.kinsta.com
+          image: php:7.2
+          caches:
+          - composer
+          script:
+            - apt-get update && apt-get install -y unzip curl libmcrypt-dev mysql-client rsync ssh
+            - docker-php-ext-install pdo_mysql
+            - curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
+            - composer install --no-ansi --no-dev --no-interaction --no-progress --optimize-autoloader --no-scripts
+            - rsync -avzp --exclude="node_modules" ./* -e 'ssh -p '$SSH_PORT_DEV $SSH_USER_DEV@$HOST:$SSH_PATH_DEV/wp-content/themes/freshbooks --delete

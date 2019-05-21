@@ -1,0 +1,54 @@
+.three-col-content {
+    padding-top: 50px;
+    text-align: center;
+
+    h2,
+    h3 {
+        font-family: $font-med;
+    }
+
+    h2 {
+        color: $midnight-blue;
+        font-size: 3rem;
+        font-weight: 400;
+    }
+
+    .thirds {
+        max-width: 1067px;
+        margin: 2.5% auto;
+        align-items: flex-start;
+        justify-content: space-between;
+
+        @media screen and (max-width: $tablet) {
+            display: block;
+        }
+    }
+
+    .third {
+        max-width: 290px;
+        width: 100%;
+
+        h3 {
+            color: $midnight-blue;
+            font-size: 2.4rem;
+            margin-bottom: 11px;
+            line-height: calc(32 / 24);
+        }
+
+        p {
+            margin-top: 0;
+            font-family: $font-book;
+        }
+
+        img {
+            margin: 0 auto;
+            display: block;
+            width: 160px;
+            height: auto;
+        }
+
+        @media screen and (max-width: $tablet) {
+            margin: 0 auto;
+        }
+    }
+}

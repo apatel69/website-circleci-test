@@ -1,0 +1,185 @@
+.payments {
+    padding-top: 70px;
+
+    @media (max-width: $tablet) {
+        padding-top: 10%;
+    }
+
+    .img-copy > h2 {
+        top: 87.5%;
+        width: 285px;
+        left: 2.5%;
+    }
+}
+
+.invoicing {
+    .img-copy > h2:first-of-type {
+        width: 160px;
+        top: 15%;
+        right: 69%;
+
+        @media (max-width: $tablet) {
+            width: 100%;
+            margin-bottom: 0;
+        }
+    }
+
+    .img-copy > h2:last-of-type {
+        width: 165px;
+        left: 40%;
+        top: 93%;
+
+        @media (max-width: $tablet) {
+            width: 100%;
+            left: 0;
+            margin-top: 0;
+        }
+    }
+}
+
+.team {
+    .img-copy > h2 {
+        top: 87.5%;
+        left: 22.5%;
+        width: 175px;
+    }
+}
+
+.support {
+    padding-bottom: 110px;
+
+    @media (max-width: $tablet) {
+        padding-bottom: 10%;
+    }
+
+    .img-copy > h2 {
+        top: 80%;
+        left: 55%;
+        width: 160px;
+    }
+}
+
+.payments,
+.invoicing,
+.team,
+.support {
+    .img-copy > h2,
+    .img-copy > .first,
+    .img-copy > .second {
+        @media (max-width: $tablet) {
+            width: 100%;
+            left: 0;
+        }
+    }
+
+    .img-copy > .first {
+        @media (max-width: $tablet) {
+            margin-bottom: 0;
+        }
+    }
+
+    .img-copy > .second {
+        @media (max-width: $tablet) {
+            margin-top: 0;
+        }
+    }
+}
+
+.select {
+    h2,
+    h3 {
+        color: $midnight-blue;
+        margin-top: 0;
+    }
+
+    .features-text {
+        ul li {
+            background-image: url("~images/icons/black-list.svg");
+        }
+
+        h3 {
+            margin-top: 30px;
+            margin-bottom: 5px;
+        }
+
+        @media (max-width: $tablet) {
+            h3,
+            p {
+                text-align: center;
+            }
+
+            ul {
+                display: block;
+                width: 275px;
+                margin: 0 auto;
+            }
+        }
+
+        .select-cta {
+            @media (max-width: $desktop-sm) {
+                margin-left: 0;
+            }
+
+            @media (max-width: $tablet) {
+                text-align: center;
+                margin: 50px auto 0;
+            }
+
+            font-family: $font-main;
+            background-color: $select-blue;
+            border-radius: 0;
+            display: block;
+            max-width: 300px;
+            margin-top: 20px;
+        }
+    }
+}
+
+.img-copy {
+    position: relative;
+
+    img {
+        display: block;
+        margin-left: auto;
+
+        @media (max-width: $tablet) {
+            margin-right: auto;
+        }
+    }
+
+    h2 {
+        background: rgba(0, 0, 0, 0.05);
+        padding: 10px;
+        position: absolute;
+        margin-bottom: 0;
+        font-family: $font-main;
+
+        @media (max-width: $tablet) {
+            padding: 0;
+            background: none;
+            position: relative;
+            text-align: center;
+            width: 100%;
+            margin-top: 10px;
+            margin-bottom: 20px;
+            font-size: 2rem;
+            font-family: $font-med;
+            font-weight: normal;
+            line-height: calc(30 / 20);
+        }
+    }
+}
+
+.select-column {
+    h3 {
+        text-transform: uppercase;
+        margin-bottom: 0;
+        font-size: 2rem;
+        font-family: $font-med;
+        font-weight: 400;
+    }
+
+    p {
+        margin-top: 0;
+    }
+}

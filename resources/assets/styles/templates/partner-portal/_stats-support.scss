@@ -1,0 +1,211 @@
+.supportStats {
+    background-color: $lighter-blue;
+    padding-top: 66px;
+    padding-bottom: 285px;
+    text-align: center;
+
+    @media screen and (max-width: $tablet) {
+        padding-top: 46px;
+    }
+
+    @media screen and (max-width: $mobile) {
+        padding-top: 50px;
+        padding-bottom: 0;
+    }
+
+    h2 {
+        margin: 0;
+        font-family: $font-med;
+        font-size: 16px;
+        line-height: 1.19;
+        letter-spacing: 0.5px;
+        color: $midnight-blue;
+        text-transform: uppercase;
+    }
+
+    &__stats {
+        display: flex;
+        justify-content: space-between;
+
+        @media screen and (max-width: $mobile) {
+            flex-direction: column;
+        }
+
+        h3 {
+            font-family: $font-book;
+            font-size: 66px;
+            line-height: 0.64;
+            letter-spacing: -1.3px;
+            margin-top: 40px;
+
+            @media screen and (max-width: $tablet) {
+                font-size: 49.5px;
+                margin-top: 34px;
+                margin-bottom: 8px;
+            }
+
+            @media screen and (max-width: $mobile) {
+                font-size: 47px;
+                line-height: 0.89;
+                margin-bottom: 0;
+                margin-top: 61px;
+            }
+        }
+
+        p {
+            font-family: $font-book;
+            font-size: 18px;
+            line-height: 1.33;
+            color: $input-grey;
+            margin-bottom: 0;
+
+            @media screen and (min-width: $mobile + 1) and (max-width: $tablet) {
+                font-size: 15px;
+                line-height: 1.2;
+            }
+        }
+
+        &Container {
+            padding-left: 100px;
+            padding-right: 100px;
+
+            @media screen and (max-width: $desktop-sm) {
+                padding-left: 10px;
+                padding-right: 10px;
+            }
+
+            @media screen and (max-width: $mobile) {
+                padding-left: 0;
+                padding-right: 0;
+            }
+        }
+    }
+}
+
+.supportInfo {
+    background: none;
+    margin-top: -269px;
+    margin-bottom: 20px;
+
+    @media screen and (max-width: $tablet) {
+        margin-top: -250px;
+    }
+
+    @media screen and (max-width: $mobile) {
+        margin-top: 0;
+    }
+
+    &__container {
+        border-radius: 8px;
+        box-shadow: 4px 4px 13px 0 rgba(6, 41, 66, 0.1);
+        border: solid 1px $rule-grey;
+        background-color: #fff;
+        display: flex;
+        justify-content: space-between;
+        padding: 53px 92px 75px;
+        margin-left: 36px;
+        margin-right: 36px;
+
+        @media screen and (max-width: $desktop-sm) {
+            justify-content: space-around;
+            margin-left: -21px;
+            margin-right: -21px;
+            padding-right: 67px;
+        }
+
+        @media screen and (max-width: $tablet) {
+            margin-left: 0;
+            margin-right: 0;
+            padding: 53px 40px 55px 44px;
+        }
+
+        @media screen and (max-width: $mobile) {
+            box-shadow: none;
+            border: none;
+            border-radius: 0;
+            padding: 0;
+            flex-direction: column-reverse;
+            padding-top: 46px;
+        }
+    }
+
+    &__content {
+        margin-right: 112px;
+        margin-bottom: 0;
+        max-width: 500px;
+
+        @media screen and (max-width: $desktop-sm) {
+            margin-right: 68px;
+        }
+
+        @media screen and (max-width: $tablet) {
+            margin-right: 20px;
+            max-width: 350px;
+        }
+
+        @media screen and (max-width: $mobile) {
+            margin-top: 20px;
+        }
+
+        h2 {
+            margin-top: 12px;
+            font-family: $font-med;
+            font-size: 40px;
+            line-height: 1.15;
+            letter-spacing: -0.1px;
+            color: $midnight-blue;
+
+            @media screen and (max-width: $tablet) {
+                font-size: 32px;
+                line-height: 1.19;
+            }
+        }
+
+        p {
+            font-family: $font-book;
+            font-size: 18px;
+            line-height: 1.5;
+            letter-spacing: -0.1px;
+        }
+    }
+
+    &__image {
+        max-width: 330px;
+        width: 100%;
+
+        @media screen and (max-width: $desktop-sm) {
+            max-width: 324px;
+        }
+
+        @media screen and (max-width: $tablet) {
+            max-width: 274px;
+        }
+
+        @media screen and (max-width: $mobile) {
+            padding-left: 20px;
+            padding-right: 20px;
+            margin: 0 auto;
+        }
+    }
+
+    &__contact {
+        margin-top: 41px;
+
+        @media screen and (max-width: $tablet) {
+            margin-top: 39px;
+        }
+
+        p {
+            font-family: $font-book;
+            font-size: 18px;
+            line-height: 1.5;
+            letter-spacing: -0.1px;
+            color: $fresh-blue;
+        }
+
+        a {
+            color: $fresh-blue;
+            text-decoration: none;
+        }
+    }
+}

@@ -1,0 +1,16 @@
+.main-container {
+    .main-content {
+        text-align: -webkit-center;
+
+        h2 {
+            color: $midnight-blue;
+            margin-top: 50px;
+        }
+
+        p {
+            max-width: 683px;
+            width: 100%;
+            margin-bottom: 45px;
+        }
+    }
+}

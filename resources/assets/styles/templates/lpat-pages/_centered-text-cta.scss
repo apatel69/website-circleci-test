@@ -1,0 +1,83 @@
+.centered-content {
+    text-align: center;
+}
+
+.centered-text-cta {
+    width: auto;
+    display: block;
+
+    &__content {
+        display: flex;
+        margin: 0 auto;
+        border: 1px solid $cta-ghost-border;
+        border-radius: 5px;
+        max-width: 798px;
+        padding: 20px 30px;
+
+        @media screen and (max-width: $tablet) {
+            flex-direction: column;
+        }
+    }
+
+    &__text {
+        display: inline-block;
+        margin-right: 20px;
+        max-width: 445px;
+        text-align: left;
+        width: 100%;
+
+        @media screen and (max-width: $tablet) {
+            max-width: 100%;
+        }
+    }
+
+    &__message {
+        font-size: 24px;
+        letter-spacing: normal;
+        line-height: 1.55555556;
+        margin: 0;
+
+        @media screen and (max-width: $tablet) {
+            text-align: center;
+        }
+    }
+
+    &__subtext {
+        font-size: 1.4rem;
+        line-height: 1.28571429;
+        margin-top: 10px;
+        color: $dark-grey;
+        margin-bottom: 0;
+
+        @media screen and (max-width: $tablet) {
+            display: none;
+        }
+    }
+
+    &__cta {
+        display: inline-block;
+        align-self: center;
+
+        @media screen and (max-width: $tablet) {
+            width: 100%;
+        }
+
+        .primary-cta {
+            width: 255px;
+
+            @media screen and (max-width: $tablet) {
+                width: 100%;
+            }
+        }
+    }
+}
+
+.centered-text-cta__subtext--mobile {
+    @extend .centered-text-cta__subtext;
+
+    display: none;
+
+    @media screen and (max-width: $tablet) {
+        display: block;
+    }
+}

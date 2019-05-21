@@ -1,0 +1,99 @@
+@import '../../global';
+@import '../../flexible-content/global/custom-header';
+@import '../invoice-templates/footer-cta';
+@import '../invoice-templates/footer-template-listing';
+@import '../invoice-templates/cards';
+@import '../../flexible-content/global/comparison-chart';
+@import '../../flexible-content/global/faq-accordion';
+@import '../../flexible-content/global/cta-full-width';
+@import 'global';
+@import '../about/two-col-content-cta-image';
+@import '../../flexible-content/global/two-column-image-cta';
+@import '../../flexible-content/global/three-column-content';
+@import '../../flexible-content/global/cta-full-width-outline';
+@import '../../flexible-content/global/three-col-two-row-content';
+@import '../../flexible-content/global/cta-invoice-templates';
+@import '../../flexible-content/global/invoice-templates-footer';
+@import '../../flexible-content/global/centered-content';
+@import 'content-image-cta';
+@import 'two-column-video-feature';
+
+h2 {
+    width: 100%;
+    font-family: 'Franklin-Gothic-URW-Med', Helvetica, Arial, sans-serif;
+    font-weight: normal;
+    color: $midnight-blue;
+    font-size: 40px;
+    line-height: 50px;
+    margin: 0 0 16px;
+
+    @media screen and (max-width: $mobile) {
+        font-size: 36px !important;
+        line-height: 46px;
+    }
+}
+
+.switch-competitor {
+    text-align: center;
+    padding-top: 5em;
+
+    p {
+        width: 55%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+.three-col {
+    img {
+        max-width: 50%;
+    }
+}
+
+@media screen and (max-width: $tablet) {
+    .three-col {
+        img {
+            max-width: 40%;
+        }
+    }
+}
+
+@media screen and (max-width: $mobile) {
+    .three-col {
+        img {
+            max-width: 40%;
+        }
+    }
+
+    .col {
+        @include shadowBox;
+    }
+}
+
+.template-gallery-alt {
+    .col {
+        a:nth-of-type(2) {
+            img {
+                background-repeat: no-repeat;
+                background-position: center;
+                background-size: contain;
+                padding: 0 80px;
+                top: 4em;
+                position: relative;
+            }
+        }
+    }
+}
+
+.ghost-button {
+    width: 285px;
+}
+
+.container.featured-in {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.jump-links-section {
+    max-width: 960px;
+}

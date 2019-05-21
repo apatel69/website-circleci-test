@@ -1,0 +1,157 @@
+.main-content {
+    text-align: left;
+    margin-left: auto;
+    margin-right: auto;
+
+    p {
+        margin-left: auto;
+        margin-right: auto;
+
+        br {
+            content: "";
+            display: block;
+            margin: 1.8rem 0;
+        }
+
+        @media screen and (max-width: $desktop-sm) {
+            width: 75%;
+        }
+
+        @media screen and (max-width: $tablet) {
+            width: 100%;
+        }
+    }
+
+    .primary-cta {
+        margin-top: 15px;
+        padding: 7px 28px 8px 25px;
+    }
+
+    img {
+        margin: 30px auto 0;
+        display: block;
+    }
+}
+
+.featured-in {
+    margin-top: 5.5em;
+    background-color: #fff;
+    border-top: 1px solid $rule-grey;
+    border-bottom: 1px solid $rule-grey;
+
+    section {
+        display: flex;
+        justify-content: space-between;
+        align-content: flex-start;
+        height: 70px;
+        margin-top: 10px;
+    }
+
+    .copy {
+        font-size: 1.8rem;
+        vertical-align: middle;
+        font-weight: bold;
+    }
+
+    img {
+        display: inline-block;
+        vertical-align: middle;
+    }
+
+    .hide-mobile-sm {
+        @media screen and (max-width: $mobile-sm) {
+            display: none;
+        }
+    }
+
+    .hide-mobile {
+        @media screen and (max-width: $mobile) {
+            display: none;
+        }
+    }
+
+    .hide-tablet {
+        @media screen and (max-width: $tablet) {
+            display: none;
+        }
+    }
+
+    .hide-desktop-sm {
+        @media screen and (max-width: $desktop-sm) {
+            display: none;
+        }
+    }
+
+    #cnet,
+    .cnet {
+        width: 26px;
+        height: 26px;
+        margin-top: -4px;
+        margin-bottom: -2px;
+    }
+
+    #forbes,
+    .forbes {
+        width: 56.61px;
+        height: 22px;
+        margin-top: -2px;
+    }
+
+    .cnn {
+        width: 35px;
+        height: 18px;
+    }
+
+    #ny-times,
+    #thenewyorktimes,
+    .ny-times {
+        width: 154px;
+        height: 21px;
+        margin-bottom: -2px;
+    }
+
+    .techcrunch {
+        width: 114.74px;
+        height: 16px;
+    }
+
+    .mashable {
+        width: 80.99px;
+        height: 14px;
+        margin-top: 2px;
+    }
+
+    #bloomberg,
+    .bloomberg {
+        width: 102px;
+        height: 18px;
+        margin-bottom: -2px;
+        margin-top: 2px;
+    }
+
+    .fast-company {
+        width: 94.36px;
+        height: 18px;
+    }
+
+    .betakit {
+        width: 62px;
+        height: 17px;
+    }
+
+    .financial-post {
+        width: 97.87px;
+        height: 16px;
+    }
+
+    .globe-and-mail {
+        width: 171.5px;
+        height: 14px;
+        margin-top: 3px;
+    }
+
+    .techvibes {
+        width: 94px;
+        height: 16.47px;
+    }
+}

@@ -1,0 +1,38 @@
+.press-page,
+.single-press_releases,
+.single-data_research {
+    .hero {
+        height: auto;
+        background-position: top center;
+
+        section {
+            padding: 45px 0;
+        }
+
+        .hero-h1 {
+            margin-bottom: 32px;
+        }
+
+        p {
+            margin-bottom: 10px;
+
+            br {
+                content: "";
+                display: block;
+                margin: 1.8rem 0;
+            }
+        }
+
+        .press-hero-links {
+            & > span {
+                font-size: 1.8rem;
+                display: block;
+                line-height: calc(28 / 18);
+
+                &:not(:last-child) {
+                    margin-bottom: 15px;
+                }
+            }
+        }
+    }
+}

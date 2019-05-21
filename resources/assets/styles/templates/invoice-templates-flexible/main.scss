@@ -1,0 +1,34 @@
+@import "../../global";
+@import "../../flexible-content/global/custom-header";
+@import "../invoice-templates/footer-cta";
+@import "../invoice-templates/footer-template-listing";
+@import "../invoice-templates/cards";
+@import "../../flexible-content/global/comparison-chart";
+@import "../../flexible-content/global/faq-accordion";
+@import "../../flexible-content/global/cta-full-width";
+@import "../../flexible-content/global/cta-invoice-templates";
+@import "../../flexible-content/global/centered-content";
+@import "two-col-hero";
+@import "centered-content";
+@import "content-image-cta";
+@import "../../flexible-content/global/cta-full-width-outline";
+@import "../../flexible-content/global/jump-links";
+@import "two-col-image-content";
+@import "../../flexible-content/global/three-col-two-row-content";
+@import "two-column-video-feature";
+@import "../../flexible-content/global/three-column-content";
+@import "global";
+@import "../../flexible-content/global/invoice-templates-footer";
+
+.template-gallery-alt {
+    .inner-wrap .col {
+        span > img {
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: contain;
+            padding: 0 80px;
+            top: 4em;
+            position: relative;
+        }
+    }
+}

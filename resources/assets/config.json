@@ -1,0 +1,281 @@
+{
+    "entry": {
+        "global": [
+            "./scripts/global.js",
+            "./styles/_global.scss"
+        ],
+        "homepage": [
+            "./styles/templates/homepage/main.scss",
+            "./scripts/templates/homepage/main.js"
+        ],
+        "seo-modular-page": [
+            "./styles/templates/seo-modular-page/main.scss",
+            "./scripts/templates/seo-modular-page/main.js"
+        ],
+        "product-tour": [
+            "./styles/templates/product-tour/main.scss",
+            "./scripts/templates/product-tour/main.js"
+        ],
+        "segment": [
+            "./styles/templates/segment/main.scss",
+            "./scripts/templates/segment/main.js"
+        ],
+        "podcast": [
+            "./styles/templates/podcast/main.scss",
+            "./scripts/templates/podcast/main.js"
+        ],
+        "direct-mail": [
+            "./styles/templates/direct-mail/main.scss",
+            "./scripts/templates/direct-mail/main.js"
+        ],
+        "affiliate-program": [
+            "./styles/templates/affiliate-program/main.scss",
+            "./scripts/templates/affiliate-program/main.js"
+        ],
+        "pricing-page": [
+            "./styles/templates/pricing-page/main.scss",
+            "./scripts/templates/pricing-page/main.js"
+        ],
+        "who-its-for": [
+            "./styles/templates/who-its-for/main.scss",
+            "./scripts/templates/who-its-for/main.js"
+        ],
+        "careers": [
+            "./styles/templates/careers/main.scss",
+            "./scripts/templates/careers/main.js"
+        ],
+        "philosophy": [
+            "./styles/templates/philosophy/main.scss",
+            "./scripts/templates/philosophy/main.js"
+        ],
+        "about": [
+            "./styles/templates/about/main.scss",
+            "./scripts/templates/about/main.js"
+        ],
+        "education": [
+            "./styles/templates/education/main.scss",
+            "./scripts/templates/education/main.js"
+        ],
+        "our-story": [
+            "./styles/templates/our-story/main.scss",
+            "./scripts/templates/our-story/main.js"
+        ],
+        "about-team": [
+            "./styles/templates/team/main.scss",
+            "./scripts/templates/team/main.js"
+        ],
+        "accessibility": [
+            "./styles/templates/accessibility/main.scss",
+            "./scripts/templates/accessibility/main.js"
+        ],
+        "policies": [
+            "./styles/templates/policies/main.scss",
+            "./scripts/templates/policies/main.js"
+        ],
+        "features": [
+            "./styles/templates/features/main.scss",
+            "./scripts/templates/features/main.js"
+        ],
+        "reseller-program": [
+            "./styles/templates/reseller-program/main.scss",
+            "./scripts/templates/reseller-program/main.js"
+        ],
+        "partner-page": [
+            "./styles/templates/partner-page/main.scss",
+            "./scripts/templates/partner-page/main.js"
+        ],
+        "partner-portal": [
+            "./styles/templates/partner-portal/main.scss",
+            "./scripts/templates/partner-portal/main.js"
+        ],
+        "integrations": [
+            "./styles/templates/integrations/main.scss",
+            "./scripts/templates/integrations/main.js"
+        ],
+        "resources": [
+            "./styles/templates/resources/main.scss",
+            "./scripts/templates/resources/main.js"
+        ],
+        "affiliates-new-freshbooks": [
+            "./styles/templates/affiliates-new-freshbooks/main.scss",
+            "./scripts/templates/affiliates-new-freshbooks/main.js"
+        ],
+        "contact": [
+            "./styles/templates/contact/main.scss",
+            "./scripts/templates/contact/main.js"
+        ],
+        "webinars": [
+            "./styles/templates/webinars/main.scss",
+            "./scripts/templates/webinars/main.js"
+        ],
+        "sitemap": [
+            "./styles/templates/sitemap/main.scss",
+            "./scripts/templates/sitemap/main.js"
+        ],
+        "accountants": [
+            "./styles/templates/accountants/main.scss",
+            "./scripts/templates/accountants/main.js"
+        ],
+        "select": [
+            "./styles/templates/select/main.scss",
+            "./scripts/templates/select/main.js"
+        ],
+        "compare": [
+            "./styles/templates/compare/main.scss",
+            "./scripts/templates/compare/main.js"
+        ],
+        "compare-subpages": [
+            "./styles/templates/compare/subpages/main.scss",
+            "./scripts/templates/compare/subpages/main.js"
+        ],
+        "guides": [
+            "./styles/templates/guides/main.scss",
+            "./scripts/templates/guides/main.js"
+        ],
+        "press": [
+            "./styles/templates/press/main.scss",
+            "./scripts/templates/press/main.js"
+        ],
+        "refer-a-friend": [
+            "./styles/templates/refer-a-friend/main.scss",
+            "./scripts/templates/refer-a-friend/main.js"
+        ],
+        "404": [
+            "./styles/templates/404/main.scss",
+            "./scripts/templates/404/main.js"
+        ],
+        "nfb-feature-education": [
+            "./styles/templates/nfb-feature-education/main.scss",
+            "./scripts/templates/nfb-feature-education/main.js"
+        ],
+        "invoice-templates": [
+            "./styles/templates/invoice-templates/main.scss",
+            "./scripts/templates/invoice-templates/main.js"
+        ],
+        "free-invoice-templates": [
+            "./styles/templates/free-invoice-templates/main.scss",
+            "./scripts/templates/free-invoice-templates/main.js"
+        ],
+        "invoice-templates-flexible": [
+            "./styles/templates/invoice-templates-flexible/main.scss",
+            "./scripts/templates/invoice-templates-flexible/main.js"
+        ],
+        "accounting-software": [
+            "./styles/templates/accounting-software/main.scss",
+            "./scripts/templates/accounting-software/main.js"
+        ],
+        "free-invoice-creator-landing-page": [
+            "./styles/templates/free-invoice-creator-landing-page/main.scss",
+            "./scripts/templates/free-invoice-creator-landing-page/main.js"
+        ],
+        "holiday": [
+            "./styles/templates/holiday/main.scss",
+            "./scripts/templates/holiday/main.js"
+        ],
+        "addons": [
+            "./styles/templates/addons/main.scss",
+            "./scripts/templates/addons/main.js"
+        ],
+        "lpat-pages": [
+            "./styles/templates/lpat-pages/main.scss",
+            "./scripts/templates/lpat-pages/main.js"
+        ],
+        "invoice-templates-gallery": [
+            "./styles/templates/invoice-templates-gallery/main.scss",
+            "./scripts/templates/invoice-templates-gallery/main.js"
+        ],
+        "benefits": [
+            "./styles/templates/benefits/main.scss",
+            "./scripts/templates/benefits/main.js"
+        ],
+        "api": [
+            "./styles/templates/api/main.scss",
+            "./scripts/templates/api/main.js"
+        ],
+        "education-pages": [
+            "./styles/templates/education-pages/main.scss",
+            "./scripts/templates/education-pages/main.js"
+        ],
+        "support": [
+            "./styles/templates/support/main.scss",
+            "./scripts/templates/support/main.js"
+        ],
+        "nice-reply": [
+            "./styles/templates/nice-reply/main.scss",
+            "./scripts/templates/nice-reply/main.js"
+        ],
+        "newsletter-blog": [
+            "./styles/templates/newsletter-blog/main.scss",
+            "./scripts/templates/newsletter-blog/main.js"
+        ],
+        "ca-invoice-software": [
+            "./styles/templates/ca-invoice-software/main.scss",
+            "./scripts/templates/ca-invoice-software/main.js"
+        ],
+        "business-name-generator": [
+            "./styles/templates/business-name-generator/main.scss",
+            "./scripts/templates/business-name-generator/main.js"
+        ],
+        "contact-us": [
+            "./styles/templates/contact-us/main.scss",
+            "./scripts/templates/contact-us/main.js"
+        ],
+        "easy-bookkeeping": [
+            "./styles/templates/easy-bookkeeping/main.scss",
+            "./scripts/templates/easy-bookkeeping/main.js"
+        ],
+        "which-version": [
+            "./styles/templates/which-version/main.scss",
+            "./scripts/templates/which-version/main.js"
+        ],
+        "apple": [
+            "./styles/templates/apple/main.scss",
+            "./scripts/templates/apple/main.js"
+        ],
+        "new-freshbooks-june-update": [
+            "./styles/templates/new-freshbooks-june-update/main.scss",
+            "./scripts/templates/new-freshbooks-june-update/main.js"
+        ],
+        "new-freshbooks-launch": [
+            "./styles/templates/new-freshbooks-launch/main.scss",
+            "./scripts/templates/new-freshbooks-launch/main.js"
+        ],
+        "new-freshbooks": [
+            "./styles/templates/new-freshbooks/main.scss",
+            "./scripts/templates/new-freshbooks/main.js"
+        ],
+        "developers": [
+            "./styles/templates/developers/main.scss",
+            "./scripts/templates/developers/main.js"
+        ],
+        "signup": [
+            "./styles/templates/signup/main.scss",
+            "./scripts/templates/signup/main.js"
+        ],
+        "signup-new": [
+            "./styles/templates/signup-new/main.scss",
+            "./scripts/templates/signup-new/main.js"
+        ],
+        "annual-report": [
+            "./styles/templates/annual-report/main.scss",
+            "./scripts/templates/annual-report/main.js"
+        ],
+        "admin-user-roles": [
+            "./styles/admin/user-roles.scss",
+            "./scripts/admin/user-roles.js"
+        ],
+        "customizer": [
+            "./scripts/customizer.js"
+        ]
+    },
+    "publicPath": "/wp-content/themes/freshbooks",
+    "devUrl": "http://www.freshbooks.test:8080",
+    "proxyUrl": "http://localhost:3000",
+    "chunkHash": "[name]_[chunkhash:8]",
+    "contentHash": "[name]_[contenthash:8]",
+    "watch": [
+        "app/**/*.php",
+        "config/**/*.php",
+        "resources/views/**/*.php"
+    ]
+}

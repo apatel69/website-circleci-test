@@ -1,0 +1,28 @@
+.search-form {
+    font-size: 15px;
+    margin-right: 50px;
+    width: 100%;
+    max-width: 400px;
+
+    &__input {
+        outline: none;
+        width: 100%;
+        background: #fff;
+        border: 2px solid $med-grey;
+        border-radius: 28px;
+        padding: 12px 17px 11px 41px;
+        background-image: url("~images/icons/icon-search-grey.svg");
+        background-size: 17px 17px;
+        background-position: 15px;
+        background-repeat: no-repeat;
+
+        &:focus {
+            border-color: $cta-green;
+        }
+    }
+
+    @media screen and (max-width: $tablet) {
+        margin: 20px 0 0;
+        max-width: 300px;
+    }
+}

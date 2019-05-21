@@ -1,0 +1,74 @@
+.affiliates-heading {
+    max-width: 687px;
+    margin: 0 auto 5%;
+
+    h2 {
+        margin-left: 5px;
+        margin-right: 5px;
+        max-width: 520px;
+        text-align: center;
+        font-family: $font-med;
+        color: $midnight-blue;
+    }
+}
+
+.affiliate-heading {
+    &:first-child {
+        padding-right: 1%;
+    }
+
+    &:last-child {
+        padding-left: 1%;
+    }
+}
+
+.affiliates-info {
+    border: 1px solid $med-grey;
+    border-radius: 8px;
+    max-width: 935px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 30px 5% 45px;
+    box-shadow: 4px 4px 13px 0 rgba(6, 41, 66, 0.1);
+}
+
+.affiliate-details {
+    justify-content: space-between;
+    align-items: flex-start;
+
+    @media (max-width: $mobile) {
+        display: block;
+    }
+}
+
+.affiliate-detail {
+    max-width: 349px;
+    margin: 0 auto;
+
+    &:last-child {
+        @media (max-width: $mobile) {
+            margin-top: 25px;
+        }
+    }
+
+    span {
+        font-family: $font-book;
+        color: $dark-grey;
+        font-size: 1.6rem;
+
+        &.affiliate-how-much {
+            text-transform: uppercase;
+        }
+    }
+
+    h3 {
+        margin: 0;
+        font-size: 7.2rem;
+        color: $magenta;
+        text-indent: -2rem;
+    }
+
+    p {
+        margin-bottom: 40px;
+    }
+}

@@ -1,0 +1,46 @@
+.btn-trial a {
+    border: solid 2px rgba(6, 41, 66, 0.2);
+    border-radius: 5px;
+    padding: 7px 26px 8px 23px;
+    white-space: nowrap;
+
+    @media (max-width: $mobile) {
+        padding: 9px 5px;
+    }
+
+    &:hover,
+    &:focus {
+        border-color: $cta-green;
+        background-color: $cta-green;
+        color: #fff !important;
+    }
+}
+
+.call-toll-free {
+    width: 98px;
+    height: auto;
+    margin-top: 14px;
+    margin-right: 2px;
+    vertical-align: middle;
+}
+
+.support-number {
+    margin-left: 0;
+    vertical-align: middle;
+}
+
+.nav-wrapper {
+    ul li {
+        padding-left: 28px;
+    }
+
+    nav .header-text {
+        p {
+            margin: 0 auto;
+        }
+
+        @media (max-width: $tablet) {
+            display: none;
+        }
+    }
+}

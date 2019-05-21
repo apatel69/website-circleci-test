@@ -1,0 +1,33 @@
+.tax-support_categories,
+.support {
+    .support-post {
+        padding: 25px 0;
+        border-bottom: solid 1px $rule-grey;
+
+        &:last-child {
+            border-bottom: none;
+        }
+    }
+
+    .support-post-title {
+        font-size: 2rem;
+        margin: 0 0 10px;
+    }
+
+    .support-post-excerpt {
+        font-family: $font-main;
+        margin: 0;
+    }
+
+    .more-posts {
+        display: none;
+    }
+
+    .show-all-posts {
+        display: inline-block;
+        font-size: 1.6rem;
+        text-decoration: underline;
+        margin: 25px 0;
+        font-family: $font-book;
+    }
+}

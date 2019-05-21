@@ -1,0 +1,590 @@
+.snapshot {
+    &__container {
+        background-color: $midnight-blue;
+        padding-left: 104px;
+        padding-right: 104px;
+        padding-top: 116px;
+
+        @media screen and (max-width: 991px) {
+            padding-left: 75px;
+            padding-right: 75px;
+            padding-top: 130px;
+        }
+
+        @media screen and (max-width: 767px) {
+            padding-left: 46px;
+            padding-right: 46px;
+            padding-top: 57px;
+        }
+    }
+    // Main Content Styles - includes title, description & building image
+    &__mainContent {
+        p {
+            line-height: 1.44;
+            color: $off-white;
+            font-family: $font-book;
+            font-size: 18px;
+            margin-top: 0;
+            max-width: 615px;
+            margin-bottom: 28px;
+
+            @media screen and (max-width: 991px) {
+                max-width: 323px;
+            }
+
+            @media screen and (max-width: 767px) {
+                max-width: 100%;
+                line-height: 1.33;
+            }
+
+            &:first-of-type {
+                @media screen and (max-width: 991px) {
+                    max-width: 100%;
+                }
+            }
+
+            &:last-of-type {
+                margin-bottom: 0;
+            }
+        }
+
+        &Image {
+            position: relative;
+            margin-top: 196px;
+
+            @media screen and (max-width: 991px) {
+                margin-top: 93px;
+            }
+        }
+    }
+
+    &__title {
+        font-size: 60px;
+        font-family: $font-dem;
+        line-height: 1.03;
+        color: $off-white;
+        margin-bottom: 11px;
+        max-width: 816px;
+
+        @media screen and (max-width: 991px) {
+            max-width: 100%;
+            font-size: 45px;
+            line-height: 1.11;
+            margin-bottom: 0;
+        }
+
+        @media screen and (max-width: 767px) {
+            font-size: 30px;
+        }
+    }
+
+    &__spotlight {
+        max-width: 47.9%;
+        position: absolute;
+        z-index: 0;
+        width: 100%;
+        top: -80%;
+        left: 50%;
+
+        @media screen and (max-width: 1162px) {
+            top: -50%;
+        }
+    }
+
+    &__buildingImage {
+        max-width: 787px;
+        margin: 0 auto;
+        display: block;
+        position: relative;
+        width: 100%;
+
+        @media screen and (max-width: 991px) {
+            margin-left: 27px;
+        }
+
+        @media screen and (max-width: 767px) {
+            margin-left: 5px;
+        }
+    }
+
+    &__buildingWindow {
+        position: absolute;
+        max-width: 787px;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 100;
+
+        @media screen and (max-width: 991px) {
+            display: none;
+        }
+    }
+
+    // list content styles - includes 6 side by side vs list data
+    &__listWrapper {
+        margin-bottom: 24px;
+        transform: translateY(-5%);
+
+        @media screen and (max-width: 991px) {
+            margin-bottom: 9px;
+            transform: translateY(-25%);
+        }
+
+        @media screen and (max-width: 767px) {
+            margin-bottom: 32px;
+            transform: translateY(-7%);
+        }
+    }
+
+    &__listContent {
+        display: flex !important;
+        position: relative;
+        margin-bottom: 46px;
+        height: 100%;
+
+        @media screen and (max-width: 991px) {
+            margin-bottom: 26px;
+        }
+
+        @media screen and (max-width: 767px) {
+            flex-direction: column;
+            margin-bottom: 0;
+        }
+
+        &:last-of-type {
+            margin-bottom: 0;
+        }
+    }
+
+    &__leftContent,
+    &__rightContent {
+        flex: 1 0 528px;
+        max-width: calc(50% - 16px);
+        margin-left: 8px;
+        margin-right: 8px;
+        border-radius: 5px;
+        box-shadow: 4px 4px 0 0 rgba(6, 41, 66, 0.06);
+        border: solid 1px $rule-grey;
+        background-color: #fff;
+        display: flex;
+        align-items: center;
+        min-height: 218px;
+
+        @media screen and (max-width: 991px) {
+            flex-basis: 303px;
+            max-width: calc(50% - 10px);
+            margin-left: 5px;
+            margin-right: 5px;
+        }
+
+        @media screen and (max-width: 991px) {
+            flex-basis: 283px;
+        }
+
+        @media screen and (max-width: 767px) {
+            flex-basis: 100%;
+            max-width: 100%;
+            margin: 5px 0;
+        }
+
+        p {
+            font-size: 23px;
+            font-family: $font-med;
+            line-height: 1.13;
+            color: $midnight-blue;
+            margin: 0;
+            display: table-cell;
+            vertical-align: middle;
+
+            @media screen and (max-width: 991px) {
+                font-size: 17px;
+                line-height: 1.06;
+            }
+        }
+    }
+
+    &__middleContent {
+        position: absolute;
+        z-index: 4;
+        left: 50%;
+        top: 50%;
+        color: $midnight-blue;
+        font-size: 26px;
+        border-radius: 50%;
+        border: 7px solid $midnight-blue;
+        background-color: #f5da66;
+        letter-spacing: normal;
+        padding: 6px;
+        font-family: $font-dem;
+        transform: translate(-50%, -50%);
+    }
+
+    &__leftContent {
+        padding: 30px 45px 30px 35px;
+
+        @media screen and (max-width: 991px) {
+            padding: 20px 42px 20px 20px;
+        }
+
+        @media screen and (max-width: 767px) {
+            padding: 20px;
+            text-align: center;
+        }
+    }
+
+    &__rightContent {
+        padding: 30px 54px 30px 64px;
+
+        @media screen and (max-width: 991px) {
+            padding: 20px 15px 20px 36px;
+        }
+
+        @media screen and (max-width: 767px) {
+            padding: 20px;
+            text-align: center;
+        }
+    }
+
+    &__listWrapper {
+        // Styling the default Slick dots
+        .slick-dots {
+            display: flex;
+            justify-content: center;
+            margin: 0;
+            padding: 1rem 0;
+            list-style-type: none;
+
+            li {
+                margin: 0 0.25rem;
+                background-image: none;
+                padding-left: 0;
+            }
+
+            button {
+                display: block;
+                width: 1rem;
+                height: 1rem;
+                padding: 0;
+                border: none;
+                border-radius: 100%;
+                background-color: #50697a;
+                text-indent: -9999px;
+            }
+
+            li.slick-active button {
+                background-color: #9ba9b3;
+            }
+
+            &::after {
+                content: "Swipe Left Or Right";
+                font-size: 13px;
+                font-family: $font-book;
+                line-height: 2;
+                color: $dark-grey;
+                position: absolute;
+                bottom: -17px;
+            }
+        }
+    }
+
+    // How do SMO feel about self-employment section - 1 row table
+    &__smoTable {
+        table {
+            width: 100%;
+            height: auto;
+            color: #fff;
+            border: solid 4px $table-border-blue;
+            border-radius: 13px;
+
+            @media screen and (max-width: 767px) {
+                border-width: 3.6px;
+            }
+
+            tr {
+                @media screen and (max-width: 767px) {
+                    display: flex;
+                    flex-direction: column;
+                    height: auto;
+                }
+            }
+
+            th {
+                width: 306px;
+                border-right: solid 4px $table-border-blue;
+                font-size: 30px;
+                font-family: $font-dem;
+                color: $off-white;
+                padding: 22px 31px;
+                line-height: normal;
+                text-align: left;
+                font-weight: normal;
+
+                @media screen and (max-width: 991px) {
+                    width: 185px;
+                    font-size: 18px;
+                    padding: 36px 15px 34px 20px;
+                }
+
+                @media screen and (max-width: 767px) {
+                    width: 100%;
+                    border-right: none;
+                    border-bottom: solid 3.6px $table-border-blue;
+                    padding: 17px 28px 29px;
+                    text-align: center;
+                }
+            }
+
+            td {
+                font-size: 20px;
+                font-family: $font-book;
+                line-height: 1.05;
+                color: $off-white;
+                padding: 27px 24px 29px;
+                vertical-align: baseline;
+
+                &:first-of-type {
+                    padding-left: 50px;
+                    width: 235px;
+
+                    @media screen and (max-width: 991px) {
+                        padding-left: 30px;
+                        width: 25%;
+                    }
+
+                    @media screen and (max-width: 767px) {
+                        width: 100%;
+                        padding: 27px 9px 21px;
+                    }
+                }
+
+                @media screen and (max-width: 991px) {
+                    font-size: 15px;
+                    line-height: 1;
+                    padding: 27px 9px 21px;
+                }
+
+                @media screen and (max-width: 767px) {
+                    text-align: center;
+                    line-height: 1.4;
+
+                    &:not(:last-of-type) {
+                        padding-bottom: 0;
+                    }
+                }
+
+                span {
+                    font-size: 50px;
+                    font-family: $font-dem;
+                    display: block;
+                    margin-bottom: 5px;
+
+                    @media screen and (max-width: 991px) {
+                        font-size: 35px;
+                        line-height: 0.6;
+                    }
+                }
+            }
+        }
+    }
+
+    // Future goals for small business owners - includes title, description and image
+    &__futureGoals {
+        display: flex;
+        margin-top: 30px;
+
+        @media screen and (max-width: 991px) {
+            display: block;
+        }
+
+        @media screen and (max-width: 991px) {
+            margin-top: 72px;
+        }
+
+        @media screen and (max-width: 767px) {
+            margin-top: 44px;
+        }
+
+        &Content {
+            flex: 1 0 36%;
+            max-width: 36%;
+            padding-top: 91px;
+
+            @media screen and (max-width: 991px) {
+                max-width: 100%;
+            }
+
+            @media screen and (max-width: 991px) {
+                padding-top: 0;
+            }
+
+            @media screen and (max-width: 767px) {
+                text-align: center;
+            }
+
+            h2 {
+                font-size: 30px;
+                font-family: $font-dem;
+                color: $off-white;
+                margin-bottom: 0;
+                margin-top: 0;
+                line-height: normal;
+                padding-right: 70px;
+
+                @media screen and (max-width: 991px) {
+                    padding-right: 119px;
+                }
+
+                @media screen and (max-width: 767px) {
+                    padding-right: 0;
+                    font-size: 20px;
+                    line-height: 1.25;
+                    margin-bottom: 20px;
+                }
+            }
+
+            p {
+                font-size: 18px;
+                font-family: $font-book;
+                line-height: 1.44;
+                color: $off-white;
+                margin-top: 0;
+                margin-bottom: 26px;
+
+                &:last-of-type {
+                    margin-bottom: 0;
+                }
+
+                @media screen and (max-width: 767px) {
+                    line-height: 1.33;
+                }
+            }
+        }
+
+        &Image {
+            flex: 1 0 64%;
+            max-width: 64%;
+            transform: translateY(13%);
+
+            @media screen and (max-width: 991px) {
+                max-width: 100%;
+                transform: translateY(17%);
+            }
+
+            @media screen and (max-width: 767px) {
+                transform: translateY(14%);
+            }
+        }
+    }
+
+    // Top skills required for small business
+    &__topSkills {
+        border-radius: 5px;
+        box-shadow: 4px 4px 0 0 rgba(6, 41, 66, 0.06);
+        border: solid 1px $rule-grey;
+        background-color: #fff;
+        padding: 61px 51px 102px;
+        transform: translateY(-1%);
+        position: relative;
+        z-index: 10;
+
+        @media screen and (max-width: 991px) {
+            padding: 33px 0 58px;
+        }
+
+        @media screen and (max-width: 767px) {
+            margin-left: -31px;
+            margin-right: -33px;
+        }
+
+        &Content {
+            max-width: 861.7px;
+            margin: 0 auto;
+            text-align: center;
+
+            @media screen and (max-width: 991px) {
+                max-width: 100%;
+            }
+
+            h2 {
+                font-size: 30px;
+                font-family: $font-dem;
+                line-height: normal;
+                color: $midnight-blue;
+                margin-bottom: 3px;
+                margin-top: 0;
+
+                @media screen and (max-width: 991px) {
+                    line-height: 1;
+                    padding-left: 50px;
+                    padding-right: 50px;
+                }
+
+                @media screen and (max-width: 767px) {
+                    font-size: 19px;
+                    padding-left: 12px;
+                    padding-right: 14px;
+                    line-height: 1.26;
+                    margin-bottom: 8px;
+                }
+            }
+
+            p {
+                font-size: 18px;
+                font-family: $font-book;
+                color: $midnight-blue;
+                line-height: normal;
+                margin: 0;
+
+                @media screen and (max-width: 991px) {
+                    font-size: 16px;
+                    padding-left: 15px;
+                    padding-right: 26px;
+                }
+            }
+        }
+
+        &Image {
+            margin-top: 62.4px;
+
+            @media screen and (max-width: 991px) {
+                margin-left: 20px;
+                margin-right: 60px;
+                margin-top: 20.8px;
+            }
+
+            @media screen and (max-width: 767px) {
+                margin-left: 5px;
+                margin-right: 20px;
+                margin-top: 30px;
+            }
+
+            img {
+                margin: 0 auto;
+                display: block;
+            }
+        }
+    }
+}
+
+.slick-track {
+    display: flex;
+
+    .slick-slide {
+        display: flex;
+        height: auto;
+        align-items: center;
+        justify-content: center;
+
+        @media screen and (max-width: 767px) {
+            margin-left: 5px;
+        }
+
+        > div {
+            height: 100%;
+
+            @media screen and (max-width: 767px) {
+                height: auto;
+            }
+        }
+    }
+}

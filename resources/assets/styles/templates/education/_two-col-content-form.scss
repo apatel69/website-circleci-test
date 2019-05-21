@@ -1,0 +1,157 @@
+.education-details {
+    align-items: flex-start;
+    justify-content: space-between;
+
+    @media (max-width: $tablet) {
+        display: block;
+    }
+
+    .education-detail {
+        flex-basis: 580px;
+        padding-right: 15px;
+
+        @media (max-width: $tablet) {
+            padding-right: 0;
+        }
+    }
+
+    .education-link {
+        font-size: 1.8em;
+    }
+
+    .education-detail-info {
+        @media (max-width: $tablet) {
+            padding-right: 0;
+
+            h2,
+            p {
+                text-align: center;
+            }
+        }
+    }
+
+    .education-module {
+        justify-content: space-between;
+        align-items: flex-start;
+        margin-bottom: 50px;
+
+        @media (max-width: $tablet) {
+            justify-content: center;
+        }
+
+        @media (max-width: $mobile) {
+            display: block;
+        }
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    .education-module-iconography {
+        img {
+            @media (max-width: $mobile) {
+                display: block;
+                margin: 0 auto 30px;
+            }
+        }
+    }
+
+    .education-module-details {
+        padding-left: 15px;
+        flex-basis: 390px;
+
+        h3 {
+            font-size: 1.8rem;
+            line-height: calc(26 / 18);
+            color: $midnight-blue;
+            font-family: $font-med;
+            margin-top: 0;
+        }
+
+        p {
+            margin-bottom: 5px;
+        }
+
+        @media (max-width: $mobile) {
+            padding-left: 0;
+            text-align: center;
+        }
+    }
+
+    .education-enrollment {
+        flex-basis: 476px;
+        background: $fresh-blue;
+        padding: 40px;
+        height: 889px;
+        margin-top: 90px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+
+        @media (max-width: $tablet) {
+            height: 784px;
+            padding: 15px;
+        }
+
+        h2,
+        p {
+            color: white;
+            text-align: center;
+        }
+
+        h2 {
+            margin-top: 0;
+        }
+    }
+
+    .its-free {
+        position: absolute;
+        top: -35px;
+        right: 20px;
+    }
+
+    .education-enrollment-form {
+        .fieldset {
+            margin-bottom: 15px;
+
+            input[type="text"] {
+                width: 100%;
+                border: solid 2px white;
+                border-radius: 5px;
+                padding: 18px 14px 14px;
+                font-size: 1.8rem;
+                line-height: calc(21 / 18);
+
+                &.has-error {
+                    background: $error-state-text;
+                    border: solid 2px $error-state;
+                    border-bottom-left-radius: 0;
+                    border-bottom-right-radius: 0;
+                }
+            }
+
+            .error {
+                display: none;
+                width: 100%;
+                background-color: $error-state;
+                color: white;
+                font-size: 1.5rem;
+                line-height: calc(24 / 16);
+                padding: 5px 10px 7px;
+                border-bottom-left-radius: 5px;
+                border-bottom-right-radius: 5px;
+            }
+        }
+    }
+
+    .education-submit {
+        cursor: pointer;
+        width: 100%;
+    }
+
+    .education-enrollment-form-success {
+        display: none;
+    }
+}

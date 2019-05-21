@@ -1,0 +1,22 @@
+.one-col {
+    ul {
+        display: block;
+        width: 95%;
+        margin: 0 auto;
+
+        li {
+            background-image: none;
+            list-style-type: disc;
+            padding-left: 0;
+            margin-bottom: 0;
+        }
+    }
+
+    p + ul {
+        margin-top: -1.8rem;
+    }
+
+    h3 + ul {
+        margin-top: -2rem;
+    }
+}

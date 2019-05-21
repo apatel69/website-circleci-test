@@ -1,0 +1,60 @@
+@import "../../common/mixins";
+
+.two-column-image-cta {
+    padding: 3.5em 0;
+
+    @media screen and (max-width: $tablet) {
+        padding: 4.5em 15px 0;
+    }
+}
+
+.two-column-image-cta-columns-description {
+    img {
+        @include shadowBox;
+    }
+
+    @media screen and (max-width: $tablet) {
+        p {
+            margin: 0 auto;
+            max-width: 500px;
+            padding: 0.5em 0;
+        }
+    }
+}
+
+.two-column-image-cta-columns {
+    display: flex;
+
+    @media screen and (max-width: $tablet) {
+        display: block;
+        text-align: center;
+    }
+}
+
+.two-column-image-cta-tooltip.two-column-column {
+    margin-bottom: 1em;
+
+    @media screen and (max-width: $tablet) {
+        margin-top: 0;
+    }
+
+    @media screen and (max-width: $mobile) {
+        padding: 0;
+    }
+}
+
+.two-column-column {
+    flex-basis: 0;
+    flex-grow: 1;
+    margin: 0 3em;
+
+    @media screen and (max-width: $tablet) {
+        padding: 3em 0;
+    }
+
+    &:first-child {
+        @media screen and (max-width: $mobile) {
+            padding-top: 0;
+        }
+    }
+}

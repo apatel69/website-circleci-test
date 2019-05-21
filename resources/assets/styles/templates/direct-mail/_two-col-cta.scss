@@ -1,0 +1,45 @@
+.who-its-for {
+    align-items: flex-start;
+
+    @media screen and (max-width: $desktop-sm) {
+        display: block;
+    }
+
+    .who-its-for-col {
+        width: 50%;
+
+        @media screen and (max-width: $desktop-sm) {
+            width: 100%;
+        }
+
+        &:first-child {
+            padding-right: 2%;
+
+            @media screen and (max-width: $desktop-sm) {
+                padding-right: 0;
+            }
+        }
+
+        &:last-child {
+            padding-left: 2%;
+
+            @media screen and (max-width: $desktop-sm) {
+                padding-left: 0;
+            }
+        }
+    }
+
+    h2 {
+        text-align: center;
+    }
+
+    p {
+        text-align: center;
+    }
+
+    img {
+        display: block;
+        margin: 0 auto;
+        border-radius: 5px;
+    }
+}

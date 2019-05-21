@@ -1,0 +1,32 @@
+.main-content {
+    text-align: center;
+
+    p {
+        width: 55%;
+        margin-left: auto;
+        margin-right: auto;
+
+        br {
+            content: "";
+            display: block;
+            margin: 1.8rem 0;
+        }
+
+        @media screen and (max-width: $desktop-sm) {
+            width: 75%;
+        }
+
+        @media screen and (max-width: $tablet) {
+            width: 100%;
+        }
+    }
+
+    .primary-cta {
+        margin-top: 15px;
+    }
+
+    img {
+        margin: 30px auto 0;
+        display: block;
+    }
+}

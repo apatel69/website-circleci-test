@@ -1,0 +1,20 @@
+.menu-item {
+    &.current-page-ancestor {
+        background: white;
+
+        a {
+            position: relative;
+            color: $midnight-blue;
+            display: inline-block;
+
+            &::after {
+                content: "";
+                display: block;
+                background: $cta-green;
+                height: 4px;
+                width: 100%;
+                margin: 5px auto 0;
+            }
+        }
+    }
+}

@@ -1,0 +1,50 @@
+.min-award {
+    justify-content: space-between;
+    width: 94.43%;
+    max-width: 967px;
+    margin: 0 auto;
+
+    &.additional-margin {
+        margin-bottom: 10px;
+        padding-bottom: 15px;
+        margin-top: 50px;
+
+        &[class*="quickbooks"] {
+            padding-bottom: 25px;
+            margin-top: 0;
+        }
+    }
+
+    @media screen and (max-width: $desktop-sm) {
+        justify-content: space-around;
+        width: 100%;
+        flex-wrap: wrap;
+    }
+
+    img {
+        max-height: 52px;
+
+        @media screen and (max-width: $mobile) {
+            &:nth-child(2) {
+                flex-basis: 100%;
+                margin-bottom: 20px;
+            }
+        }
+    }
+
+    @media screen and (max-width: $mobile-sm) {
+        justify-content: space-between;
+    }
+
+    .copy {
+        font-family: $font-med;
+        text-transform: uppercase;
+        margin: 0;
+
+        @media screen and (max-width: $desktop-sm) {
+            margin-bottom: 2.2rem;
+            width: 100%;
+            text-align: center;
+        }
+    }
+}

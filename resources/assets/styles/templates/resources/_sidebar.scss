@@ -1,0 +1,17 @@
+.controls-categories,
+.article-categories {
+    a {
+        display: block;
+        font-size: 18px;
+        line-height: 18px;
+        text-decoration: none;
+        color: $midnight-blue;
+        padding: 15px;
+
+        &:hover,
+        &.active {
+            color: $fresh-blue;
+            background: $header-background;
+        }
+    }
+}

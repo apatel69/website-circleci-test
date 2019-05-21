@@ -1,0 +1,62 @@
+.tax-integration_categories,
+.integrations {
+    .masthead {
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: cover;
+
+        @media screen and (max-width: $tablet) {
+            background: $header-background;
+            text-align: center;
+        }
+
+        h1,
+        h1 span {
+            font-family: $font-med;
+            color: $midnight-blue;
+            font-size: 44px;
+            line-height: 48px;
+            margin-bottom: 0;
+
+            @media screen and (max-width: $mobile) {
+                font-size: 28px;
+                line-height: 34px;
+            }
+        }
+
+        .content {
+            width: 55%;
+            padding: 90px 5%;
+
+            @media screen and (max-width: $desktop-sm) {
+                width: 70%;
+            }
+
+            @media screen and (max-width: $tablet) {
+                width: 100%;
+                padding: 30px;
+            }
+        }
+
+        .st-default-search-input {
+            box-sizing: border-box;
+            height: auto;
+            border: solid 2px $rule-grey;
+            border-radius: 30px;
+            width: 100%;
+            max-width: 346px;
+            font-size: 17px;
+            padding: 10px 43px;
+            line-height: 16px;
+            background-image: url("~images/icons/ico_search_addons.svg");
+            background-repeat: no-repeat;
+            background-position: left 16px center;
+            font-family: $font-book;
+
+            &:focus {
+                outline: none;
+                border-color: rgba(0, 0, 0, 0.5);
+            }
+        }
+    }
+}

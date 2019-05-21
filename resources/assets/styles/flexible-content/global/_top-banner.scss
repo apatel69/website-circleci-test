@@ -1,0 +1,197 @@
+.top-banner {
+    position: relative;
+    width: 100%;
+
+    &.container {
+        padding: 0;
+    }
+
+    &.show-split-test {
+        display: none;
+    }
+
+    section {
+        padding: 0;
+
+        .content {
+            height: 100%;
+            display: flex;
+            flex-wrap: wrap;
+            background: $fresh-blue;
+            padding: 50px 60px;
+
+            @media screen and (min-width: $tablet + 1) {
+                overflow-y: scroll;
+            }
+
+            .col {
+                width: (200% / 3);
+
+                h2 {
+                    font-family: $font-dem;
+                    font-style: italic;
+                    color: #fff;
+                    font-size: 8.3rem;
+                    letter-spacing: 1.23px;
+                    line-height: (10.6 / 8.3);
+                    margin: 0;
+                    padding-right: 1em;
+                }
+
+                p {
+                    font-family: $font-book;
+                    color: #fff;
+                    font-size: 2.6rem;
+                    line-height: (3.4 / 2.6);
+                    margin: 0;
+
+                    & strong {
+                        font-family: $font-dem;
+                    }
+                }
+
+                .body {
+                    max-width: 220px;
+                }
+
+                .off-center-left {
+                    position: relative;
+                    max-height: 372px;
+                    margin-top: -50px;
+                    margin-left: -50px;
+                }
+
+                ~ .col {
+                    width: (100% / 3);
+                }
+            }
+
+            .cta {
+                width: 100%;
+                text-align: left;
+                margin-top: 4rem;
+                padding-top: 3.5rem;
+
+                .primary-cta {
+                    font-family: $font-book;
+                    font-size: 2.6rem;
+                    width: 100%;
+                    max-width: 345px;
+                    padding: 12px 30px;
+                }
+
+                .cta-after-image {
+                    position: relative;
+
+                    &::before {
+                        content: "";
+                        position: absolute;
+                        width: 100%;
+                        height: 100%;
+                        top: calc(-100% - 0.5rem);
+                        left: 0;
+                        background-repeat: no-repeat;
+                        background-position: left;
+                        pointer-events: none;
+                    }
+                }
+            }
+
+            .footer {
+                width: 100%;
+                max-width: 345px;
+                text-align: center;
+                margin-top: 1.5rem;
+
+                a {
+                    font-family: $font-book;
+                    width: 100%;
+                    max-width: 345px;
+                    margin-top: 1em;
+                    color: #fff;
+                    font-size: 1.4rem;
+                    line-height: (1.8 / 1.5);
+                    text-align: center;
+                }
+            }
+        }
+
+        @media screen and (min-width: $tablet) and (max-width: $desktop-sm) {
+            .content {
+                padding: 50px 35px 35px;
+
+                .col {
+                    width: 60%;
+
+                    ~ .col {
+                        width: 40%;
+                    }
+
+                    h2 {
+                        font-size: 4.9rem;
+                        line-height: (5.2 / 4.9);
+                        letter-spacing: 0.73px;
+                        margin-bottom: 0.5em;
+                    }
+
+                    p {
+                        font-size: 2.2rem;
+                        line-height: (3 / 2.2);
+                    }
+
+                    .off-center-left {
+                        margin-left: -21px;
+                    }
+                }
+            }
+        }
+
+        @media screen and (max-width: $tablet - 1) {
+            .content {
+                padding: 30px 25px;
+
+                .col {
+                    width: 100%;
+                    position: relative;
+
+                    h2 {
+                        font-size: 5.2rem;
+                        line-height: (5.6 / 5.2);
+                        text-align: center;
+                        padding-right: 0;
+                        margin-bottom: 0.4em;
+                    }
+
+                    p {
+                        font-size: 2rem;
+                        line-height: (2.8 / 2);
+                        text-align: center;
+                    }
+
+                    & ~ .col {
+                        display: none;
+                    }
+                }
+
+                .cta {
+                    padding-top: 60px;
+                    text-align: center;
+
+                    .cta-after-image {
+                        position: relative;
+
+                        &::before {
+                            top: calc(-100% - 0.8em);
+                            left: 0;
+                            background-position: center;
+                        }
+                    }
+                }
+
+                .footer {
+                    max-width: unset;
+                }
+            }
+        }
+    }
+}

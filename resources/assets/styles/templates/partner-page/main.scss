@@ -1,0 +1,35 @@
+@import "../../global";
+@import "../../flexible-content/global/featured-in";
+@import "../../flexible-content/global/cta-full-width";
+@import "../../flexible-content/global/cta-full-width-outline";
+@import "../../flexible-content/global/carousel-content";
+@import "../../flexible-content/global/custom-cta-image";
+@import "../../flexible-content/global/custom-header";
+@import "../../flexible-content/global/partner-call-out";
+@import "../../flexible-content/global/three-column-content";
+@import "../../flexible-content/global/testimonial-columns";
+@import "../../flexible-content/global/support-full-width";
+@import "../../flexible-content/global/getapp";
+@import "../../flexible-content/global/toll-free-header";
+@import "../../flexible-content/global/cta-invoice-templates";
+@import "hero";
+
+.three-col-content {
+    text-align: center;
+    padding-bottom: 0;
+
+    .thirds {
+        @media screen and (max-width: $tablet) {
+            display: block;
+        }
+    }
+
+    .third {
+        margin-right: 30px;
+
+        @media screen and (max-width: $tablet) {
+            width: 80%;
+            margin: 0 auto;
+        }
+    }
+}

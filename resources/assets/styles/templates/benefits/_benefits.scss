@@ -1,0 +1,128 @@
+section {
+    max-width: 990px;
+    margin: 0 auto;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+p,
+span,
+h3 {
+    font-family: $font-classic;
+}
+
+.section-intro p {
+    font-size: 17px;
+    line-height: 24px;
+    max-width: 775px;
+    margin: 20px auto;
+}
+
+.section-info {
+    text-align: center;
+}
+
+.section-intro .hero-h1,
+.section-info .hero-h1 {
+    padding: 0;
+    color: $fresh-blue;
+}
+
+.featurelist-sprite {
+    background-size: 100%;
+    background-repeat: no-repeat;
+    display: block;
+    margin-bottom: 2%;
+    width: 13%;
+    min-width: 25px;
+    min-height: 48px;
+
+    @media (max-width: 767px) {
+        min-width: 25px;
+        min-height: 35px;
+        width: 28px;
+        margin-bottom: 1%;
+    }
+}
+
+.featurelist-container {
+    margin-top: 5%;
+    margin-bottom: 0;
+    padding: 0 0 3%;
+    float: left;
+}
+
+.featurelist-li {
+    display: block;
+    list-style-type: none;
+    width: 31%;
+    float: left;
+    padding-left: 0;
+    margin-bottom: 5%;
+    background-image: none;
+
+    @media (min-width: 768px) {
+        margin-left: 3%;
+    }
+}
+
+.featurelist-icon {
+    margin-bottom: 4%;
+    width: 18%;
+    min-width: 60px;
+}
+
+.featurelist-title {
+    font-size: 20px;
+    text-align: left;
+    color: $fresh-blue;
+    margin: 0;
+    padding: 0;
+
+    @media (min-width: $tablet) {
+        font-size: 24px;
+    }
+
+    @media (min-width: $desktop-sm) {
+        font-size: 28px;
+    }
+}
+
+.featurelist-description {
+    margin-bottom: 0;
+    line-height: 24px;
+    font-size: 16px;
+}
+
+@media (max-width: 767px) {
+    .featurelist-li {
+        float: none;
+        padding: 0;
+        width: 100%;
+    }
+
+    .featurelist-invoice-autobiography {
+        margin-bottom: 0;
+    }
+
+    .featurelist-li:nth-child(even) {
+        padding-left: 0%;
+        padding-bottom: 0;
+    }
+
+    .featurelist-icon {
+        width: 14%;
+        min-width: 55px;
+    }
+}
+
+@media screen and (min-width: $tablet) {
+    .featurelist-li:nth-child(3n+1) {
+        margin-left: 0;
+    }
+}
+
+.testimonial {
+    background-color: transparent;
+    clear: both;
+}

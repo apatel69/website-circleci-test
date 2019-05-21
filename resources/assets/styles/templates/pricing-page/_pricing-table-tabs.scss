@@ -1,0 +1,543 @@
+.subscriptions-toggle {
+    justify-content: center;
+    margin: 0 auto 60px;
+
+    .switch-container {
+        .label {
+            font-family: $font-med;
+            display: inline-flex;
+            font-size: 1.5rem;
+            line-height: 1.8;
+            color: $midnight-blue;
+            opacity: 0.6;
+
+            &.active {
+                opacity: 1;
+            }
+        }
+
+        .switch {
+            position: relative;
+            display: inline-block;
+            width: 62px;
+            height: 28px;
+            top: -1em;
+            border: 2px solid $rule-grey;
+            border-radius: 15px;
+            margin: 0 1em;
+            -webkit-tap-highlight-color: transparent;
+
+            input {
+                opacity: 0;
+                width: 0;
+                height: 0;
+
+                &:checked + .slider {
+                    background-color: $white;
+                }
+
+                &:focus + .slider {
+                    box-shadow: 0 0 1px $fresh-blue;
+                }
+
+                &:checked + .slider::before {
+                    transform: translateX(34px);
+                }
+            }
+
+            .slider {
+                position: absolute;
+                cursor: pointer;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                background-color: $white;
+                transition: 0.2s;
+
+                &::before {
+                    position: absolute;
+                    content: "";
+                    height: 22px;
+                    width: 22px;
+                    left: 1px;
+                    bottom: 1px;
+                    background-color: $fresh-blue;
+                    transition: 0.2s;
+                }
+
+                &.round {
+                    border-radius: 34px;
+
+                    &::before {
+                        border-radius: 50%;
+                    }
+                }
+            }
+        }
+
+        &.switch-side-image {
+            position: relative;
+            overflow-x: hidden;
+            padding-top: 2px;
+
+            &::before {
+                content: "";
+                position: absolute;
+                width: 100px;
+                height: 100%;
+                top: calc(-100% + 1rem);
+                left: calc(100% + 1.5rem);
+                background-repeat: no-repeat;
+                background-position: left;
+                pointer-events: none;
+
+                @media screen and (max-width: $tablet) {
+                    top: calc(-100% + 0.4em);
+                    left: calc(100% - 1em);
+                    background-size: 80px;
+                }
+
+                @media screen and (max-width: $mobile-sm) {
+                    left: calc(100% - 4em);
+                }
+            }
+        }
+    }
+
+    .subscription-toggle {
+        display: block;
+        font-family: $font-book;
+        font-size: 1.6rem;
+        line-height: 1;
+        text-decoration: none;
+        padding: 13px 26px 10px;
+        background: $light-grey;
+        color: $dark-grey;
+        position: relative;
+        bottom: -2px;
+
+        &:hover {
+            color: $midnight-blue;
+            cursor: pointer;
+        }
+
+        &:last-child {
+            position: relative;
+        }
+
+        &.active {
+            color: $midnight-blue;
+            border-left: 1px solid $med-grey;
+            border-right: 1px solid $med-grey;
+            border-bottom: 0;
+            background: white;
+            position: relative;
+            bottom: -1px;
+            border-top: 4px solid $fresh-blue;
+            border-top-right-radius: 3px;
+            border-top-left-radius: 3px;
+
+            &:hover {
+                background: white;
+                border-top: 4px solid lighten($fresh-blue, 5%);
+            }
+        }
+
+        .save-10-percent {
+            position: absolute;
+            width: 127px;
+            height: 26.55px;
+            top: 0;
+            right: -125px;
+        }
+    }
+}
+
+.show-desktop {
+    display: block;
+}
+
+.show-mobile {
+    display: none;
+}
+
+section {
+    position: relative;
+
+    .currency-disclaimer {
+        font-size: 1.3rem;
+        color: $dark-grey;
+        font-family: $font-book;
+        position: absolute;
+        top: -0.2em;
+        right: 1em;
+    }
+}
+
+/* Pricing Tier Container */
+.pricing-tiers {
+    display: flex;
+    flex-flow: row;
+    max-width: 1200px;
+    margin: 0 auto;
+    flex-wrap: nowrap;
+    position: relative;
+
+    .pricing-tier {
+        position: relative;
+        width: 25%;
+        border: 1px $rule-grey solid;
+        border-left: none;
+
+        &:first-child {
+            border-left: 1px $rule-grey solid;
+            border-right: none;
+            border-radius: 8px 0 0 8px;
+        }
+
+        &.most-popular {
+            border-left: 1px $rule-grey solid;
+            border-radius: 8px;
+            box-shadow: 0 3px 17px 0 rgba(6, 41, 66, 0.14);
+        }
+
+        &:last-child {
+            border-radius: 0 8px 8px 0;
+        }
+
+        // Plan Title and Description
+        .plan-header {
+            .plan-name {
+                font-family: $font-med;
+                font-size: 2.6rem;
+                line-height: (3.5 / 2.6);
+                padding-top: 30px;
+                margin: 0 auto;
+                text-align: center;
+            }
+
+            .promo-icon {
+                position: absolute;
+                right: 16px;
+                top: 0;
+            }
+
+            .description {
+                font-family: $font-book;
+                font-size: 1.6rem;
+                line-height: (2.4 / 1.6);
+                text-align: center;
+                padding: 0 3em;
+                margin: 0.2em auto 2.5em;
+            }
+        }
+
+        // Plan Cost, Client #, and Links
+        .plan-values {
+            min-height: 300px;
+            padding: 40px 0 5px;
+            text-align: center;
+            background: $highlight-blue;
+
+            .plan-clients {
+                font-family: $font-med;
+                font-size: 1.6rem;
+                line-height: calc(1.9 / 1.6);
+                margin: 0.25em auto 2.3em;
+                text-align: center;
+            }
+
+            .pricing-btn {
+                font-family: $font-book;
+                font-size: 1.9rem;
+                line-height: (1.5 / 1.9);
+                width: calc(100% - 2em);
+                max-width: 160px;
+                padding: 12px 10px;
+                background: transparent;
+                border: 2px solid $rule-grey;
+                border-radius: 4px;
+                color: #000;
+            }
+
+            .direct-buy-link {
+                p,
+                a {
+                    font-family: $font-book;
+                    font-size: 1.6rem;
+                    line-height: (1.9 / 1.6);
+                    margin: 1em auto;
+                }
+            }
+        }
+
+        .type-one,
+        .type-two {
+            display: none;
+
+            &.subscription-type {
+                display: hidden;
+
+                &.show-plan {
+                    display: block;
+                }
+
+                .plan-cost {
+                    font-family: $font-med;
+                    margin-bottom: 0;
+                    font-size: 7.2rem;
+                    margin-top: 0;
+                    line-height: 1;
+                    min-height: 72px;
+
+                    &.cost-text {
+                        font-size: 3.2rem;
+                        line-height: 1;
+                        padding-top: 1.6rem;
+                    }
+
+                    sub {
+                        font-family: $font-book;
+                        color: $dark-grey;
+                        font-size: 1.5rem;
+                        line-height: (1.8 / 1.5);
+                        bottom: 0;
+                        display: inline-block;
+                        margin-left: -15px;
+
+                        &.with-cents {
+                            margin-left: -40px;
+                        }
+                    }
+
+                    sup {
+                        font-size: 3.2rem;
+                        margin-right: -15px;
+                        top: -0.8em;
+
+                        &.cents {
+                            font-size: 3rem;
+                            top: -1em;
+                        }
+                    }
+                }
+            }
+
+            .reg-cost {
+                color: #8495a3;
+                font-size: 1.4rem;
+                line-height: (1.7 / 1.4);
+                margin-bottom: 1.6rem;
+
+                .strikethrough {
+                    text-decoration: line-through;
+                }
+            }
+        }
+
+        // Plan Feature Details
+        .plan-details {
+            padding: 30px 20px 40px;
+
+            ul {
+                li {
+                    font-family: $font-book;
+                    font-size: 1.4rem;
+                    line-height: (2.2 / 1.5);
+                    background-size: 14px 20px;
+                }
+            }
+
+            p {
+                font-family: $font-book;
+                font-size: 1.6rem;
+                line-height: (1.9 / 1.6);
+                margin: 0;
+                padding: 0;
+            }
+        }
+
+        // Most Popular Popup column
+        &.most-popular {
+            margin: -20px 0;
+
+            .plan-header {
+                padding-top: 20px;
+            }
+
+            .plan-values {
+                box-shadow: 0 0 0 10px $highlight-border-blue;
+                margin: 0 10px;
+
+                .pricing-btn {
+                    font-family: $font-book;
+                    background-color: $cta-green;
+                    border: 2px solid $cta-green;
+                    color: #fff;
+                    padding: 15px 10px;
+                    font-size: 2.4rem;
+                    line-height: (1.9 / 2.4);
+                    max-width: 198px;
+                    margin-top: -6px;
+                }
+            }
+
+            .plan-details {
+                padding: 30px 20px 40px;
+            }
+        }
+    }
+}
+
+.icon-most-popular {
+    position: absolute;
+    top: -47px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    z-index: 1;
+}
+
+@media screen and (max-width: $tablet - 1) {
+    .subscriptions-toggle {
+        margin: 0 auto 20px;
+    }
+
+    .show-desktop {
+        display: none;
+    }
+
+    .show-mobile {
+        display: block;
+    }
+
+    .pricing-tiers {
+        flex-wrap: wrap;
+
+        > .pricing-tier {
+            width: 100%;
+            border: 1px $rule-grey solid;
+            border-radius: 8px;
+            box-shadow: 0 3px 17px 0 rgba(6, 41, 66, 0.14);
+            margin: 4em auto;
+
+            &:first-child,
+            &:last-child,
+            &.most-popular {
+                border: 1px $rule-grey solid;
+                border-radius: 8px;
+                box-shadow: 0 3px 17px 0 rgba(6, 41, 66, 0.14);
+                margin: 4em auto;
+            }
+
+            &:first-child {
+                margin: 0 auto 4em;
+            }
+
+            .plan-details {
+                ul {
+                    li + li + li + li + li {
+                        display: none;
+                    }
+                }
+
+                .mobile-expand {
+                    margin-right: 0.25em;
+                }
+
+                .show-more {
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+
+    .subscriptions-toggle {
+        .subscription-toggle {
+            .save-10-percent {
+                top: -60px;
+                right: 0;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: $tablet) and (max-width: $desktop-sm) {
+    .pricing-tiers {
+        .pricing-tier {
+            .icon-most-popular {
+                width: 100px;
+                top: -37px;
+            }
+
+            .plan-header {
+                .description {
+                    font-size: 1.3rem;
+                    padding: 0 1em;
+                    min-height: 3.8rem;
+                }
+
+                .promo-icon {
+                    right: 8px;
+                    width: 30px;
+                }
+            }
+
+            .plan-values {
+                min-height: 280px;
+
+                .type-one,
+                .type-two {
+                    display: none;
+
+                    &.subscription-type {
+                        .plan-cost {
+                            font-size: 4.2rem;
+                            margin-top: 0;
+                            min-height: 52px;
+
+                            sup {
+                                font-size: 1.7rem;
+                                margin-right: -10px;
+                                top: -0.9em;
+
+                                &.cents {
+                                    font-size: 1.7rem;
+                                    top: -1em;
+                                }
+                            }
+
+                            sub {
+                                font-size: 1.6rem;
+                                margin-left: -10px;
+
+                                &.with-cents {
+                                    margin-left: -20px;
+                                }
+                            }
+
+                            &.cost-text {
+                                font-size: 2.2rem;
+                                line-height: 1;
+                                padding-top: 1.6rem;
+                            }
+                        }
+                    }
+                }
+
+                .reg-cost {
+                    margin-bottom: 1.6rem;
+                }
+
+                .plan-clients {
+                    font-size: 1.6rem;
+                }
+            }
+        }
+    }
+
+    .pricing-tiers .pricing-tier.most-popular .plan-values .pricing-btn {
+        font-size: 2rem;
+    }
+}

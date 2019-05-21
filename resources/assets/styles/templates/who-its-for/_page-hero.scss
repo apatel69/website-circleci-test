@@ -1,0 +1,84 @@
+.hero {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top center;
+
+    section {
+        padding: 45px 0;
+    }
+
+    .content {
+        width: 45%;
+        margin-left: 20px;
+
+        @media screen and (max-width: $desktop-sm) {
+            margin-left: 0;
+        }
+    }
+
+    h1 {
+        margin-bottom: 32px;
+    }
+
+    p {
+        font-size: 1.8rem;
+        line-height: calc(28 / 18);
+        margin-bottom: 25px;
+
+        br {
+            content: "";
+            display: block;
+            margin: 1.8rem 0;
+        }
+    }
+
+    .primary-cta {
+        min-width: 275px;
+        display: inline-block;
+        vertical-align: middle;
+
+        @media screen and (max-width: $mobile-sm) {
+            min-width: 0;
+            max-width: 275px;
+        }
+    }
+
+    .subtext {
+        color: $dark-grey;
+        max-width: 275px;
+        margin: 10px auto 0;
+    }
+
+    @media screen and (max-width: $tablet) {
+        background-color: $background-blue;
+        background-image: none;
+
+        .content {
+            text-align: center;
+            width: 100%;
+        }
+    }
+}
+
+.hero.bg-img {
+    @media screen and (max-width: $tablet) {
+        background-image: none !important;
+    }
+}
+
+.cta-subtext {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.cta-subtext-assurance {
+    margin-left: 20px;
+
+    @media screen and (max-width: $desktop-sm) {
+        margin-left: 0;
+    }
+
+    @media screen and (max-width: $tablet) {
+        text-align: center;
+    }
+}

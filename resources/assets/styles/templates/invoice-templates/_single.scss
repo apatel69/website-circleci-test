@@ -1,0 +1,187 @@
+.legacy-invoice-content {
+    .column-parent {
+        @media screen and (max-width: $tablet) {
+            display: block;
+        }
+    }
+
+    .breadcrumbs {
+        font-size: 1.6rem;
+        color: $fresh-blue;
+        margin-left: 20px;
+
+        @media screen and (max-width: $desktop-sm) {
+            margin-left: 0;
+        }
+
+        @media screen and (max-width: $tablet) {
+            text-align: center;
+        }
+
+        a {
+            margin-right: 7px;
+            text-decoration: none;
+
+            &:hover {
+                color: $midnight-blue;
+            }
+        }
+
+        .current {
+            color: $dark-grey;
+        }
+
+        .arrow {
+            vertical-align: middle;
+            margin-right: 6px;
+            height: 16px;
+        }
+    }
+
+    .download-button {
+        .format-link:last-child {
+            margin: 0;
+        }
+
+        @media screen and (max-width: $tablet) {
+            width: 450px;
+            margin: 0 auto;
+        }
+
+        @media screen and (max-width: $mobile) {
+            width: 100%;
+        }
+    }
+
+    .format-link {
+        display: inline-block;
+        vertical-align: middle;
+        text-transform: uppercase;
+        width: 31%;
+        min-width: 0;
+        margin: 0 2.5% 0 0;
+        padding: 18px 0;
+    }
+
+    .download-template {
+        display: block;
+        font-size: 2.4rem;
+        line-height: calc(28 / 24);
+        color: $fresh-blue;
+        margin-bottom: 15px;
+    }
+
+    .primary-cta {
+        &.full-width-cta {
+            margin-top: 10px;
+
+            @media screen and (max-width: $tablet) {
+                width: 450px;
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            @media screen and (max-width: $mobile) {
+                width: 100%;
+            }
+        }
+    }
+
+    .trial {
+        border-radius: 5px;
+
+        .title {
+            font-family: $font-book;
+            display: block;
+            padding-top: 40px;
+            color: $fresh-blue;
+            font-size: 3.2rem;
+            line-height: calc(42 / 32);
+            margin: 0 auto;
+            width: 90%;
+        }
+    }
+
+    .freshbooks-screenshots {
+        display: block;
+        margin: 50px auto 30px;
+    }
+
+    .featured-companies {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        align-items: center;
+        margin-bottom: 50px;
+
+        img {
+            margin: 20px 15px;
+        }
+
+        .cnet {
+            width: 26px;
+            height: 26px;
+        }
+
+        .forbes {
+            width: 56.61px;
+            height: 22px;
+        }
+
+        .cnn {
+            width: 35px;
+            height: 18px;
+        }
+
+        .ny-times {
+            width: 154px;
+            height: 21px;
+        }
+
+        .techcrunch {
+            width: 114.74px;
+            height: 16px;
+        }
+
+        .mashable {
+            width: 80.99px;
+            height: 14px;
+        }
+
+        .bloomberg {
+            width: 102px;
+            height: 18px;
+        }
+
+        .fast-company {
+            width: 94.36px;
+            height: 18px;
+        }
+
+        .betakit {
+            width: 62px;
+            height: 17px;
+        }
+
+        .financial-post {
+            width: 97.87px;
+            height: 16px;
+        }
+
+        .globe-and-mail {
+            width: 171.5px;
+            height: 14px;
+        }
+
+        .techvibes {
+            width: 94px;
+            height: 16.47px;
+        }
+    }
+
+    .assurance-copy {
+        text-align: center;
+        color: $dark-grey;
+        padding-top: 30px;
+    }
+}

@@ -1,0 +1,9 @@
+.three-col-invoice-temp {
+    .loadmore-btn {
+        width: 303px;
+
+        @media screen and (max-width: $tablet) {
+            width: 285px;
+        }
+    }
+}

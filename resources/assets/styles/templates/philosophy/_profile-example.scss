@@ -1,0 +1,60 @@
+.example-photos {
+    background-repeat: no-repeat;
+    background-size: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+    .profile-image {
+        @media screen and (max-width: $mobile) {
+            margin: 0 auto;
+        }
+
+        img {
+            max-width: 216px;
+            margin-top: 20px;
+        }
+    }
+
+    .text {
+        width: 30%;
+        align-self: center;
+        text-align: left;
+        margin-top: 212px;
+        padding-left: 25px;
+
+        @media screen and (max-width: $desktop-sm) {
+            width: 50%;
+        }
+
+        h3 {
+            font-size: 3.6rem;
+            font-family: $font-script;
+            color: $fresh-blue;
+            margin-bottom: 0;
+        }
+
+        p {
+            font-weight: bold;
+            margin-bottom: 0;
+            margin-top: 0;
+        }
+
+        .grey {
+            color: $dark-grey;
+            font-weight: normal;
+        }
+    }
+
+    @media screen and (max-width: $mobile) {
+        flex-direction: column;
+
+        .text {
+            text-align: center;
+            margin-top: 0;
+            margin-right: 0;
+            padding-left: 0;
+            width: 100%;
+        }
+    }
+}

@@ -1,0 +1,144 @@
+{
+    "key": "group_5c36833f19cb1",
+    "title": "Classic Menu",
+    "fields": [
+        {
+            "key": "field_5c36834534584",
+            "label": "Override Classic Logo",
+            "name": "override_classic_logo",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui": 1,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        },
+        {
+            "key": "field_5c36835a34585",
+            "label": "Custom Classic Logo",
+            "name": "custom_classic_logo",
+            "type": "clone",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5c36834534584",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "clone": [
+                "group_5a81cd4f1a6fd"
+            ],
+            "display": "group",
+            "layout": "block",
+            "prefix_label": 0,
+            "prefix_name": 0
+        },
+        {
+            "key": "field_5c36852a59f76",
+            "label": "Override Classic Menu",
+            "name": "override_classic_menu",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui": 1,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        },
+        {
+            "key": "field_5c36853559f77",
+            "label": "Custom Classic Menu",
+            "name": "custom_classic_menu",
+            "type": "select",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5c36852a59f76",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "primary_navigation": "Primary Navigation",
+                "footer-col-1": "Footer Menu Column 1",
+                "footer-col-2": "Footer Menu Column 2",
+                "footer-col-3": "Footer Menu Column 3",
+                "footer-col-4": "Footer Menu Column 4",
+                "footer-col-5": "Footer Menu Column 5",
+                "footer-col-6": "Footer Menu Column 6",
+                "secondary-navigation": "Secondary Navigation",
+                "secondary-navigation_uk": "Secondary Navigation UK",
+                "product-tour": "Product Tour Menu",
+                "about-navigation": "About Section Navigation",
+                "policies-navigation": "Policies Sidebar",
+                "alt_header_default": "Custom Header Default",
+                "education-navigation": "Education Header Menu",
+                "accountants": "Accountants Header Menu",
+                "classic-footer": "Classic Footer Menu",
+                "classic-header": "Classic Header Menu",
+                "lpat-pages": "LPAT Pages Header Menu",
+                "invoice-software": "CA Invoice Software",
+                "contact-us": "Contact Us",
+                "easy-bookkeeping": "Easy Bookkeeping",
+                "custom-classic-menu": "Custom Classic Menu"
+            },
+            "default_value": [],
+            "allow_null": 0,
+            "multiple": 0,
+            "ui": 1,
+            "ajax": 0,
+            "return_format": "value",
+            "placeholder": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "page_template",
+                "operator": "==",
+                "value": "views\/business-name-generator.blade.php"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": 1,
+    "description": "",
+    "modified": 1547077206
+}

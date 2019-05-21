@@ -1,0 +1,98 @@
+@import "../../common/mixins";
+
+.equation-cta {
+    display: flex;
+    justify-content: space-around;
+    padding: 30px 0;
+
+    @media screen and (max-width: $tablet) {
+        display: block;
+        text-align: center;
+    }
+
+    .col-A {
+        width: 30%;
+        padding: 0 2em;
+
+        h2 {
+            margin-top: 0;
+        }
+    }
+
+    .col-B {
+        flex-basis: 800px;
+        padding: 0 2em;
+    }
+
+    @media screen and (max-width: $tablet) {
+        .col-A,
+        .col-B {
+            margin: 3em 0;
+        }
+
+        .col-A {
+            width: 100%;
+        }
+    }
+
+    .equation-cta-formula {
+        @include shadowBox;
+
+        display: flex;
+        align-items: center;
+        padding: 2em 3em;
+        text-align: center;
+        justify-content: space-evenly;
+
+        @media screen and (max-width: $mobile) {
+            display: block;
+        }
+    }
+
+    .equation-cta-equation {
+        .equation-body-text {
+            font-size: 4rem;
+            font-family: $font-med;
+        }
+
+        .equation-sub-text {
+            color: $med-grey;
+            display: block;
+            font-size: 2em;
+            margin: 0;
+            padding: 0;
+            width: 100%;
+        }
+
+        p {
+            display: inline-block;
+            margin: 0;
+            padding: 0;
+        }
+
+        br {
+            margin: 0;
+            padding: 0;
+        }
+    }
+
+    .equation-cta-prime-operator {
+        font-size: 4.5em;
+        color: $fresh-blue;
+        margin: -0.5em 0.1em 0;
+
+        @media screen and (max-width: $tablet) {
+            margin-top: 0;
+        }
+    }
+
+    .equation-cta-outro-wyswig,
+    .equation-cta-outro-wyswig p {
+        color: #6c7e8b;
+
+        @media screen and (max-width: $tablet) {
+            display: block;
+            text-align: left;
+        }
+    }
+}

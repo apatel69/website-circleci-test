@@ -1,0 +1,36 @@
+.pillars {
+    h2 {
+        text-align: center;
+    }
+
+    .three-col {
+        float: left;
+
+        .col {
+            float: left;
+            text-align: center;
+            width: 30%;
+            margin-right: 5%;
+
+            p {
+                padding: 0 5%;
+            }
+
+            &:last-child {
+                margin-right: 0;
+            }
+
+            @media screen and (max-width: $tablet) {
+                width: 100%;
+                margin-right: 0;
+
+                p {
+                    max-width: 376px;
+                    padding: 0;
+                    margin-left: auto;
+                    margin-right: auto;
+                }
+            }
+        }
+    }
+}

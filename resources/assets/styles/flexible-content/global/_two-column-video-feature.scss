@@ -1,0 +1,113 @@
+@import '../../common/mixins';
+
+.two-column-video-feature-container {
+    background: bottom left no-repeat #fff;
+    background-size: 50%;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 2.5em 3em;
+
+    @media screen and (max-width: $tablet) {
+        background-size: 0;
+        display: block;
+    }
+
+    .two-column-video-feature-cta-title {
+        margin-top: 40px;
+        text-align: center;
+        width: 100%;
+        font-family: $font-med;
+        font-weight: normal;
+        color: $midnight-blue;
+        font-size: 40px;
+        line-height: 50px;
+        margin-bottom: 33px;
+
+        @media screen and (max-width: $tablet) {
+            font-size: 30px;
+        }
+    }
+
+    .two-column-video-feature-video {
+        flex: 2;
+    }
+
+    .two-column-video-feature-video,
+    .two-column-video-feature-image {
+        @include shadowBox;
+
+        flex: 2;
+        margin-right: 3em;
+
+        @media screen and (max-width: $tablet) {
+            background-size: 0;
+            display: block;
+        }
+
+        .two-column-video-feature-cta-title {
+            margin-top: 40px;
+            text-align: center;
+            width: 100%;
+        }
+
+        .two-column-video-feature-video {
+            flex: 2;
+        }
+
+        .two-column-video-feature-video,
+        .two-column-video-feature-image {
+            @include shadowBox;
+
+            flex: 2;
+            margin-right: 3em;
+
+            @media screen and (max-width: $tablet) {
+                margin-right: 0;
+            }
+
+            .responsive-video iframe {
+                border-radius: 5px;
+            }
+        }
+
+        .two-column-video-feature-description {
+            background: $lighter-blue;
+            border-radius: 5px;
+            flex: 1;
+            padding: 3em;
+
+            @media screen and (max-width: $tablet) {
+                margin-top: 2em;
+                padding: 2em 1.5em;
+                text-align: center;
+                margin-bottom: 2em;
+
+                p {
+                    margin-top: 0.1em;
+                }
+
+                .primary-cta {
+                    margin-top: 0.5em;
+                    margin-bottom: 1em;
+                }
+            }
+        }
+    }
+
+    .flipped {
+        background: bottom right no-repeat #fff;
+
+        .two-column-video-feature-video,
+        .two-column-video-feature-image {
+            @include shadowBox;
+
+            flex: 2;
+            margin-right: 0;
+            margin-left: 3em;
+
+            @media screen and (max-width: $tablet) {
+                margin-left: 0;
+            }
+        }
+    }
+}

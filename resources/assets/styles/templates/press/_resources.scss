@@ -1,0 +1,183 @@
+#assets {
+    display: none;
+    position: relative;
+}
+
+.resources {
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+
+    @media screen and (max-width: $desktop-sm) {
+        justify-content: space-between;
+    }
+
+    .content {
+        width: 40%;
+
+        @media screen and (max-width: $desktop-sm) {
+            width: 50%;
+        }
+
+        @media screen and (max-width: $tablet) {
+            width: 85%;
+            text-align: center;
+            margin: 0 auto;
+        }
+
+        @media screen and (max-width: $mobile) {
+            width: 100%;
+        }
+
+        span {
+            display: block;
+            font-size: 1.8rem;
+            margin-bottom: 25px;
+            color: $dark-grey;
+        }
+    }
+}
+
+.freshbooks-logos {
+    width: 42.5%;
+    display: flex;
+    justify-content: center;
+
+    @media screen and (max-width: $tablet) {
+        width: 85%;
+        margin: 0 auto;
+    }
+
+    @media screen and (max-width: $mobile) {
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .fb-logo {
+        text-align: center;
+
+        &:not(:last-of-type) {
+            margin-right: 15px;
+        }
+
+        a {
+            margin-top: 15px;
+            text-align: center;
+            display: block;
+            font-size: 1.6rem;
+            line-height: 1.5;
+        }
+    }
+}
+
+.expand-chevron::after {
+    content: url("~images/icons/down-chevron-blue.svg");
+    vertical-align: sub;
+    margin-left: 10px;
+}
+
+.devices {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    flex-wrap: wrap;
+    align-content: space-between;
+    margin: 30px 0;
+
+    @media screen and (max-width: $desktop-sm) {
+        height: 440px;
+        justify-content: space-between;
+    }
+
+    @media screen and (max-width: $tablet) {
+        height: 640px;
+        justify-content: center;
+    }
+
+    @media screen and (max-width: $mobile) {
+        height: 1080px;
+    }
+}
+
+.device {
+    width: 20%;
+    text-align: center;
+
+    @media screen and (max-width: $desktop-sm) {
+        width: 33.33%;
+    }
+
+    @media screen and (max-width: $tablet) {
+        width: 50%;
+    }
+
+    @media screen and (max-width: $mobile) {
+        width: 100%;
+    }
+
+    img {
+        margin-bottom: 15px;
+
+        &.device-family {
+            width: 230px;
+            height: auto;
+        }
+
+        &.device-iphone {
+            width: 46px;
+            height: auto;
+        }
+
+        &.device-android {
+            width: 64px;
+            height: auto;
+        }
+
+        &.device-laptop {
+            width: 208px;
+            height: auto;
+        }
+
+        &.device-tablet {
+            width: 113px;
+            height: auto;
+        }
+    }
+
+    span {
+        color: $dark-grey;
+        display: block;
+        font-size: 1.8rem;
+        line-height: (28 / 18);
+    }
+}
+
+.image {
+    width: 42.5%;
+
+    img {
+        &.image-border {
+            border-radius: 5px;
+        }
+
+        display: block;
+        margin: 0 auto;
+    }
+
+    @media screen and (max-width: $tablet) {
+        width: 85%;
+        margin: 0 auto;
+    }
+
+    @media screen and (max-width: $mobile) {
+        width: 100%;
+    }
+}
+
+.close-icon {
+    position: absolute;
+    width: 20px;
+    height: auto;
+    top: 20px;
+    right: 0;
+}

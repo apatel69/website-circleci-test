@@ -1,0 +1,33 @@
+.two-col {
+    h4 {
+        font-family: $font-med;
+    }
+
+    display: flex;
+
+    .col {
+        margin: 0 1em;
+        padding: 0 4.5em;
+
+        h4:not(.sub-title) {
+            color: $midnight-blue;
+        }
+
+        a.text-link {
+            text-decoration: none;
+            font-size: 1.4em;
+
+            &::after {
+                content: "\2192";
+                padding-left: 0.5em;
+            }
+        }
+
+        .col-image-container {
+            display: flex;
+            min-height: 400px;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+}

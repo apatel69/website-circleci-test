@@ -1,0 +1,77 @@
+.st-injected-content-generated {
+    .st-ui-autocomplete {
+        .st-query-present {
+            border-radius: 15px;
+
+            .st-ui-result {
+                .st-ui-type-heading {
+                    font-size: 14px;
+                    color: $fresh-blue;
+                }
+
+                .st-ui-type-detail {
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+
+    .st-search-results.st-ui-content {
+        backface-visibility: hidden;
+
+        .st-ui-result {
+            .st-ui-type-heading {
+                font-size: 14px;
+                font-family: $font-book;
+
+                em {
+                    font-family: $font-book;
+                }
+            }
+
+            .st-ui-type-detail-bold,
+            .st-ui-type-detail {
+                font-family: $font-book;
+
+                em {
+                    font-family: $font-book;
+                }
+            }
+
+            .st-ui-type-detail-bold {
+                font-size: 12px;
+            }
+
+            .st-ui-type-detail {
+                font-size: 14px;
+                max-height: unset;
+            }
+
+            &:hover {
+                color: $fresh-blue;
+
+                .st-ui-type-heading {
+                    text-decoration: underline;
+                }
+
+                .st-ui-type-detail-bold,
+                .st-ui-type-detail {
+                    color: $fresh-blue;
+                }
+            }
+        }
+    }
+
+    .st-ui-container-footer_bar {
+        .st-ui-footer {
+            .st-query-present {
+                font-family: $font-book;
+
+                strong,
+                .st-ui-search-summary-query {
+                    font-family: $font-book;
+                }
+            }
+        }
+    }
+}

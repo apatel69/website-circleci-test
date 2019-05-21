@@ -1,0 +1,293 @@
+.desktop-nav-wrapper > .container {
+    @media screen and (max-width: $desktop-sm) {
+        display: none;
+    }
+}
+
+.mobile-nav {
+    @media screen and (max-width: $desktop-sm) {
+        display: block;
+    }
+}
+
+.desktop-nav-wrapper > .container .header-logo {
+    width: 110px;
+    height: auto;
+}
+
+.desktop-nav-wrapper > .container .main-nav {
+    padding-bottom: 0;
+
+    .primary-cta {
+        color: white;
+        padding-left: 14px;
+        padding-right: 14px;
+    }
+}
+
+.desktop-nav-wrapper > .container .nav-items {
+    width: 80%;
+}
+
+.overlay.active {
+    @media screen and (max-width: $desktop-sm) {
+        opacity: 0.85;
+    }
+}
+
+.cta-only.mobile-only {
+    display: none;
+
+    @media screen and (max-width: $desktop-sm) {
+        display: block;
+    }
+}
+
+.mobile-nav-items {
+    .mobile-nav-item > a {
+        @media screen and (max-width: $desktop-sm) {
+            padding-left: 40px;
+            padding-right: 40px;
+        }
+
+        @media screen and (max-width: $tablet) {
+            padding-left: 15px;
+            padding-right: 15px;
+        }
+    }
+
+    .btn-trial {
+        @media screen and (max-width: $desktop-sm) {
+            margin-left: 40px;
+            margin-right: 40px;
+        }
+
+        @media screen and (max-width: $tablet) {
+            margin-left: 15px;
+            margin-right: 15px;
+        }
+    }
+}
+
+.hero {
+    @media screen and (min-width: 1025px) {
+        height: 450px;
+
+        section {
+            padding-top: 10%;
+        }
+    }
+
+    @media screen and (max-width: $tablet) {
+        background: white;
+    }
+}
+
+.cta-full-width,
+.cta-heading {
+    text-align: center;
+}
+
+.cta-full-width {
+    padding-top: 75px;
+    padding-bottom: 75px;
+}
+
+.form-landing-page-details {
+    align-items: flex-start;
+    justify-content: space-between;
+
+    @media screen and (max-width: $tablet) {
+        display: block;
+    }
+}
+
+.form-landing-page-detail {
+    flex-basis: 590px;
+    padding-right: 15px;
+
+    @media screen and (max-width: $tablet) {
+        padding-right: 0;
+    }
+}
+
+.form-landing-page-detail-info {
+    @media screen and (max-width: $tablet) {
+        padding-right: 0;
+
+        h2,
+        p {
+            text-align: center;
+        }
+    }
+}
+
+.form-landing-page-module {
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 50px;
+
+    @media screen and (max-width: $tablet) {
+        justify-content: center;
+    }
+
+    @media screen and (max-width: $mobile) {
+        display: block;
+    }
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
+
+.form-landing-page-module-iconography {
+    img {
+        max-width: 150px;
+
+        @media screen and (max-width: $mobile) {
+            display: block;
+            margin: 0 auto 30px;
+        }
+    }
+}
+
+.form-landing-page-module-details {
+    padding-left: 15px;
+    flex-basis: 390px;
+
+    h3 {
+        font-size: 1.8rem;
+        line-height: 26/18;
+        color: $midnight-blue;
+        font-family: "Franklin-Gothic-URW-Med";
+        margin-top: 0;
+    }
+
+    p {
+        margin-bottom: 0;
+    }
+
+    @media screen and (max-width: $mobile) {
+        padding-left: 0;
+        text-align: center;
+    }
+}
+
+.form-landing-page-form-container {
+    flex-basis: 476px;
+    background: $fresh-blue;
+    padding: 40px;
+    height: auto;
+    margin-top: 90px;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    border-radius: 8px;
+
+    h2,
+    p {
+        color: white;
+        text-align: center;
+    }
+
+    h2 {
+        margin-top: 0;
+    }
+}
+
+.its-free {
+    position: absolute;
+    top: -35px;
+    right: 20px;
+}
+
+.form-landing-page-form {
+    .fieldset {
+        margin-bottom: 15px;
+
+        input[type="text"] {
+            width: 100%;
+            border: solid 2px white;
+            border-radius: 5px;
+            padding: 18px 14px 14px;
+            font-size: 1.8rem;
+            line-height: 21/18;
+
+            &.has-error {
+                background: $error-state-text;
+                border: solid 2px $error-state;
+                border-bottom-left-radius: 0;
+                border-bottom-right-radius: 0;
+            }
+        }
+
+        .error {
+            display: none;
+            width: 100%;
+            background-color: $error-state;
+            color: white;
+            font-size: 1.5rem;
+            line-height: 24/16;
+            padding: 5px 10px 7px;
+            border-bottom-left-radius: 5px;
+            border-bottom-right-radius: 5px;
+        }
+    }
+}
+
+.form-landing-page-form-submit {
+    cursor: pointer;
+    width: 100%;
+}
+
+.form-landing-page-form-success {
+    display: none;
+}
+
+.hero #cpy-hero h1,
+.hero .cpy-hero,
+.cpy-hero h3,
+.form-landing-page-detail h3 {
+    color: $midnight-blue;
+    font-family: "Franklin-Gothic-URW-Med";
+}
+
+.form-landing-page-detail .form-landing-page-module-details {
+    h3 {
+        color: $fresh-blue;
+        font-size: 2.4rem;
+
+        @media screen and (max-width: $tablet) {
+            font-size: 2.2rem;
+        }
+    }
+}
+
+.form-landing-page-form::before {
+    background: url("~images/forms/recco-banner-desktop@2x.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    content: "";
+    display: block;
+    height: 100px;
+    position: absolute;
+    right: -16px;
+    top: -15px;
+    width: 240px;
+
+    @media screen and (max-width: $mobile) {
+        .form-landing-page-form::before {
+            background: url("~images/forms/recco-banner-desktop@2x.png");
+        }
+    }
+}
+
+.feedback-form-success {
+    display: none;
+}
+
+.feedback-form-submit {
+    margin: 0 auto;
+    display: block;
+    width: 100%;
+}

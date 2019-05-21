@@ -1,0 +1,31 @@
+.four-col-wrapper {
+    justify-content: space-between;
+    align-items: stretch;
+    flex-wrap: wrap;
+
+    @media screen and (max-width: $desktop-sm) {
+        flex-wrap: wrap;
+    }
+
+    @media screen and (max-width: $mobile) {
+        justify-content: center;
+    }
+
+    .four-col-column {
+        text-align: center;
+        width: 23%;
+
+        img {
+            border-radius: 50%;
+            width: 100px;
+        }
+
+        @media screen and (max-width: $desktop-sm) {
+            width: 48%;
+        }
+
+        @media screen and (max-width: $mobile) {
+            width: 80%;
+        }
+    }
+}

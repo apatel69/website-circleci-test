@@ -1,0 +1,367 @@
+.cta-side-mobile {
+    display: none;
+
+    @media screen and (max-width: $tablet) {
+        display: block;
+        text-align: center;
+        margin: 2em;
+
+        span {
+            display: block;
+        }
+    }
+}
+
+.inline-form-hero {
+    margin-left: 20px;
+
+    @media screen and (max-width: $desktop-sm) {
+        margin-left: 0;
+    }
+
+    .error-general {
+        text-align: left;
+    }
+
+    .fieldset,
+    .cta-subtext,
+    .error-general {
+        max-width: 371px;
+        width: 100%;
+
+        @media screen and (max-width: $tablet) {
+            max-width: 450px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
+
+    .fieldset {
+        margin-bottom: 7px;
+
+        & > input[type="email"],
+        & > input[type="password"] {
+            &.error,
+            &:invalid:not(:focus):not(:placeholder-shown) {
+                @media screen and (max-width: $tablet) {
+                    border-bottom-right-radius: 0;
+                    border-bottom-left-radius: 0;
+                }
+
+                & ~ .error-state {
+                    display: inline-block;
+                    animation: error-reveal-header 0.3s ease-out;
+
+                    @media screen and (max-width: $tablet) {
+                        display: block;
+                    }
+                }
+            }
+        }
+    }
+
+    .error-state {
+        position: absolute;
+        left: 104%;
+        bottom: 0;
+        z-index: 100;
+    }
+
+    .error-message {
+        position: relative;
+        white-space: nowrap;
+
+        @media screen and (max-width: $tablet) {
+            text-align: center;
+        }
+
+        &::before {
+            position: absolute;
+            content: "◀";
+            color: $error-pink;
+            left: -31px;
+
+            @media screen and (max-width: $tablet) {
+                display: none;
+            }
+        }
+    }
+
+    .fieldset-password {
+        display: none;
+    }
+
+    .fieldset {
+        position: relative;
+
+        @media screen and (max-width: $tablet) {
+            display: block;
+        }
+
+        label {
+            position: absolute;
+            font-family: $font-book;
+            font-size: 2rem;
+            line-height: 1;
+            color: $input-grey;
+            top: 16px;
+            left: 17px;
+            display: block;
+
+            @media screen and (max-width: $tablet) {
+                font-size: 2.4rem;
+            }
+
+            @media screen and (max-width: $mobile) {
+                font-size: 1.8rem;
+            }
+        }
+
+        & > input[type="email"],
+        & > input[type="password"] {
+            width: 100%;
+            border: 2px solid $med-grey;
+            border-radius: 5px;
+            height: 50px;
+            font-size: 2rem;
+            line-height: 1;
+            padding: 0 15px;
+            font-family: $font-book;
+            color: $midnight-blue;
+
+            @media screen and (max-width: $tablet) {
+                font-size: 2.4rem;
+            }
+
+            @media screen and (max-width: $mobile) {
+                font-size: 1.8rem;
+            }
+
+            &:focus {
+                & + label {
+                    display: none;
+                }
+            }
+
+            &.error,
+            &:valid,
+            &:invalid:not(:focus):not(:placeholder-shown) {
+                background-position: center right 10px;
+                background-repeat: no-repeat;
+                background-size: 25px;
+            }
+
+            &:valid {
+                background-image: url("~images/forms/list.svg");
+                background-color: white;
+
+                & + label {
+                    display: none;
+                }
+            }
+
+            &.error,
+            &:invalid:not(:focus):not(:placeholder-shown) {
+                background-image: url("~images/forms/icon_error.svg");
+                background-color: $error-pink-light;
+                border: 2px solid $error-pink;
+                font-family: $font-book;
+
+                & + label {
+                    display: none;
+                }
+
+                & ~ .error-state {
+                    .error-message {
+                        display: none;
+                    }
+                }
+            }
+
+            &.error {
+                & ~ .error-state {
+                    .error-message.server-message {
+                        display: block;
+                    }
+                }
+            }
+
+            &:invalid:not(:focus):not(:placeholder-shown) {
+                & ~ .error-state {
+                    .error-message.client-message {
+                        display: block;
+                    }
+                }
+            }
+        }
+    }
+
+    .submit-assurance {
+        position: relative;
+
+        .side-image-container {
+            position: absolute;
+            // top: -78px;
+            top: 50%;
+            transform: translateY(-60%);
+            left: 395px;
+
+            img {
+                max-width: 240px;
+                max-height: 145px;
+            }
+
+            p.side-image-caption {
+                color: $dark-grey;
+                display: flex;
+                flex-direction: column;
+                font-size: 1.35em;
+                justify-content: center;
+                margin: 3px;
+                text-align: center;
+
+                .image-caption {
+                    margin-top: 0;
+                    padding-top: 0;
+                }
+            }
+
+            @media screen and (max-width: $tablet) {
+                display: none;
+            }
+        }
+    }
+
+    .error-general {
+        display: none;
+        font-size: 2rem;
+        line-height: 1;
+        padding: 15px;
+        color: $midnight-blue;
+        background: $error-pink-light;
+        border: 2px solid $error-state;
+        border-radius: 5px;
+        margin-bottom: 7px;
+        background-image: url("~images/forms/icon_error.svg");
+        background-position: center right 10px;
+        background-repeat: no-repeat;
+        background-size: 25px;
+        font-family: $font-book;
+
+        @media screen and (max-width: $tablet) {
+            font-size: 2.4rem;
+        }
+
+        @media screen and (max-width: $mobile) {
+            font-size: 1.8rem;
+        }
+    }
+
+    .error-state {
+        background: $error-pink;
+        padding: 14px 16px;
+        border-radius: 5px;
+        box-shadow: 2px 2px 0 rgba(6, 41, 66, 0.25);
+        display: none;
+
+        @media screen and (max-width: $tablet) {
+            position: static;
+            border-top-left-radius: 0;
+            border-top-right-radius: 0;
+            padding: 7px;
+            box-shadow: 0 0 0;
+        }
+    }
+
+    .error-message {
+        color: #fff;
+        font-size: 2rem;
+        line-height: 1;
+    }
+
+    @keyframes error-reveal-header {
+        0% {
+            opacity: 0;
+            transform: translateX(-100%);
+        }
+
+        50% {
+            opacity: 0;
+        }
+
+        100% {
+            opacity: 1;
+            transform: translateX(0);
+        }
+    }
+
+    @media screen and (max-width: $tablet) {
+        @keyframes error-reveal-header {
+            0% {
+                opacity: 0;
+                transform: translateY(-100%);
+            }
+
+            50% {
+                opacity: 0;
+            }
+
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    }
+
+    @keyframes error-reveal-body {
+        0% {
+            opacity: 0;
+            transform: translateY(-100%);
+        }
+
+        50% {
+            opacity: 0;
+        }
+
+        100% {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    .inline-form-subtext-assurance {
+        .cta-subtext {
+            text-align: center;
+            display: block;
+
+            p:first-of-type:not(.side-image-caption) {
+                margin: 0;
+
+                @media screen and (min-width: $tablet) and (max-width: $tablet) {
+                    margin-left: 15%;
+                }
+            }
+        }
+
+        .primary-cta {
+            min-width: 100%;
+            font-size: 2.5rem;
+            line-height: calc(30 / 25);
+            padding-top: 12px;
+            padding-bottom: 12px;
+            border: none;
+            cursor: pointer;
+            font-family: $font-book;
+        }
+
+        small {
+            margin-top: 5px;
+
+            &.security::before {
+                content: url("~images/icons/security-lock.svg");
+                vertical-align: middle;
+                margin-right: 5px;
+            }
+        }
+    }
+}

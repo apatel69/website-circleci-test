@@ -1,0 +1,150 @@
+.features-nav {
+    display: flex;
+    flex-flow: row no-wrap;
+    justify-content: space-around;
+    padding: 20px 0;
+
+    .tab {
+        font-size: 20px;
+        text-decoration: none;
+        color: $midnight-blue;
+        cursor: pointer;
+
+        &.active::after {
+            content: "";
+            display: block;
+            background: $cta-green;
+            height: 4px;
+            width: 100%;
+            margin: 5px auto 0;
+        }
+    }
+}
+
+.slide {
+    display: none;
+
+    &:first-child {
+        display: block;
+    }
+
+    @media screen and (max-width: $tablet) {
+        display: block !important;
+    }
+}
+
+.features {
+    padding: 0 4%;
+
+    .info-button {
+        @media screen and (max-width: $tablet) {
+            display: none;
+        }
+    }
+
+    @media screen and (max-width: $desktop-sm) {
+        padding: 0;
+    }
+}
+
+.blue-white-background {
+    position: relative;
+
+    @media screen and (max-width: $desktop-sm) {
+        min-height: 645px;
+    }
+}
+
+.feature-arrow {
+    position: absolute;
+    top: 25%;
+    cursor: pointer;
+
+    &.left-arrow {
+        left: 0;
+        display: none;
+    }
+
+    &.right-arrow {
+        right: 0;
+    }
+
+    @media screen and (max-width: $desktop-sm) {
+        top: 35%;
+    }
+
+    @media screen and (max-width: $tablet) {
+        display: none !important;
+    }
+}
+
+.feature {
+    justify-content: space-around;
+    display: flex;
+    flex-direction: row;
+
+    @media screen and (max-width: $desktop-sm) {
+        display: block;
+    }
+
+    @media screen and (max-width: $tablet) {
+        padding: 25px 0;
+    }
+}
+
+.carousel-nav {
+    @media screen and (max-width: $tablet) {
+        display: none;
+    }
+}
+
+.feature-content {
+    margin-right: 20px;
+    width: 52%;
+    min-height: 410px;
+
+    @media screen and (max-width: $desktop-sm) {
+        min-height: inherit;
+        text-align: center;
+        width: 85%;
+        margin: 0 auto;
+    }
+
+    @media screen and (max-width: $mobile) {
+        width: 100%;
+    }
+
+    h3 {
+        @media screen and (max-width: $desktop-sm) {
+            margin-top: 0;
+        }
+
+        @media screen and (max-width: $tablet) {
+            margin-top: 2.7rem;
+        }
+    }
+
+    .primary-cta {
+        @media screen and (max-width: $tablet) {
+            display: none;
+        }
+    }
+
+    a {
+        margin: 20px auto;
+    }
+}
+
+.feature-image {
+    align-self: flex-end;
+    width: 80%;
+
+    @media screen and (max-width: $desktop-sm) {
+        width: 100%;
+    }
+
+    img {
+        display: block;
+        margin: 0 auto;
+    }
+}

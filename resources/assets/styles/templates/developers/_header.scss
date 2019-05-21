@@ -1,0 +1,320 @@
+.responsive-header {
+    max-width: 1280px;
+    padding-left: 40px;
+    padding-right: 40px;
+    margin: 0 auto;
+
+    @media screen and (max-width: $tablet) {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+}
+
+.header-wrapper {
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+
+    @media screen and (max-width: $tablet) {
+        padding: 10px 0 0;
+    }
+}
+
+.header-banner {
+    display: block;
+    text-align: center;
+    background: $blue;
+    color: #fff;
+    padding: 11px;
+
+    @media screen and (max-width: $tablet) {
+        display: none;
+    }
+
+    p {
+        margin: 0;
+        font-size: 15px;
+        line-height: 22px;
+        font-family: $font-classic;
+    }
+
+    a {
+        color: #fff;
+        text-decoration: none;
+
+        &:hover {
+            text-decoration: none;
+        }
+    }
+}
+
+.banner-phone {
+    a::before {
+        content: "\e601";
+        font-family: $font-icon;
+        position: relative;
+        display: inline-block;
+        top: -1px;
+        margin: 0 5px;
+        font-size: 11px;
+        line-height: 22px;
+    }
+}
+
+.freshbooks-logo {
+    padding-bottom: 10px;
+
+    img {
+        width: 130px;
+
+        @media screen and (min-width: $desktop-lrg) {
+            padding-bottom: 4px;
+        }
+
+        @media screen and (max-width: $tablet) {
+            width: 90px;
+        }
+    }
+}
+
+#menu-classic-header-navigation {
+    position: relative;
+    box-sizing: border-box;
+    padding: 0;
+
+    @media screen and (max-width: $tablet) {
+        display: block;
+        margin: 0;
+    }
+
+    li {
+        display: inline-block;
+        margin: 0 20px 0 0;
+        list-style: none;
+        font-size: 16px;
+        line-height: 25px;
+        background-image: none;
+        padding-left: 0;
+
+        @media screen and (max-width: $tablet) {
+            display: block;
+            margin: 0;
+
+            + li {
+                border-top: 1px solid #e6f3fc;
+            }
+        }
+
+        &.call {
+            @media screen and (max-width: $tablet) {
+                border-top: none;
+
+                a {
+                    font-size: 15px;
+                    color: #0062af;
+                    text-align: center;
+                    padding: 10px;
+                }
+            }
+
+            span {
+                &::before {
+                    content: "\e601";
+                    font-family: $font-icon;
+                }
+            }
+        }
+
+        a {
+            text-decoration: none;
+            color: #fff;
+            opacity: 0.8;
+            padding-bottom: 10px;
+            margin: 10px 10px 0;
+            display: block;
+            text-align: center;
+            font-family: $font-classic;
+
+            @media screen and (max-width: $tablet) {
+                color: $fresh-blue;
+                margin: 0;
+                text-align: left;
+                opacity: 1;
+                display: block;
+                padding: 20px;
+                font-size: 18px;
+                line-height: 20px;
+            }
+
+            &:hover,
+            &:focus {
+                opacity: 1;
+            }
+        }
+    }
+
+    .mobile-only {
+        display: none;
+
+        @media screen and (max-width: $tablet) {
+            display: block;
+        }
+    }
+
+    .nav-primary-cta {
+        margin: 3px 3px 0 0;
+
+        @media screen and (max-width: $tablet) {
+            padding: 20px 20px 0;
+            margin: 0;
+        }
+
+        a {
+            color: white;
+            background: transparent;
+            text-align: center;
+            border-radius: 4px;
+            border: 1px solid #fff;
+            padding: 6px 15px;
+            text-decoration: none;
+            display: inline-block;
+            transition: all 0.5s ease;
+            opacity: 1;
+            margin: 0;
+
+            @media screen and (max-width: $tablet) {
+                display: block;
+                padding: 14px 18px;
+                color: white;
+                font-size: 20px;
+                transition: all 0.2s ease;
+                border-radius: 4px;
+                text-decoration: none;
+                border: 1px solid #659c17;
+                background: #85c51f;
+                text-align: center;
+            }
+
+            &:hover,
+            &:focus {
+                color: #0064be;
+                border-color: #fff;
+                background: #fff;
+
+                @media screen and (max-width: $tablet) {
+                    border-color: #659c17;
+                    background: #8ed221;
+                    color: #fff;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: $tablet) {
+    .nav-primary {
+        overflow: hidden;
+        max-height: 0;
+        position: absolute;
+        left: 0;
+        top: 71.5px;
+        width: 100%;
+        transition: all 0.3s linear;
+        background: #fff;
+
+        &::after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        &.is-shown {
+            max-height: 850px;
+            transition: max-height 0.6s linear;
+        }
+    }
+}
+
+//mobile animation
+.menu-icon {
+    width: 20px;
+    margin-top: 5px;
+    position: relative;
+    cursor: pointer;
+    float: right;
+    display: inline-block;
+    transform: rotate(0deg);
+    transition: 0.3s ease-in-out;
+    margin-right: 5px;
+
+    span {
+        display: block;
+        position: absolute;
+        height: 2px;
+        width: 100%;
+        background: #fff;
+        opacity: 1;
+        left: 0;
+        transform: rotate(0deg);
+        transition: 0.3s ease-in-out;
+    }
+
+    .menu-icon-span1 {
+        top: 0;
+    }
+
+    .menu-icon-span2,
+    .menu-icon-span3 {
+        top: 6px;
+    }
+
+    .menu-icon-span4 {
+        top: 12px;
+    }
+}
+
+.menu-icon.open {
+    .menu-icon-span1 {
+        top: 15px;
+        width: 0%;
+        left: 50%;
+    }
+
+    .menu-icon-span2 {
+        transform: rotate(45deg);
+    }
+
+    .menu-icon-span3 {
+        transform: rotate(-45deg);
+    }
+
+    .menu-icon-span4 {
+        top: 15px;
+        width: 0%;
+        left: 50%;
+    }
+}
+
+.button-nav-primary .button-label {
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 19.4px;
+    line-height: 24px;
+    margin: 0 13px 0 0;
+    color: #fff;
+    font-family: $font-classic;
+
+    @media screen and (max-width: 760px) {
+        font-size: 18.8px;
+    }
+
+    @media screen and (max-width: 640px) {
+        font-size: 18.4px;
+    }
+
+    @media screen and (max-width: 500px) {
+        font-size: 18px;
+    }
+}

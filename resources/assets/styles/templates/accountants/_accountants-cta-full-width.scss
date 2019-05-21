@@ -1,0 +1,72 @@
+.container.fresh-blue-background {
+    background: $fresh-blue;
+    color: #fff;
+
+    .work-smarter {
+        padding-top: 50px;
+        padding-bottom: 75px;
+    }
+
+    h2 {
+        color: #fff;
+        margin-top: 0;
+        text-align: center;
+    }
+
+    p {
+        max-width: 605px;
+        width: 100%;
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    .contacts {
+        max-width: 549px;
+        width: 100%;
+        margin: 30px auto 0;
+        -webkit-justify-content: space-between;
+        -ms-flex-pack: justify;
+        justify-content: space-between;
+
+        @media (max-width: $tablet) {
+            display: block;
+        }
+    }
+
+    .contact {
+        font-size: 1.8rem;
+        line-height: 1.22222222;
+
+        @media (max-width: $tablet) {
+            text-align: center;
+        }
+    }
+
+    .contact:last-child {
+        @media (max-width: $tablet) {
+            margin-top: 10px;
+        }
+    }
+
+    .email,
+    .phone,
+    .twitter {
+        font-size: 1.8rem;
+    }
+
+    a {
+        color: #fff;
+    }
+
+    .phone::before {
+        content: url("~images/icons/telephone-white.svg");
+        vertical-align: -webkit-baseline-middle;
+        margin-right: 5px;
+    }
+
+    .email::before {
+        content: url("~images/icons/envelope-white.svg");
+        vertical-align: -webkit-baseline-middle;
+        margin-right: 5px;
+    }
+}

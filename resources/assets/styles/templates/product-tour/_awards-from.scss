@@ -1,0 +1,16 @@
+.awards-container {
+    display: flex;
+    justify-content: space-around;
+    padding: 44px 70px;
+    background-color: $background-grey;
+
+    @media (max-width: $mobile) {
+        flex-direction: column;
+        text-align: center;
+        padding: 0;
+
+        .award-logo {
+            margin-bottom: 20px;
+        }
+    }
+}

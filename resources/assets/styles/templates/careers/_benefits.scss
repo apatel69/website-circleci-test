@@ -1,0 +1,32 @@
+.benefits-wrapper {
+    .benefits-list {
+        flex-wrap: wrap;
+        justify-content: center;
+        align-content: flex-start;
+        align-items: stretch;
+        margin-bottom: 5%;
+    }
+
+    .benefit {
+        width: 25%;
+        text-align: center;
+        padding: 2.5%;
+
+        @media screen and (max-width: $tablet) {
+            width: 50%;
+
+            &:last-child {
+                width: 100%;
+            }
+        }
+
+        @media screen and (max-width: $mobile) {
+            width: 100%;
+        }
+
+        img {
+            width: 140px;
+            height: auto;
+        }
+    }
+}

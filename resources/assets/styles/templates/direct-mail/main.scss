@@ -1,0 +1,60 @@
+@import "../../global";
+@import "../../flexible-content/global/featured-in";
+@import "../../flexible-content/global/cta-full-width";
+@import "../../flexible-content/global/cta-full-width-outline";
+@import "../../flexible-content/global/carousel-content";
+@import "../../flexible-content/global/custom-cta-image";
+@import "../../flexible-content/global/custom-header";
+@import "../../flexible-content/global/support-full-width";
+@import "../../flexible-content/global/cta-invoice-templates";
+@import "../../flexible-content/global/two-col-hero-cta";
+@import "home-page-hero";
+@import "two-col-image-content";
+@import "three-col-content";
+@import "two-col-addon";
+@import "testimonial-columns";
+@import "two-col-cta";
+@import "main-content-centered";
+@import "background-image-full-width";
+@import "two-col-support";
+
+pre {
+    background: #282828;
+    color: #0f6;
+    font-size: 0.75em;
+    border: 1px solid #0f6;
+    border-radius: 4px;
+}
+
+section.pillars {
+    padding: 0;
+}
+
+.call-toll-free {
+    width: 98px;
+    height: auto;
+    margin-top: 14px;
+    margin-right: 2px;
+    vertical-align: middle;
+}
+
+.support-number {
+    margin-left: 0;
+    vertical-align: middle;
+}
+
+.nav-wrapper {
+    ul li {
+        padding-left: 28px;
+    }
+
+    nav .header-text {
+        p {
+            margin: 0 auto;
+        }
+
+        @media (max-width: $tablet) {
+            display: none;
+        }
+    }
+}

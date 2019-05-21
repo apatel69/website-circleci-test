@@ -1,0 +1,117 @@
+{
+    "key": "group_5b5b5cb141267",
+    "title": "Page-Specific Inline Scripts",
+    "fields": [
+        {
+            "key": "field_5b5b5cbdc0241",
+            "label": "Include Page-Specific Scripts?",
+            "name": "include_page_specific_scripts",
+            "type": "true_false",
+            "instructions": "Enable to add inline scripts specific to this page (ex. Crazyegg).",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui": 1,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        },
+        {
+            "key": "field_5b5b5d17c0242",
+            "label": "Page-Specific Scripts",
+            "name": "page_specific_scripts",
+            "type": "repeater",
+            "instructions": "Here you may add scripts and their alias.",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5b5b5cbdc0241",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "collapsed": "field_5b5b5d45c0243",
+            "min": 0,
+            "max": 0,
+            "layout": "table",
+            "button_label": "Add Script",
+            "sub_fields": [
+                {
+                    "key": "field_5b5b5d45c0243",
+                    "label": "Script Alias",
+                    "name": "script_alias",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 1,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "Unique Script Alias",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
+                },
+                {
+                    "key": "field_5b5b5d73c0244",
+                    "label": "Script Code",
+                    "name": "script_code",
+                    "type": "textarea",
+                    "instructions": "",
+                    "required": 1,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "Script content including <script> tags",
+                    "maxlength": "",
+                    "rows": 3,
+                    "new_lines": ""
+                }
+            ]
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "page"
+            }
+        ],
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "post"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": 1,
+    "description": "",
+    "modified": 1532716391
+}

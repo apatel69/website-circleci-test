@@ -1,0 +1,360 @@
+.two-col-modular {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: flex-end;
+    position: relative;
+    min-height: 870px;
+    padding: 20px 0;
+    max-width: calc(100% - 30px);
+    left: 15px;
+
+    @media screen and (min-width: $mobile + 1) and (max-width: $tablet) {
+        max-width: 100%;
+        left: 0;
+    }
+
+    @media screen and (min-width: $tablet + 1) and (max-width: $desktop-sm) {
+        width: calc(100% - 30px);
+        left: 15px;
+    }
+
+    .col {
+        margin-bottom: 5em;
+
+        &.col-text {
+            margin-top: 130px;
+            width: 660px;
+            background: $white;
+            position: relative;
+            z-index: 2;
+
+            h2 {
+                font-family: $font-book;
+                color: $midnight-blue;
+                margin-top: 90px;
+                font-size: 43px;
+                line-height: (51px / 43px);
+            }
+
+            p,
+            li {
+                font-family: $font-book;
+                color: $midnight-blue;
+                margin-right: 6em;
+                font-size: 18px;
+                line-height: (26px / 18px);
+            }
+
+            .divider {
+                height: 1px;
+                width: 85%;
+                position: relative;
+                left: 0;
+                bottom: 0;
+                background: $select-outline;
+                margin: 2em 0;
+            }
+
+            .btn-select {
+                position: relative;
+                bottom: 0;
+                left: 0;
+                margin-top: 2em;
+                display: block;
+                padding: 20px 50px;
+                text-decoration: none;
+                text-align: center;
+            }
+
+            &.flipped {
+                padding-left: 12em;
+
+                p,
+                li {
+                    margin-right: 0;
+                }
+
+                .divider {
+                    right: 0;
+                    left: auto;
+                    width: 100%;
+                    margin: 2em 0;
+                }
+
+                .btn-select {
+                    margin-top: 1em;
+                }
+            }
+        }
+
+        &.col-image {
+            position: relative;
+            margin-left: -220px;
+            align-self: end;
+            width: 788px;
+
+            &.flipped {
+                margin-left: unset;
+                margin-right: -220px;
+            }
+
+            .col-image-content {
+                width: 788px;
+
+                @media screen and (min-width: $tablet + 1) and (max-width: $desktop-sm) {
+                    max-width: 100%;
+                }
+
+                @media screen and (min-width: $desktop-sm + 1) {
+                    // min-height: 760px;
+                    max-height: 1000px;
+                }
+
+                &.flipped {
+                    margin-left: 0;
+                }
+            }
+
+            .triangle {
+                position: absolute;
+
+                &.bottom-right {
+                    bottom: -15px;
+                    right: -15px;
+                }
+
+                &.bottom-left {
+                    bottom: -15px;
+                    left: -15px;
+                }
+
+                .green {
+                    fill: $select-green;
+                    opacity: 0.2;
+                }
+
+                .orange {
+                    fill: $select-orange;
+                    opacity: 0.2;
+                }
+
+                .blue {
+                    fill: $select-med-blue;
+                    opacity: 0.2;
+                }
+            }
+        }
+    }
+
+    @media screen and (max-width: $mobile) {
+        flex-direction: column-reverse;
+        margin-top: 1em;
+        max-width: 100%;
+        left: 0;
+
+        &.flipped {
+            flex-direction: column;
+        }
+
+        .col {
+            width: 100%;
+            min-height: 280px;
+
+            &.col-text {
+                text-align: left;
+                width: calc(100% - 6em);
+                position: relative;
+                margin: 1em auto;
+                padding-bottom: 0;
+
+                h2 {
+                    font-size: 27px;
+                    line-height: (43px / 27px);
+                    position: relative;
+                    margin: 0 auto 0.5em;
+                }
+
+                p {
+                    font-size: 18px;
+                    line-height: (26px / 18px);
+                    position: relative;
+                    margin: 0 auto;
+                }
+
+                li {
+                    margin: 1em 0;
+                }
+
+                &.flipped {
+                    padding-left: 0;
+
+                    .btn-select {
+                        left: 0;
+                    }
+                }
+
+                .divider {
+                    position: relative;
+                    width: 100%;
+                    bottom: 0;
+                    margin: 15px 0 5px;
+                }
+
+                .btn-select {
+                    position: relative;
+                    padding: 13px 50px;
+                    margin: 1em auto 0;
+                }
+
+                &.flipped {
+                    .divider {
+                        width: 100%;
+                    }
+                }
+            }
+
+            &.col-image {
+                margin-left: 0;
+                width: 100%;
+                margin-bottom: 2em;
+                height: 280px;
+                overflow: hidden;
+                position: relative;
+
+                .col-image-content {
+                    min-width: 100%;
+                    height: auto;
+                    margin: 0 auto;
+                    position: absolute;
+                }
+
+                .triangle {
+                    display: none;
+                }
+
+                &.flipped {
+                    margin-right: 0;
+                }
+            }
+        }
+    }
+
+    @media screen and (min-width: $mobile + 1) and (max-width: $tablet) {
+        .col {
+            &.col-text {
+                width: 497px;
+                max-width: auto;
+                padding: 1em 0.5em 0 48px;
+
+                h2 {
+                    margin: 30px 2em 20px 0;
+                    font-family: $font-book;
+                    font-size: 35px;
+                    line-height: (42 / 35);
+                }
+
+                p,
+                li {
+                    font-family: $font-book;
+                    font-size: 16px;
+                    line-height: (24 / 16);
+                    margin-right: 2em;
+                }
+
+                .divider {
+                    position: relative;
+                    margin-top: 2em;
+                    bottom: auto;
+                    width: calc(100% - 3em);
+                }
+
+                .btn-select {
+                    position: relative;
+                    margin: 1.5em 0;
+                    left: 0;
+                    padding: 14px 50px;
+                }
+
+                &.flipped {
+                    padding: 1em 6em 0 4em;
+
+                    .btn-select {
+                        left: 0;
+                    }
+
+                    .divider {
+                        width: calc(100% - 1em);
+                    }
+                }
+            }
+
+            &.col-image {
+                width: 523px;
+                max-width: auto;
+
+                .triangle {
+                    display: none;
+                }
+            }
+        }
+    }
+
+    @media screen and (min-width: $tablet + 1) and (max-width: $desktop-sm) {
+        .col {
+            &.col-text {
+                width: 610px;
+                padding: 0 8em 0 6em;
+
+                h2 {
+                    font-family: $font-book;
+                    font-size: 36px;
+                    line-height: (42 / 36);
+                    margin-top: 70px;
+                }
+
+                p,
+                li {
+                    font-family: $font-book;
+                    font-size: 18px;
+                    line-height: (26 / 18);
+                    margin-right: 0;
+                }
+
+                .divider {
+                    height: 1px;
+                    width: 100%;
+                    position: relative;
+                    left: auto;
+                    bottom: auto;
+                    background: $select-outline;
+                }
+
+                .btn-select {
+                    position: relative;
+                    bottom: auto;
+                    left: auto;
+                    margin-top: 50px;
+                    padding: 10px 50px;
+                }
+
+                &.flipped {
+                    padding: 0 8em;
+
+                    .btn-select {
+                        left: 0;
+                    }
+                }
+            }
+
+            &.col-image {
+                width: 654px;
+                margin-left: -240px;
+
+                &.flipped {
+                    margin-right: -240px;
+                }
+            }
+        }
+    }
+}

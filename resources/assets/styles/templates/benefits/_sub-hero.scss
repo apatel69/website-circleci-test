@@ -1,0 +1,70 @@
+.subhero-background {
+    background-color: $fresh-blue;
+    border-top: 1px solid #50a3d1;
+    position: relative;
+    text-align: center;
+}
+
+.subhero {
+    padding: 15px 0;
+    clear: both;
+    max-width: 960px;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+
+    @media screen and (max-width: 991px) {
+        padding: 15px;
+    }
+}
+
+.subhero-headline {
+    position: absolute;
+    top: -46px;
+    left: 0;
+    color: white;
+    padding: 8px 12px;
+    display: inline-block;
+    background-color: $dark-blue;
+    border-radius: 4px;
+
+    @media screen and (max-width: $tablet) {
+        display: none;
+    }
+
+    @media screen and (max-width: 991px) {
+        left: 15px;
+    }
+
+    // Blue Arrow
+    &::after {
+        content: " ";
+        top: 100%;
+        left: 15px;
+        border: 8px solid rgba(30, 117, 183, 0);
+        height: 0;
+        width: 0;
+        position: absolute;
+        pointer-events: none;
+        border-top-color: $dark-blue;
+    }
+
+    //Hide on Mobile
+    @media screen and (max-width: $mobile) {
+        display: none;
+    }
+}
+
+.subhero-headline p {
+    line-height: 0;
+    margin: 10px 5px;
+    text-align: left;
+    margin-bottom: 8px;
+    font-size: 16px;
+}
+
+p.subhero-headline-subtext {
+    opacity: 0.5;
+    padding-top: 8px;
+    font-size: 14px;
+}

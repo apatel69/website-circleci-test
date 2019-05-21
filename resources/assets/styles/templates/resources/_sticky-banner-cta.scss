@@ -1,0 +1,63 @@
+.stickyBannerCTA {
+    background: $fresh-blue;
+    padding: 10px 15px;
+    width: 100%;
+    text-align: Center;
+
+    @media screen and (min-width: $tablet + 1) {
+        justify-content: center;
+        align-items: center;
+        display: flex;
+        padding: 8px 40px;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    p,
+    span {
+        color: #fff;
+        font-family: $font-med;
+        font-size: 14px;
+        margin: 0;
+
+        @media screen and (min-width: $tablet + 1) {
+            margin-right: 26px;
+            font-size: 20px;
+        }
+
+        @media screen and (max-width: $tablet) {
+            margin: 0 auto 5px;
+        }
+    }
+
+    &__spacer {
+        display: none;
+    }
+
+    &__button {
+        font-size: 18px;
+        font-family: $font-med;
+        padding: 15px 25px;
+
+        @media screen and (max-width: $tablet) {
+            padding: 10px 25px;
+            font-size: 14px;
+        }
+    }
+
+    &.sticky {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        z-index: 9000;
+
+        ~ .stickyBannerCTA__spacer {
+            display: block;
+        }
+    }
+}

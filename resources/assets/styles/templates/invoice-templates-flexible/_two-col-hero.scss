@@ -1,0 +1,254 @@
+.invoice-templates-flexible,
+.invoice-templates {
+    .hero-card {
+        border-top: solid 1px $rule-grey;
+
+        @media screen and (max-width: $tablet) {
+            padding: 0;
+        }
+    }
+
+    .inner-wrap {
+        display: flex;
+        justify-content: space-around;
+        padding: 20px 0 0;
+        width: 100%;
+
+        @media screen and (max-width: $tablet) {
+            flex-direction: column;
+        }
+
+        @media screen and (max-width: $desktop-sm) {
+            padding: 0;
+        }
+
+        .col {
+            order: 2;
+            padding: 46px;
+            text-align: center;
+            width: 48.4%;
+            background: #fff;
+
+            @media screen and (max-width: $tablet) {
+                order: 1;
+                padding: 25px 15px 46px;
+                width: 100%;
+                border-bottom: 0;
+                box-shadow: none;
+            }
+
+            img {
+                background-position: center;
+                background-repeat: no-repeat;
+                display: block;
+                margin: 6px auto 0;
+                max-height: 450px;
+                padding: 20px 75px;
+
+                @media screen and (max-width: $tablet) {
+                    max-height: 350px;
+                }
+            }
+        }
+
+        .card {
+            order: 1;
+            width: 48.4%;
+            border-radius: 8px;
+            border: solid 1px $rule-grey;
+            box-shadow: 4px 4px 0 0 rgba(6, 41, 66, 0.1);
+            text-align: center;
+            padding-bottom: 42px;
+
+            @media screen and (max-width: $tablet) {
+                order: 2;
+                float: none;
+                width: calc(100% - 10em);
+                margin: 5px auto;
+                box-shadow: 4px 4px 0 0 rgba(6, 41, 66, 0.1);
+                border: 1px solid $rule-grey;
+                border-radius: 5px;
+            }
+
+            @media screen and (max-width: $mobile) {
+                width: calc(100% - 10px);
+            }
+
+            .cta-subtext {
+                padding-top: 5px;
+                position: relative;
+
+                .img-subtext {
+                    position: absolute;
+                    width: 100px;
+                    height: auto;
+                    top: -5px;
+                    right: -100px;
+
+                    @media screen and (max-width: $desktop-lrg) {
+                        display: none;
+                    }
+
+                    @media screen and (max-width: $tablet) {
+                        display: block;
+                    }
+
+                    @media screen and (max-width: $tablet) {
+                        width: 90px;
+                        right: -90px;
+                        top: 0;
+                    }
+
+                    @media screen and (max-width: $mobile) {
+                        display: none;
+                    }
+                }
+            }
+
+            .content {
+                padding: 46px;
+                margin-bottom: 0;
+
+                .cta-arrow {
+                    float: left;
+                    left: -50px;
+                    position: absolute;
+                    top: -20px;
+
+                    @media screen and (max-width: $mobile) {
+                        display: none;
+                    }
+                }
+
+                @media screen and (max-width: $tablet) {
+                    padding: 46px 15px;
+                }
+            }
+
+            img {
+                display: block;
+                margin: 0 auto;
+            }
+        }
+    }
+
+    .template-gallery-alt,
+    .profession-list {
+        p,
+        span {
+            font-family: $font-book;
+
+            &.secondary {
+                color: $fresh-blue;
+                font-weight: bold;
+                font-size: 16px;
+            }
+        }
+
+        p {
+            &.secondary-link {
+                color: $dark-grey;
+                font-size: 16px;
+                text-decoration: none;
+                position: relative;
+                top: 2.75em;
+                cursor: default;
+
+                @media screen and (max-width: $tablet) {
+                    margin-bottom: 2.75em;
+                }
+            }
+        }
+
+        h1,
+        h2,
+        h4,
+        h5,
+        h6 {
+            font-family: $font-med;
+            font-weight: normal;
+            color: $midnight-blue;
+            font-size: 40px;
+            line-height: 50px;
+            margin: 0 0 16px;
+
+            @media screen and (max-width: $tablet) {
+                font-size: 30px;
+            }
+        }
+
+        h3 {
+            font-family: $font-med;
+            font-size: 30px;
+            color: $midnight-blue;
+            line-height: 50px;
+        }
+
+        .category-profession-list {
+            h3 {
+                color: $fresh-blue;
+                font-family: $font-book;
+            }
+        }
+
+        .btn {
+            border-radius: 5px;
+            display: inline-block;
+            text-decoration: none;
+        }
+
+        .btn-med {
+            font-size: 20px;
+            line-height: 20px;
+            padding: 14px 51px 17px;
+
+            &.primary-cta {
+                font-family: $font-book;
+                font-size: 24px;
+                line-height: (23 / 24);
+
+                @media screen and (max-width: $mobile) {
+                    font-size: 18px;
+                }
+            }
+
+            &.ghost-button {
+                max-width: 294px;
+                border: 2px solid $rule-grey;
+                font-size: 20px;
+            }
+        }
+
+        .btn-primary {
+            background: $cta-green;
+            color: #fff;
+
+            &:hover {
+                background: $cta-green-hover;
+            }
+        }
+
+        .btn-neutral {
+            background: $dark-grey;
+            color: #fff;
+
+            &:hover {
+                background: $rule-grey;
+            }
+        }
+
+        @media screen and (min-device-width: 411px) and (max-device-height: 823px) and (orientation: landscape) {
+            .col {
+                a:nth-of-type(2) {
+                    img {
+                        padding: 0 40px;
+                    }
+                }
+            }
+
+            .btn-med.primary-cta {
+                font-size: 20px;
+            }
+        }
+    }
+}

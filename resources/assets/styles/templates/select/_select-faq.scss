@@ -1,0 +1,40 @@
+.faq-container {
+    max-width: 1200px;
+    width: 100%;
+    padding: 85px 0 120px;
+
+    @media (max-width: $tablet) {
+        padding: 20px 0 0;
+    }
+}
+
+.faq-columns {
+    justify-content: space-between;
+    align-items: flex-start;
+
+    @media (max-width: $desktop-sm) {
+        flex-wrap: wrap;
+    }
+}
+
+.faq-column {
+    flex-basis: 49%;
+
+    @media (max-width: $desktop-sm) {
+        flex-basis: 100%;
+
+        &:first-child {
+            .faq-item:last-child {
+                border-bottom: 0;
+            }
+        }
+    }
+}
+
+.faq-item {
+    h3 {
+        color: $fresh-blue;
+        font-size: 2rem;
+        text-transform: uppercase;
+    }
+}

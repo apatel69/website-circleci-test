@@ -1,0 +1,57 @@
+.executives-wrapper {
+    .executive-member {
+        margin: 70px 0;
+        justify-content: space-between;
+
+        &:first-child {
+            margin-top: 0;
+        }
+
+        p {
+            margin: 0;
+        }
+
+        @media screen and (max-width: $tablet) {
+            display: block;
+            margin: 0;
+            text-align: center;
+        }
+    }
+
+    .executive-name {
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+
+    .executive-position {
+        display: block;
+        font-size: 1.4rem;
+        line-height: 18/14;
+        color: $dark-grey;
+        margin-bottom: 20px;
+    }
+
+    .executive-image {
+        border-radius: 50%;
+        width: 250px;
+    }
+
+    .executive-info {
+        width: 70%;
+
+        @media screen and (max-width: $desktop-sm) {
+            padding-left: 20px;
+        }
+
+        @media screen and (max-width: $tablet) {
+            text-align: center;
+            padding-left: 0;
+            width: 90%;
+            margin: 0 auto 55px;
+        }
+
+        @media screen and (max-width: $mobile) {
+            width: 100%;
+        }
+    }
+}

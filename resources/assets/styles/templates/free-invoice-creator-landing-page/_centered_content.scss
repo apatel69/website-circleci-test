@@ -1,0 +1,22 @@
+.centered-content {
+    h3 {
+        color: $midnight-blue;
+        font-family: $font-med;
+        margin-top: 0;
+        text-align: center;
+    }
+
+    h4 {
+        color: $fresh-blue;
+        margin: 0;
+        padding: 0;
+        text-transform: uppercase;
+    }
+
+    h5 {
+        color: $midnight-blue;
+        font-size: 2.4em;
+        margin: 0;
+        padding: 0;
+    }
+}

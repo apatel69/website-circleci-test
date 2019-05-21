@@ -1,0 +1,16 @@
+.clipboard {
+    display: none;
+    background: #85c525;
+    z-index: 10000;
+    position: fixed;
+    width: 100%;
+    left: 0;
+    text-align: center;
+    box-shadow: 0 0 8px rgba(167, 160, 160, 0.25);
+
+    p {
+        color: #fff;
+        margin: 10px;
+        font-family: $font-main;
+    }
+}

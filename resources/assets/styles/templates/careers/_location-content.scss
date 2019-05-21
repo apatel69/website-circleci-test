@@ -1,0 +1,54 @@
+.location-info-wrapper {
+    width: 60%;
+    margin: 0 auto;
+    text-align: center;
+
+    @media screen and (max-width: $desktop-sm) {
+        width: 75%;
+    }
+
+    @media screen and (max-width: $tablet) {
+        width: 85%;
+    }
+
+    @media screen and (max-width: $mobile) {
+        width: 100%;
+    }
+}
+
+.google-maps-wrapper {
+    position: relative;
+    height: 300px;
+    overflow: hidden;
+}
+
+.google-maps-wrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100% !important;
+    height: 300px !important;
+}
+
+.location-photos-wrapper {
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: 5px;
+
+    img {
+        width: 24.58%;
+
+        @media screen and (max-width: $tablet) {
+            width: 49.58%;
+
+            &:first-child,
+            &:nth-child(2) {
+                margin-bottom: 5px;
+            }
+        }
+
+        @media screen and (max-width: $mobile) {
+            display: none;
+        }
+    }
+}

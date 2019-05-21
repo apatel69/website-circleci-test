@@ -1,0 +1,38 @@
+.two-col-centered-wrapper {
+    justify-content: space-between;
+    align-items: stretch;
+    flex-wrap: wrap;
+
+    .content,
+    .image-col {
+        width: 48%;
+        text-align: center;
+
+        @media screen and (max-width: $tablet) {
+            width: 90%;
+            margin: 0 auto;
+        }
+
+        @media screen and (max-width: $mobile) {
+            width: 100%;
+        }
+    }
+
+    .image-left-col {
+        @media screen and (max-width: $tablet) {
+            order: 1;
+        }
+    }
+
+    .image-right-col {
+        @media screen and (max-width: $tablet) {
+            order: 2;
+        }
+    }
+
+    .right-content-col {
+        @media screen and (max-width: $tablet) {
+            order: 2;
+        }
+    }
+}

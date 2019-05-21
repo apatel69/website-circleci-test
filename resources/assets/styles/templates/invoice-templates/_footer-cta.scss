@@ -1,0 +1,52 @@
+.legacy-invoice-content {
+    .background-img-cta {
+        background-size: cover;
+        border-radius: 5px;
+        padding: 55px;
+        margin-bottom: 50px;
+        background-position: center;
+        background-repeat: no-repeat;
+
+        @media screen and (max-width: $tablet) {
+            background-image: none !important;
+            background-color: $background-blue;
+        }
+
+        @media screen and (max-width: $mobile) {
+            padding: 55px 15px;
+        }
+    }
+
+    .background-img-cta-content {
+        width: 50%;
+
+        @media screen and (max-width: $tablet) {
+            margin: 0 auto;
+            width: 85%;
+            text-align: center;
+        }
+
+        @media screen and (max-width: $mobile) {
+            width: 100%;
+        }
+
+        span {
+            font-size: 3.2rem;
+            line-height: calc(38 / 32);
+            color: $fresh-blue;
+        }
+    }
+
+    .cta-subtext {
+        display: inline-block;
+        vertical-align: middle;
+    }
+
+    .cta-subtext-assurance {
+        margin-left: 0;
+
+        @media screen and (max-width: $tablet) {
+            text-align: center;
+        }
+    }
+}

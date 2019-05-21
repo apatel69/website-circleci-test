@@ -1,0 +1,36 @@
+.outline-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    @media screen and (max-width: $desktop-lrg) {
+        display: block;
+    }
+
+    .cta-text {
+        padding-right: 2em;
+
+        @media screen and (max-width: $tablet) {
+            padding: 0;
+        }
+
+        .subtext {
+            display: block;
+            text-align: center;
+
+            @media screen and (max-width: $tablet) {
+                display: none;
+            }
+        }
+    }
+
+    .cta-button {
+        .subtext {
+            display: none;
+
+            @media screen and (max-width: $tablet) {
+                display: block;
+            }
+        }
+    }
+}

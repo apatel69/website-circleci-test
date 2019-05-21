@@ -1,0 +1,158 @@
+.features-carousel {
+    padding-top: 60px;
+
+    h2,
+    p {
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 629px;
+        text-align: center;
+        margin-top: 0;
+    }
+
+    h2 {
+        color: $midnight-blue;
+        font-family: $font-med;
+        font-size: 3.4rem;
+        line-height: calc(42 / 34);
+        margin-bottom: 10px;
+    }
+
+    p {
+        font-family: $font-book;
+        line-height: calc(26 / 18);
+        margin-bottom: 0;
+    }
+}
+
+.features-carousel-cta {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.new-features-desktop {
+    align-items: flex-start;
+    justify-content: space-between;
+    max-width: 1110px;
+    margin: 45px auto 0;
+
+    @media (max-width: $tablet) {
+        display: none;
+    }
+}
+
+.new-feature,
+.new-feature-detail {
+    h4 {
+        margin-top: 2.3rem;
+        margin-bottom: 1rem;
+        font-size: 1.9rem;
+        line-height: calc(27 / 19);
+        font-family: $font-med;
+    }
+}
+
+.new-feature-details {
+    max-width: 386px;
+}
+
+.new-feature-carousel {
+    max-width: 687px;
+}
+
+.new-feature-screen {
+    display: none;
+
+    &.selected {
+        display: block;
+    }
+}
+
+.new-feature-detail {
+    padding: 20px 40px 20px 20px;
+
+    h4 {
+        margin-top: 0;
+    }
+
+    p,
+    .new-feature-url {
+        max-width: 100%;
+        text-align: left;
+    }
+
+    &.selected {
+        background: $light-background-blue;
+    }
+
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+.new-feature {
+    text-align: center;
+    margin-top: 45px;
+
+    p,
+    .new-feature-url {
+        max-width: 419px;
+    }
+}
+
+.new-feature > p,
+.new-feature-detail > p,
+.new-feature-url {
+    font-size: 1.5rem;
+    line-height: calc(22 / 15);
+    font-family: $font-book;
+}
+
+.features-nav {
+    align-items: center;
+    justify-content: space-between;
+    height: 23.17px;
+    max-width: 136px;
+    margin: 42px auto 0;
+}
+
+.arrow {
+    height: 15px;
+    width: 7.5px;
+    fill: $med-grey;
+
+    &.active {
+        fill: $dark-grey;
+
+        &:hover {
+            fill: lighten($dark-grey, 10%);
+        }
+    }
+
+    &:hover {
+        fill: lighten($med-grey, 10%);
+    }
+}
+
+.nav-dots {
+    width: 60px;
+    justify-content: space-between;
+}
+
+.nav-dot {
+    width: 12px;
+    height: 12px;
+    fill: $med-grey;
+
+    &:hover {
+        fill: lighten($med-grey, 10%);
+    }
+
+    &.selected {
+        fill: $fresh-blue;
+
+        &:hover {
+            fill: lighten($fresh-blue, 10%);
+        }
+    }
+}

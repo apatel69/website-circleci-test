@@ -1,0 +1,86 @@
+@import "../../common/mixins";
+
+.two-column-video-feature-container {
+    background: bottom left no-repeat #fff;
+    background-size: 50%;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 2.5em 1em;
+
+    @media screen and (max-width: $tablet) {
+        background-size: 0;
+        display: block;
+    }
+
+    .two-column-video-feature-description {
+        border-radius: 5px;
+        flex: 1;
+        padding: 1em;
+
+        h2 {
+            padding-right: 3em;
+        }
+
+        p {
+            padding-right: 5em;
+        }
+
+        @media screen and (max-width: $tablet) {
+            margin-top: 2em;
+            padding: 2em 1.5em;
+            text-align: center;
+
+            p {
+                margin-top: 0.1em;
+                padding-right: 0;
+            }
+
+            h1 {
+                padding-right: 0;
+            }
+
+            h2 {
+                padding-right: 0;
+            }
+
+            .primary-cta {
+                margin-top: 3em;
+            }
+        }
+    }
+
+    .two-column-video-feature-cta-title {
+        text-align: left;
+        width: 100%;
+        font-family: $font-med;
+        font-weight: normal;
+        color: $midnight-blue;
+        font-size: 40px;
+        line-height: 50px;
+        margin: 0 0 16px;
+
+        @media screen and (max-width: $tablet) {
+            text-align: center;
+        }
+    }
+
+    .two-column-video-feature-video {
+        flex: 1;
+    }
+
+    .two-column-video-feature-video,
+    .two-column-video-feature-image {
+        @include shadowBox;
+
+        flex: 1;
+        margin-right: 3em;
+
+        @media screen and (max-width: $tablet) {
+            padding: 1em;
+        }
+
+        .responsive-video iframe {
+            border-radius: 5px;
+        }
+    }
+}

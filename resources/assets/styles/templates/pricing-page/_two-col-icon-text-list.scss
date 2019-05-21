@@ -1,0 +1,43 @@
+.feature-list {
+    padding: 60px 0;
+
+    @media screen and (max-width: $tablet) {
+        padding: 0 1em 4em;
+    }
+
+    h2 {
+        text-align: center;
+        color: $midnight-blue;
+        font-size: 3rem;
+        line-height: calc(40 / 30);
+        font-family: $font-med;
+        margin-top: 0;
+    }
+}
+
+.list-items {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 927px;
+    justify-content: space-between;
+    margin: 0 auto;
+    font-family: $font-book;
+
+    @media screen and (max-width: $tablet) {
+        flex-direction: column;
+        width: calc(100% - 4em);
+        max-width: 432px;
+        margin: 0 auto;
+    }
+
+    li {
+        width: 48%;
+        font-size: 1.8rem;
+        background-size: 20px 28px;
+        padding-left: 28px;
+
+        @media screen and (max-width: $tablet) {
+            width: 100%;
+        }
+    }
+}

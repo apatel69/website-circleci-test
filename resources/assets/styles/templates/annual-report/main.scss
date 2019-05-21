@@ -1,0 +1,222 @@
+@import "~slick-carousel/slick/slick.css";
+@import "../../global";
+@import "../../flexible-content/global/custom-header";
+@import "hero";
+@import "keyframes";
+@import "snapshot-of-sep";
+@import "introduction";
+@import "trends-in-self-employment";
+@import "modern-workforce";
+@import "talent-tug-of-war";
+@import "header";
+@import "back-to-top";
+@import "about";
+@import "self-employment-changes";
+@import "clipboard";
+
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: $font-dem;
+    color: $midnight-blue;
+    margin: 0;
+}
+
+p {
+    font-family: $font-book;
+    color: $midnight-blue;
+    line-height: 1.44;
+}
+
+section {
+    padding: 0;
+    font-size: 0;
+}
+
+.annualReport {
+    overflow: hidden;
+    position: relative;
+}
+
+.arContainer {
+    margin: 0 auto;
+    padding-left: 75px;
+    padding-right: 75px;
+    max-width: 1225px;
+
+    @media (max-width: 767px) {
+        padding-left: 46px;
+        padding-right: 46px;
+    }
+}
+
+.whiteContainer {
+    border-radius: 5px;
+    box-shadow: 4px 4px 0 0 rgba(6, 41, 66, 0.06);
+    border: solid 1px $rule-grey;
+    background-color: #fff;
+    padding: 50px;
+
+    @media screen and (max-width: 991px) {
+        padding: 50px 35px;
+    }
+
+    @media screen and (max-width: 767px) {
+        padding: 35px;
+        width: calc(100vw - 42px);
+        position: relative;
+        left: calc((100% - 100vw) / 2 + 21px);
+    }
+}
+
+body:not(.touch-device) {
+    .fade-in-bottom {
+        opacity: 0;
+
+        @media screen and (max-width: 991px) {
+            opacity: 1;
+        }
+
+        &.animate {
+            -webkit-animation: fade-in-bottom 0.6s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+            animation: fade-in-bottom 0.6s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+        }
+    }
+
+    .slide-right {
+        opacity: 0;
+
+        @media screen and (max-width: 991px) {
+            opacity: 1;
+        }
+
+        &.animate {
+            -webkit-animation: slide-right 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+            animation: slide-right 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+        }
+    }
+
+    .slide-left {
+        opacity: 0;
+
+        @media screen and (max-width: 991px) {
+            opacity: 1;
+        }
+
+        &.animate {
+            -webkit-animation: slide-left 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+            animation: slide-left 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+        }
+    }
+
+    .fade-in-bottom {
+        opacity: 0;
+
+        @media screen and (max-width: 991px) {
+            opacity: 1;
+        }
+
+        &.animate {
+            -webkit-animation: fade-in-bottom 0.6s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+            animation: fade-in-bottom 0.6s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+        }
+    }
+
+    .slide-fwd-tr {
+        opacity: 0;
+
+        @media screen and (max-width: 991px) {
+            opacity: 1;
+        }
+
+        &.animate {
+            -webkit-animation: slide-fwd-tr 0.45s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+            animation: slide-fwd-tr 0.45s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+        }
+    }
+
+    .flicker-in-1 {
+        opacity: 0;
+
+        @media screen and (max-width: 991px) {
+            opacity: 1;
+        }
+
+        &.animate {
+            -webkit-animation: flicker-in-1 2s linear both;
+            animation: flicker-in-1 2s linear both;
+        }
+    }
+
+    .slide-fwd-tl {
+        opacity: 0;
+
+        @media screen and (max-width: 991px) {
+            opacity: 1;
+        }
+
+        &.animate {
+            -webkit-animation: slide-fwd-tl 0.45s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+            animation: slide-fwd-tl 0.45s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+        }
+    }
+
+    .slide-top {
+        opacity: 0;
+
+        @media screen and (max-width: 991px) {
+            opacity: 1;
+        }
+
+        &.animate {
+            -webkit-animation: slide-top 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+            animation: slide-top 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+        }
+    }
+
+    .slide-tl {
+        opacity: 0;
+
+        @media screen and (max-width: 991px) {
+            opacity: 1;
+        }
+
+        &.animate {
+            -webkit-animation: slide-tl 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+            animation: slide-tl 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+        }
+    }
+
+    // back to top button
+    .fade-out-bottom.animate {
+        // visibility hidden is added to completely hide the element after the fade out animation
+        visibility: hidden;
+        transition: visibility 0.7s ease-out;
+        -webkit-animation: fade-out-bottom 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+        animation: fade-out-bottom 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+    }
+}
+
+.u-hidden {
+    display: none;
+}
+
+@media screen and (max-width: 991px) {
+    .u-hidden-tablet {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 640px) {
+    .u-hidden-mobile {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .u-hidden-desktop {
+        display: none;
+    }
+}

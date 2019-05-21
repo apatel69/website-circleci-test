@@ -1,0 +1,204 @@
+.hide-mobile {
+    @media (min-width: 769px) {
+        display: inline-block;
+    }
+}
+
+.grey-text {
+    color: $dark-grey;
+}
+
+.text-center {
+    display: none;
+
+    @media (max-width: $tablet) {
+        display: block;
+    }
+}
+
+.info-webinars {
+    padding-top: 15px;
+
+    @media (max-width: $tablet) {
+        text-align: center;
+    }
+}
+
+.webinars-cta {
+    background-color: $background-blue;
+    padding-bottom: 40px;
+    text-align: center;
+
+    @media (max-width: $tablet) {
+        background-color: white;
+        padding-bottom: 0;
+    }
+}
+
+.webinars-intro {
+    display: flex;
+    justify-content: space-between;
+    text-align: left;
+    padding: 60px 90px;
+    position: relative;
+    z-index: 99;
+
+    .intro-text {
+        padding: 70px 0;
+        width: 33%;
+    }
+
+    .intro-img {
+        width: 55%;
+        position: relative;
+        bottom: 0;
+        align-self: center;
+    }
+
+    @media (max-width: $desktop-sm) {
+        padding: 30px 60px;
+
+        .intro-text {
+            min-width: 38%;
+        }
+    }
+
+    @media (max-width: $tablet) {
+        flex-direction: column;
+        background-color: white;
+        padding: 0;
+
+        .intro-text {
+            width: 100%;
+            margin-right: 0;
+            text-align: center;
+            background-color: $background-blue;
+
+            p {
+                padding: 10px;
+            }
+        }
+
+        .intro-img {
+            max-width: 300px;
+            background-color: white;
+            margin: 0 auto;
+            margin-top: -75px;
+        }
+    }
+}
+
+.webinars-signup {
+    background-color: white;
+    display: inline-block;
+    text-align: left;
+    border: 1px solid $med-grey;
+    border-radius: 5px;
+    margin: 0 auto;
+    width: 95%;
+    margin-top: -100px;
+    padding: 50px 70px;
+
+    .signup-info {
+        float: left;
+        width: 30%;
+
+        img {
+            max-width: 200px;
+            position: absolute;
+            margin-left: 190px;
+            margin-top: -140px;
+
+            @media (max-width: $desktop-sm) {
+                display: none;
+            }
+        }
+    }
+
+    .webinars-list {
+        float: left;
+        width: 60%;
+        margin-left: 10%;
+        padding-top: 25px;
+
+        ul {
+            width: 100%;
+        }
+
+        li {
+            display: flex;
+            border-top: 1px solid $med-grey;
+            padding-left: 0;
+            background-image: none;
+            font-size: 1.7rem;
+
+            &:last-child {
+                border-bottom: 1px solid $med-grey;
+            }
+        }
+
+        .day-time {
+            align-self: center;
+            width: 80%;
+
+            p {
+                margin-top: 0;
+                margin-bottom: 0;
+            }
+        }
+
+        .register-button {
+            white-space: nowrap;
+            padding-left: 40px;
+        }
+    }
+
+    @media (max-width: $tablet) {
+        border: none;
+        border-radius: none;
+        width: 100%;
+        text-align: center;
+        margin-top: 0;
+        padding: 0;
+
+        .webinars-list {
+            width: 100%;
+            margin: 0;
+            overflow: hidden;
+            text-align: left;
+
+            h3 {
+                text-align: center;
+            }
+
+            ul {
+                width: 100%;
+                background: $background-blue;
+            }
+
+            li {
+                display: flex;
+                margin-bottom: 0;
+                padding: 0 10px;
+            }
+
+            .day-time {
+                width: 70%;
+                padding-right: 20px;
+                padding-left: 20px;
+            }
+        }
+
+        img {
+            display: none;
+        }
+
+        .signup-info {
+            width: 100%;
+
+            p {
+                width: 100%;
+            }
+        }
+    }
+}

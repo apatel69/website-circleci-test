@@ -1,0 +1,118 @@
+.static-column {
+    padding-top: 5.67%;
+}
+
+.static-column > .content {
+    float: left;
+    padding-bottom: 8.33%;
+    width: calc(95% - 410px);
+
+    @media screen and (max-width: $tablet) {
+        float: none;
+        width: 100%;
+        padding-bottom: 20px;
+    }
+
+    h2 {
+        margin-top: 0;
+    }
+}
+
+.static-column > .floating-column {
+    float: right;
+    width: 410px;
+
+    @media screen and (max-width: $tablet) {
+        float: none;
+        padding-bottom: 20px;
+        margin-left: 0;
+        width: 100%;
+    }
+}
+
+.inline_container {
+    width: 400px;
+    padding: 30px;
+    background-color: $background-blue;
+    margin-left: 30px;
+    margin-bottom: 10px;
+    float: right;
+
+    ul {
+        margin: 0;
+
+        li {
+            margin-bottom: 15px;
+            font-size: 1.8rem;
+
+            &:last-of-type {
+                margin-bottom: 0;
+            }
+        }
+    }
+
+    h3 {
+        margin-top: 0;
+    }
+
+    @media screen and (max-width: $desktop-lrg) {
+        width: 100%;
+        margin-bottom: 30px;
+        margin-left: 0;
+    }
+}
+
+.floating_column_container {
+    text-align: center;
+    border-radius: 5px;
+    border: solid 1px $med-grey;
+    padding: 37px;
+    background-size: 43px 91px;
+    background-position: 8% 100%;
+    background-repeat: no-repeat;
+    background-color: white;
+    box-shadow: 4px 4px 0 rgba(6, 41, 66, 0.15);
+
+    h2 {
+        margin-top: 0;
+    }
+
+    .primary-cta {
+        min-width: 275px;
+
+        @media screen and (max-width: $desktop-sm) {
+            min-width: 100%;
+        }
+
+        @media screen and (max-width: $tablet) {
+            min-width: 0;
+            width: 100%;
+            max-width: 275px;
+        }
+    }
+
+    .number {
+        color: $midnight-blue;
+        font-size: 3.2rem;
+
+        @media screen and (max-width: $mobile) {
+            font-size: 2.4rem;
+        }
+
+        @media screen and (max-width: $mobile-sm) {
+            font-size: 2rem;
+        }
+    }
+
+    .rule {
+        margin: 35px 0;
+    }
+}
+
+.sticky {
+    @media screen and (min-width: 769px) {
+        position: fixed;
+        z-index: 100;
+        width: 410px;
+    }
+}

@@ -1,0 +1,159 @@
+@import "../../global";
+@import "../../flexible-content/global/cta-full-width";
+@import "../../flexible-content/global/faq-accordion";
+@import "../../flexible-content/global/_content-image-cta";
+@import "../../flexible-content/global/two-column-video-feature";
+@import "../../flexible-content/global/cta-full-width-outline";
+@import "../../flexible-content/global/cta-invoice-templates";
+@import "customer-support";
+@import "sticky-nav";
+@import "testimonials";
+@import "two-column-image-cta";
+@import "three-column-content";
+@import "hero-with-cta";
+@import "two-column-flexible-cta";
+@import "equation-cta";
+
+//Set Template fonts, and paragraph spacing
+h1,
+h2,
+h3 {
+    font-weight: bold;
+}
+
+h1,
+h2,
+h3,
+p {
+    color: $midnight-blue;
+}
+
+p {
+    margin-top: 1em;
+    margin-bottom: calc(0.5em + 10px);
+}
+
+section {
+    background: white;
+}
+
+.three-col .col h3,
+.faq-container .faq-question {
+    color: $fresh-blue;
+    font-weight: normal;
+}
+
+h1 {
+    font-size: 4rem;
+
+    @media screen and (max-width: $tablet) {
+        font-size: 3rem;
+    }
+}
+
+h2 {
+    font-size: 3em;
+
+    @media screen and (max-width: $tablet) {
+        font-size: 2.2rem;
+    }
+}
+
+h3 {
+    font-size: 2.4rem;
+    margin-bottom: 0;
+
+    @media screen and (max-width: $tablet) {
+        font-size: 2.2rem;
+    }
+}
+
+//Reset Global components
+.primary-cta {
+    padding: 10px 15px;
+
+    @media screen and (max-width: $mobile) {
+        display: block;
+    }
+}
+
+.faq-accordion {
+    h2 {
+        margin-top: 0;
+    }
+}
+
+.outline-content {
+    max-width: 80%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+
+    .primary-cta {
+        height: 50px;
+        margin-top: 0.5em;
+    }
+
+    @media screen and (max-width: $tablet) {
+        display: block;
+    }
+
+    @media screen and (max-width: $tablet) {
+        max-width: 100%;
+    }
+}
+
+.nav-wrapper {
+    position: relative;
+    border-bottom: #c5c7ce 1px solid;
+    padding-bottom: 1em;
+    background: #fff;
+
+    .header-text {
+        position: absolute;
+        right: 40px;
+        top: 25%;
+
+        @media screen and (max-width: $mobile) {
+            display: none;
+        }
+
+        a {
+            text-decoration: none;
+            color: $midnight-blue;
+        }
+    }
+
+    .nav-logo {
+        @media screen and (max-width: $mobile) {
+            float: none;
+            max-width: 60%;
+            display: block;
+            width: 110px;
+            margin: 0 auto;
+        }
+    }
+}
+
+.container.no-side-pad {
+    padding: 1.5em 0;
+}
+
+// TODO: Should this be done for the global element styling?
+.content-image-cta {
+    padding: 0 calc(100% - 80%);
+}
+
+@media screen and (max-width: $tablet) {
+    .content-image-cta {
+        padding: 2em 4em 0;
+    }
+
+    .two-column-image-cta {
+        padding: 0.5em 15px 0;
+    }
+}
+
+.faq-container {
+    padding-bottom: 10px;
+}

@@ -1,0 +1,147 @@
+.all-features {
+    .features {
+        @media (max-width: $mobile) {
+            padding: 0;
+            border-bottom: 1px solid $med-grey;
+
+            &:last-child {
+                border-bottom: none;
+            }
+
+            .feature-title {
+                border-bottom: none;
+                padding: 10px 0;
+
+                h2 {
+                    display: block;
+                    margin: 0;
+
+                    &::after {
+                        content: url("~images/icons/down-chevron.svg");
+                        text-decoration: none;
+                        display: inline-block;
+                        float: right;
+                    }
+                }
+            }
+        }
+    }
+
+    .feature-title {
+        border-bottom: 1px solid $rule-grey;
+
+        h2 {
+            display: inline-block;
+            vertical-align: middle;
+        }
+
+        .more-info {
+            display: inline-block;
+
+            @media (max-width: $mobile) {
+                display: none;
+            }
+
+            margin: 0 0 0 25px;
+            vertical-align: middle;
+        }
+
+        @media (max-width: $mobile) {
+            cursor: pointer;
+        }
+    }
+
+    .mobile-feature-details {
+        .more-info {
+            display: none;
+        }
+
+        @media (max-width: $mobile) {
+            display: none;
+
+            .more-info {
+                display: block;
+            }
+        }
+
+        @media screen and (min-width: 481px) {
+            display: block !important;
+        }
+    }
+
+    .feature-details {
+        width: 70%;
+        margin: 0 auto;
+        display: flex;
+        justify-content: flex-start;
+        align-items: stretch;
+        flex-flow: row wrap;
+        text-align: left;
+
+        @media (max-width: $desktop-sm) {
+            width: 100%;
+        }
+
+        @media (max-width: $mobile) {
+            display: block;
+        }
+    }
+
+    .individual-feature {
+        width: 33.33%;
+        padding: 0 2.5%;
+
+        &:nth-child(3n+1) {
+            padding-left: 0;
+        }
+
+        &:nth-child(3n+3) {
+            padding-right: 0;
+        }
+
+        &:first-child {
+            @media (max-width: $mobile) {
+                h4 {
+                    margin-top: 0;
+                }
+            }
+        }
+
+        h4 {
+            margin-bottom: 0;
+            font-family: $font-med;
+        }
+
+        @media (max-width: $tablet) {
+            width: 50%;
+
+            &:nth-child(odd) {
+                padding-left: 0;
+                padding-right: 2.5%;
+            }
+
+            &:nth-child(even) {
+                padding-right: 0;
+                padding-left: 2.5%;
+            }
+        }
+
+        @media (max-width: $mobile) {
+            width: 100%;
+
+            &:nth-child(odd),
+            &:nth-child(even) {
+                padding: 0;
+            }
+        }
+    }
+
+    .feature-image {
+        text-align: center;
+        align-self: center;
+
+        @media (max-width: $mobile) {
+            display: none;
+        }
+    }
+}

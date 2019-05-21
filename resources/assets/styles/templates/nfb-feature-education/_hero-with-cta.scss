@@ -1,0 +1,122 @@
+.hero {
+    padding: 4.5em 4em;
+
+    @media screen and (max-width: $tablet) {
+        display: block;
+        padding: 2.5em 2em;
+    }
+
+    background: $lighter-blue no-repeat right 1em top;
+
+    .hero_intro_heading {
+        h1 {
+            margin-bottom: 0;
+        }
+    }
+
+    .cpy-hero {
+        float: left;
+        width: 40%;
+        padding-right: 2em;
+
+        @media screen and (max-width: $tablet) {
+            padding-right: 0;
+            float: none;
+            width: 100%;
+            text-align: center;
+        }
+    }
+
+    .cta-subtext {
+        @media screen and (max-width: $tablet) {
+            text-align: center;
+        }
+
+        .primary-cta {
+            padding: 18px 45px;
+            margin: 1em 0;
+
+            @media screen and (max-width: $mobile) {
+                padding: 10px 15px;
+            }
+        }
+    }
+
+    .cta-image {
+        float: left;
+        max-width: 60%;
+        padding-left: 40px;
+
+        @media screen and (max-width: $tablet) {
+            max-width: none;
+            float: none;
+            text-align: center;
+            padding-left: 0;
+        }
+    }
+
+    .desktop-cta-image.hdbackground--true {
+        @media screen and (max-width: $tablet) {
+            display: none;
+        }
+    }
+
+    .tablet-mobile-cta-image.hdbackground--true {
+        display: none;
+
+        @media screen and (max-width: $tablet) {
+            display: block;
+        }
+    }
+
+    .cta-outroCopy {
+        clear: both;
+        text-align: center;
+        width: 80%;
+        margin: 0 auto;
+        padding: 1em;
+    }
+
+    @media screen and (max-width: $mobile) {
+        width: 100%;
+    }
+
+    //bottom bleed layout overrides
+    &.layoutstyle--bottom_bleed {
+        align-items: center; // from flex-end;
+        display: flex;
+        padding-bottom: 0;
+
+        @media screen and (max-width: $tablet) {
+            display: block;
+        }
+
+        .cpy-hero {
+            width: auto;
+        }
+
+        .cta-subtext {
+            padding-bottom: 3em;
+
+            @media screen and (max-width: $tablet) {
+                margin-bottom: 3em;
+            }
+        }
+
+        .subtext {
+            text-align: left;
+            font-size: 1.8rem;
+            width: 70%;
+
+            @media screen and (max-width: $tablet) {
+                font-size: 1.7rem;
+                width: 100%;
+                text-align: center;
+            }
+        }
+    }
+
+    .cta-image {
+        max-width: none;
+    }
+}

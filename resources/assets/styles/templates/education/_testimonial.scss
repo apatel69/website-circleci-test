@@ -1,0 +1,135 @@
+
+.passion {
+    h2 {
+        margin-bottom: 0;
+    }
+
+    h3 {
+        margin-top: 0;
+        font-family: $font-med;
+        color: $midnight-blue;
+        font-size: 2.4rem;
+        line-height: calc(34 / 24);
+    }
+
+    .download-img {
+        margin-top: 1.8rem;
+    }
+
+    a {
+        font-size: 1.8rem;
+        line-height: calc(24 / 18);
+        text-align: center;
+    }
+}
+
+.infographic-image {
+    @media only screen and (min-width: 769px) {
+        position: relative;
+        cursor: none;
+        max-width: 792px;
+        margin: 0 auto;
+    }
+}
+
+.magnify-image {
+    @media only screen and (min-width: 769px) {
+        width: 175px;
+        height: 175px;
+        position: absolute;
+        border-radius: 100%;
+        box-shadow: 0 0 0 7px rgba(255, 255, 255, 0.85), 0 0 7px 7px rgba(0, 0, 0, 0.25), inset 0 0 40px 2px rgba(0, 0, 0, 0.25);
+        display: none;
+    }
+}
+
+.preview-image {
+    display: block;
+}
+
+.testimonial-container {
+    max-width: 1129px;
+    margin: 0 auto;
+    padding: 60px 7.5% 60px 5%;
+    justify-content: space-between;
+    border: 1px solid $med-grey;
+    border-radius: 8px;
+    box-shadow: 4px 4px 13px 0 rgba(6, 41, 66, 0.1);
+
+    @media (max-width: $tablet) {
+        display: block;
+        padding-top: 18px;
+        padding-bottom: 18px;
+    }
+}
+
+.testimonial-quote-source {
+    flex-basis: 610px;
+    background-image: url("~images/testimonial/quotation-marks.svg");
+    background-repeat: no-repeat;
+    order: 1;
+    padding-left: 5%;
+    padding-top: 30px;
+
+    @media (max-width: $tablet) {
+        max-width: 100%;
+    }
+}
+
+.testimonial-quote {
+    @media (max-width: $tablet) {
+        margin-bottom: 30px;
+    }
+
+    blockquote {
+        font-size: 3rem;
+        line-height: calc(44 / 30);
+        border: 0;
+        font-family: $font-main;
+        margin: 0;
+        text-indent: 0;
+        padding: 0;
+
+        @media (max-width: $tablet) {
+            font-size: 2.2rem;
+            line-height: calc(32 / 22);
+        }
+
+        &::before,
+        &::after {
+            content: "";
+        }
+    }
+}
+
+.testimonial-source {
+    p {
+        margin-bottom: 0;
+        font-family: $font-med;
+        font-size: 1.6rem;
+        text-transform: uppercase;
+
+        @media (max-width: $tablet) {
+            text-align: center;
+        }
+    }
+}
+
+.testimonial-image {
+    order: 2;
+    margin-left: 25px;
+
+    @media (max-width: $tablet) {
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    img {
+        border-radius: 50%;
+
+        @media (max-width: $tablet) {
+            width: 95px;
+            height: 95px;
+        }
+    }
+}

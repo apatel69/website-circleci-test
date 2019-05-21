@@ -1,0 +1,71 @@
+.hero-podcast {
+    section {
+        background-color: $fresh-blue;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center right;
+        height: 450px;
+        padding: 6rem;
+        vertical-align: middle;
+
+        .text-container {
+            width: 50%;
+            max-width: 565px;
+            position: relative;
+            top: 50%;
+            transform: translateY(-50%);
+
+            h1 {
+                font-family: $font-main;
+                font-size: 4rem;
+                color: #fff;
+
+                @media screen and (min-width: $desktop-lrg) {
+                    margin-right: 9rem;
+                }
+            }
+
+            p {
+                font-family: $font-book;
+                font-size: 1.8rem;
+                color: #fff;
+            }
+
+            .primary-cta {
+                font-family: $font-book;
+                padding: 12px 35px;
+                width: 100%;
+                max-width: 270px;
+            }
+        }
+
+        @media screen and (max-width: $tablet - 1) {
+            width: 100vw;
+            height: 692px;
+            background-position: center top;
+
+            .text-container {
+                width: 100%;
+                margin-top: 40px;
+                text-align: center;
+                max-width: 100%;
+
+                h1 {
+                    font-size: 3rem;
+                    line-height: (40 / 30);
+                }
+
+                p {
+                    font-size: 1.8rem;
+                    line-height: (28 / 18);
+                }
+
+                .btn-primary {
+                    padding: 12px 35px;
+                    width: 100%;
+                    max-width: 260px;
+                }
+            }
+        }
+    }
+}

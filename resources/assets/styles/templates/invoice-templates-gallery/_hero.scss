@@ -1,0 +1,12 @@
+.hero {
+    height: 325px;
+
+    .hero-title {
+        max-width: 645px;
+    }
+
+    &-h1 {
+        color: $midnight-blue;
+        font-family: $font-med;
+    }
+}

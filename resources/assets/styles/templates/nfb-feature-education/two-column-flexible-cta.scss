@@ -1,0 +1,99 @@
+@import "../../common/mixins";
+
+.two-column-flexible-cta {
+    background: top right no-repeat #fff;
+    background-size: contain;
+    padding: 3.5em 1.5em;
+    border-bottom: 3.5em solid #fff;
+
+    @media screen and (max-width: $tablet) {
+        background-position: top center;
+        background-size: 90%;
+        padding-top: 2em;
+    }
+
+    @media screen and (max-width: $mobile) {
+        background-size: 0;
+        margin-top: 0;
+        border-bottom: none;
+    }
+}
+
+.two-column-flexible-cta-title {
+    text-align: center;
+    margin-top: 0;
+}
+
+/* Single Column Layout */
+.two-column-flexible-cta-columns.display-second-column-0 {
+    @media screen and (max-width: $tablet) {
+        margin-top: 2.5em;
+    }
+
+    .two-column-flexible-cta-column {
+        @include shadowBox;
+
+        background: #fff;
+        padding: 3.5em;
+        width: 65%;
+
+        @media screen and (max-width: $tablet) {
+            width: 98%;
+            margin: 150px auto 0;
+            text-align: center;
+        }
+
+        @media screen and (max-width: $mobile) {
+            margin-top: 0;
+        }
+    }
+
+    h3 {
+        margin-top: 0;
+    }
+}
+
+/* Two Column Layout */
+.two-column-flexible-cta-columns.display-second-column-1 {
+    display: flex;
+
+    @media screen and (max-width: $tablet) {
+        display: block;
+    }
+
+    .two-column-flexible-cta-column {
+        flex-basis: 0;
+        margin: 0 1.5em;
+        padding: 2em 5em;
+
+        &:first-child {
+            background: $lighter-blue;
+            flex-grow: 1;
+
+            @media screen and (max-width: $tablet) {
+                text-align: center;
+            }
+
+            @media screen and (max-width: $tablet) {
+                padding: 2.5em;
+                margin: 0 0 2.5em;
+
+                h3 {
+                    margin-top: 0;
+                }
+            }
+        }
+
+        &:last-child {
+            @include shadowBox;
+
+            flex-grow: 1.5;
+            padding: 1.5em 5em;
+
+            @media screen and (max-width: $mobile) {
+                text-align: center;
+                margin: 0;
+            }
+        }
+    }
+}

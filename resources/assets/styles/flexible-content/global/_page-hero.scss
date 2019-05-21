@@ -1,0 +1,135 @@
+.hero,
+.hero-bg-img {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top center;
+
+    section {
+        padding: 45px 0;
+
+        &.zero-bottom-padding {
+            padding-bottom: 0;
+        }
+
+        @media screen and (max-width: $mobile) {
+            padding-bottom: 288px;
+        }
+    }
+
+    .content {
+        width: 45%;
+        margin-left: 20px;
+
+        @media screen and (max-width: $desktop-sm) {
+            margin-left: 0;
+
+            h1 {
+                @media screen and (max-width: $mobile) {
+                    color: $midnight-blue;
+                    font-family: $font-med;
+                    max-width: 284px;
+                    font-size: 24px;
+                    margin: 0 auto 25px;
+                    line-height: 1.20833333;
+                }
+            }
+        }
+    }
+
+    h1 {
+        margin-bottom: 32px;
+    }
+
+    p {
+        font-size: 1.8rem;
+        line-height: calc(28 / 18);
+        margin-bottom: 25px;
+
+        @media screen and (max-width: $mobile) {
+            display: none;
+        }
+
+        br {
+            content: "";
+            display: block;
+            margin: 1.8rem 0;
+        }
+    }
+
+    .primary-cta {
+        min-width: 275px;
+        display: inline-block;
+        vertical-align: middle;
+
+        @media screen and (max-width: $mobile-sm) {
+            min-width: 0;
+            max-width: 275px;
+        }
+    }
+
+    .subtext {
+        color: $dark-grey;
+        max-width: 300px;
+        margin: 10px 0 0;
+        text-align: center;
+    }
+
+    .two-col {
+        display: flex;
+        justify-content: space-between;
+
+        @media screen and (max-width: $tablet) {
+            display: block;
+        }
+    }
+
+    @media screen and (max-width: $tablet) {
+        background-color: $background-blue;
+        background-image: none !important;
+
+        .content {
+            text-align: center;
+            width: 100%;
+        }
+    }
+
+    .mobile-apps-buttons {
+        a:nth-child(1) {
+            margin-right: 20px;
+        }
+
+        a {
+            text-decoration: none;
+        }
+    }
+}
+
+.cta-subtext {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.inline-form-hero {
+    display: none;
+
+    @media screen and (max-width: $tablet) {
+        display: block;
+    }
+}
+
+.cta-subtext-assurance {
+    margin-left: 20px;
+
+    @media screen and (max-width: $desktop-sm) {
+        margin-left: 0;
+    }
+
+    @media screen and (max-width: $tablet) {
+        text-align: center;
+        display: none;
+    }
+
+    @media screen and (max-width: $mobile) {
+        display: none;
+    }
+}

@@ -1,0 +1,199 @@
+.select-form {
+    background-color: $midnight-blue;
+    text-align: center;
+
+    section {
+        padding: 60px 0;
+    }
+
+    h2,
+    p {
+        color: white;
+    }
+
+    .form-wrapper {
+        width: 51%;
+        display: inline-block;
+
+        @media (max-width: $desktop-sm) {
+            width: 70%;
+        }
+
+        @media (max-width: $tablet) {
+            width: 70%;
+        }
+
+        @media (max-width: $mobile) {
+            width: 100%;
+        }
+    }
+
+    .select-cta {
+        display: block;
+        margin: 0 auto;
+        width: 300px;
+        font-family: $font-main;
+        background-color: $select-blue;
+        border-radius: 0;
+
+        &:hover {
+            cursor: pointer;
+            background-color: $select-blue-hover;
+        }
+    }
+
+    form {
+        margin-top: 20px;
+        float: left;
+        font-size: 1.8rem;
+    }
+
+    .row {
+        float: left;
+        width: 100%;
+        text-align: left;
+    }
+
+    .grouped {
+        float: left;
+        display: inline-block;
+        color: white;
+        margin: 30px 0;
+
+        &:last-child {
+            float: right;
+            margin-right: 45px;
+
+            @media (max-width: $mobile) {
+                float: left;
+            }
+        }
+
+        .option {
+            float: left;
+
+            &:first-child {
+                margin-right: 60px;
+            }
+        }
+
+        @media (max-width: $mobile) {
+            margin-bottom: 0;
+
+            .option {
+                display: block;
+                margin-bottom: 20px;
+                width: 100%;
+            }
+
+            &:last-child {
+                display: block;
+            }
+        }
+    }
+
+    p {
+        margin: 0 0 20px;
+    }
+
+    .fieldset {
+        float: left;
+        width: calc(50% - 5px);
+        display: inline-block;
+        margin-bottom: 10px;
+
+        &:first-child {
+            margin-right: 10px;
+        }
+
+        @media (max-width: $mobile) {
+            width: 100%;
+
+            &:first-child {
+                margin-right: 0;
+            }
+        }
+
+        input[type="text"] {
+            float: left;
+            width: 100%;
+            display: inline-block;
+            border: solid 2px white;
+            padding: 18px 14px 14px;
+
+            &.has-error {
+                border: solid 2px $error-state;
+                border-bottom-left-radius: 0;
+                border-bottom-right-radius: 0;
+            }
+        }
+
+        .error {
+            display: none;
+            float: left;
+            width: 100%;
+            background-color: $error-state;
+            color: white;
+            padding: 5px 10px 7px;
+        }
+    }
+
+    .long {
+        width: 100%;
+    }
+
+    .mobile-select {
+        @media (max-width: $mobile) {
+            margin: 0;
+
+            &:last-child {
+                margin-top: -10px;
+            }
+        }
+    }
+
+    textarea {
+        float: left;
+        border: none;
+        width: 100%;
+        padding: 20px 16px 16px;
+        margin-bottom: 40px;
+        height: 120px;
+    }
+
+    .default-state {
+        float: left;
+        width: 100%;
+    }
+
+    .success-state {
+        display: none;
+        float: left;
+        width: 100%;
+        background-color: $midnight-blue;
+        padding: 37px 0;
+
+        .checkmark {
+            width: 65px;
+            margin: 40px 0;
+            height: auto;
+        }
+
+        .subtext {
+            display: block;
+        }
+
+        p,
+        h1 {
+            color: white;
+        }
+
+        p {
+            margin: 60px 0;
+        }
+
+        @media (max-width: $mobile) {
+            padding: 37px;
+        }
+    }
+}

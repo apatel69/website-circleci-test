@@ -1,0 +1,29 @@
+.cta-text-take-a-tour {
+    text-align: center;
+    padding: 40px;
+    font-size: 1.8rem;
+    line-height: calc(28 / 18);
+
+    p {
+        margin: 0;
+    }
+}
+
+.cc {
+    display: block;
+
+    &.nosubtext {
+        margin-bottom: 40px;
+    }
+
+    @media screen and (max-width: $tablet) {
+        margin: 0 auto;
+    }
+}
+
+.cc-subtext {
+    display: block;
+    margin: 20px 0 45px;
+    font-size: 1.4rem;
+    color: $dark-grey;
+}

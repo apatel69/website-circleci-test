@@ -1,0 +1,146 @@
+.compare {
+    &.container {
+        @media screen and (max-width: $mobile) {
+            padding: 0;
+        }
+
+        table,
+        th,
+        td {
+            border: 1px solid $med-grey;
+            border-collapse: collapse;
+        }
+
+        table {
+            @media screen and (max-width: 639px) {
+                border: 0;
+            }
+        }
+
+        th,
+        td {
+            padding: 25px 30px;
+
+            @media screen and (max-width: 639px) {
+                margin: -0.5px 0;
+                border: 1px solid $med-grey;
+            }
+        }
+
+        th:first-child {
+            color: $fresh-blue;
+            font-family: $font-main;
+            font-size: 2.7rem;
+            line-height: calc(34 / 27);
+            text-align: left;
+
+            @media screen and (max-width: 639px) {
+                text-align: center;
+                display: block;
+                width: 100%;
+            }
+        }
+
+        th:last-child,
+        th:nth-last-child(2) {
+            font-size: 2rem;
+            color: $midnight-blue;
+            font-family: $font-med;
+        }
+
+        tr > td:first-child {
+            @media screen and (max-width: 639px) {
+                display: block;
+                width: 100%;
+            }
+
+            h3 {
+                font-family: $font-med;
+                font-size: 2rem;
+                line-height: calc(30 / 20);
+                color: $midnight-blue;
+                text-transform: uppercase;
+                margin: 0;
+            }
+
+            p {
+                font-size: 1.6rem;
+                line-height: calc(26 / 16);
+                color: $midnight-blue;
+                font-family: $font-book;
+                margin: 0;
+            }
+        }
+
+        tr > td:last-child,
+        tr > td:nth-last-child(2) {
+            @media screen and (max-width: 639px) {
+                display: inline-block;
+                width: 50%;
+            }
+
+            .competitor-status {
+                text-align: center;
+                display: block;
+                margin: 0 auto;
+                width: auto;
+
+                img {
+                    height: 43px;
+                }
+            }
+        }
+
+        tr:nth-child(even) {
+            @media screen and (max-width: 639px) {
+                background: $banner-grey;
+            }
+        }
+
+        tr > th:nth-last-child(2),
+        tr > td:nth-last-child(2) {
+            @media screen and (min-width: 640px) {
+                background: $background-blue;
+            }
+        }
+
+        tr > td:nth-last-child(2) {
+            @media screen and (max-width: 639px) {
+                border-right: 0.5px;
+            }
+        }
+
+        table {
+            width: 94.43%;
+            max-width: 967px;
+            margin: 0 auto;
+            border-spacing: 0;
+
+            @media screen and (max-width: $desktop-sm) {
+                width: 100%;
+            }
+        }
+
+        @media screen and (max-width: 639px) {
+            tr:first-child {
+                display: flex;
+                flex-wrap: wrap;
+
+                th {
+                    &:first-child {
+                        width: 100%;
+                    }
+
+                    &:nth-child(n + 2) {
+                        color: #0d83dd;
+                        font-size: 2.1rem;
+                        width: 50%;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                    }
+                }
+            }
+        }
+    }
+}

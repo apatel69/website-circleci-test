@@ -1,0 +1,172 @@
+.heroTwoCol {
+    $self: &;
+
+    &.hero {
+        background-color: #ddf0fe;
+        position: relative;
+        padding: 45px 40px;
+
+        section {
+            position: static;
+            display: flex;
+            align-items: flex-start;
+            flex-direction: column;
+            padding: 0;
+
+            &#cpy-hero {
+                @media screen and (max-width: $mobile) {
+                    padding-bottom: 0;
+                    padding-top: 0;
+                }
+            }
+        }
+
+        h1 {
+            font-family: $font-med;
+            font-size: 90px;
+            line-height: 1;
+            letter-spacing: -0.9px;
+            color: $fresh-blue;
+            text-align: left;
+            margin-bottom: 0;
+
+            @media screen and (max-width: $desktop-sm) {
+                font-size: 65px;
+            }
+
+            @media screen and (max-width: $tablet - 1) {
+                text-align: center;
+                font-size: 42px;
+                line-height: 1.1;
+                margin-bottom: 8px;
+            }
+        }
+
+        #{$self}__content {
+            @media screen and (min-width: $tablet) {
+                &.content {
+                    width: 50%;
+                }
+            }
+
+            @media screen and (max-width: $tablet) {
+                width: 100%;
+            }
+        }
+
+        #{$self}__heroDescription {
+            p {
+                text-align: left;
+                font-size: 20px;
+                line-height: 1.4;
+                color: $midnight-blue;
+                max-width: 450px;
+                width: 100%;
+
+                @media screen and (max-width: $tablet) {
+                    margin: 0;
+                    margin-bottom: 20px;
+                    margin-top: 20px;
+                    max-width: 350px;
+                }
+
+                @media screen and (max-width: $tablet - 1) {
+                    display: none;
+                }
+            }
+        }
+
+        #{$self}__image {
+            @media screen and (min-width: $tablet) {
+                text-align: right;
+
+                img {
+                    position: absolute;
+                    top: 0;
+                    right: 40px;
+                    max-width: 50%;
+                }
+            }
+
+            @media screen and (min-width: $desktop-sm + 1) {
+                img {
+                    max-width: calc(50% - 40px);
+                }
+            }
+
+            @media screen and (max-width: $desktop-sm) {
+                img {
+                    top: 36px;
+                    right: 30px;
+                }
+
+                align-self: center;
+            }
+        }
+
+        #{$self}__cta {
+            width: 100%;
+            max-width: 300px;
+
+            @media screen and (max-width: $tablet - 1) {
+                margin: 17px auto 0;
+            }
+        }
+
+        .inline-form-hero {
+            img {
+                display: none;
+            }
+
+            @media screen and (max-width: $tablet) {
+                .fieldset label {
+                    font-size: 1.8rem;
+                }
+
+                .fieldset-password {
+                    display: none;
+                }
+            }
+
+            @media screen and (max-width: $tablet) and (min-width: $tablet) {
+                max-width: 350px;
+            }
+
+            @media screen and (max-width: $tablet - 1) {
+                margin: 0 auto;
+            }
+
+            @media screen and (max-width: $mobile) {
+                .fieldset label {
+                    font-size: 1.5rem;
+                    top: 19px;
+                    left: 10px;
+                }
+            }
+        }
+
+        .submit-assurance {
+            margin-bottom: 13px;
+        }
+
+        .cta-subtext {
+            p,
+            a {
+                font-size: 14px;
+                line-height: 1.36;
+                color: $dark-grey;
+
+                @media screen and (max-width: 768px) and (min-width: 768px) {
+                    margin-left: 0;
+                }
+            }
+        }
+
+        #{$self}__ctaBtn {
+            display: block;
+            font-size: 26px;
+            line-height: 0.77;
+            padding: 15px;
+        }
+    }
+}

@@ -1,0 +1,147 @@
+.tax-integration_categories,
+.single-integrations,
+.integrations {
+    .card-collection-wrap {
+        width: 100%;
+    }
+
+    .card-collection {
+        display: flex;
+        width: 100%;
+        flex-flow: row wrap;
+    }
+
+    .card {
+        width: 32%;
+        border: solid 1px $rule-grey;
+        border-radius: 10px;
+        margin-right: 1%;
+        margin-left: 1%;
+        overflow: hidden;
+        margin-bottom: 35px;
+        box-shadow: 4px 4px 0 0 rgba(6, 41, 66, 0.1);
+        position: relative;
+
+        &:nth-child(3n + 1) {
+            margin-right: 1%;
+            margin-left: 0;
+        }
+
+        &:nth-child(3n) {
+            margin-right: 0;
+            margin-left: 1%;
+        }
+
+        &:hover {
+            span.btn {
+                border: solid 2px $fresh-blue;
+                color: #fff;
+                background: $fresh-blue;
+            }
+        }
+
+        @media screen and (max-width: $desktop-sm) {
+            width: 48%;
+
+            &:nth-child(3n + 1) {
+                margin-right: 0;
+                margin-left: 0;
+            }
+
+            &:nth-child(3n) {
+                margin-right: 0;
+                margin-left: 0;
+            }
+
+            &:nth-child(odd) {
+                margin-right: 2%;
+                margin-left: 0;
+            }
+
+            &:nth-child(even) {
+                margin-right: 0;
+                margin-left: 2%;
+            }
+        }
+
+        @media screen and (max-width: $mobile) {
+            width: 100%;
+
+            &:nth-child(odd) {
+                margin-right: 0;
+                margin-left: 0;
+            }
+
+            &:nth-child(even) {
+                margin-right: 0;
+                margin-left: 0;
+            }
+        }
+
+        .content {
+            padding: 22px 22px 70px;
+        }
+
+        p {
+            color: $midnight-blue;
+        }
+
+        .btn-wrap {
+            position: absolute;
+            bottom: 0;
+            padding: 0 22px 22px;
+            width: 100%;
+        }
+
+        span.btn {
+            display: block;
+            border: solid 2px $rule-grey;
+            color: $midnight-blue;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 16px;
+            line-height: 16px;
+            text-align: center;
+            padding: 14px;
+            transition: all 0.2s;
+        }
+    }
+
+    .badge {
+        position: absolute;
+        bottom: -22px;
+        right: 10px;
+    }
+
+    .tested-flag {
+        color: $fresh-blue;
+        font-size: 13px;
+        line-height: 15px;
+        text-transform: uppercase;
+        font-family: $font-med;
+        background-image: url("~images/icons/tested.svg");
+        background-repeat: no-repeat;
+        background-position: left center;
+        padding-left: 15px;
+        letter-spacing: 0.43px;
+    }
+
+    .top-cap {
+        position: relative;
+        background: $header-background;
+        text-align: center;
+        height: 132px;
+        padding: 20px;
+
+        .logo {
+            display: inline-block;
+            top: 50%;
+            transform: translateY(-50%);
+            position: relative;
+        }
+
+        &.premium {
+            background: $midnight-blue;
+        }
+    }
+}

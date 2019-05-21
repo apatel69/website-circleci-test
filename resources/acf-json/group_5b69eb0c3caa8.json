@@ -1,0 +1,50 @@
+{
+    "key": "group_5b69eb0c3caa8",
+    "title": "Schema - Structured Data Markup",
+    "fields": [
+        {
+            "key": "field_5b69eb8368e2d",
+            "label": "Schema Markup",
+            "name": "schema_markup",
+            "type": "textarea",
+            "instructions": "Schema (or Structured Data Markup) for this page. If not specified, then",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "<script type=\"application\/ld+json\">\r\n  {\r\n    \"@context\": \"http:\/\/schema.org\",\r\n    \"@type\": \"Organization\",\r\n    \"name\": \"FreshBooks\",\r\n    \"foundingDate\": 2003,\r\n    \"url\": \"https:\/\/www.freshbooks.com\/\",\r\n    \"logo\": \"https:\/\/www.freshbooks.com\/wp-content\/uploads\/2018\/05\/fb-logo-sharing.png\",\r\n    \"sameAs\": [\r\n      \"https:\/\/www.wikidata.org\/wiki\/Q5502916\",\r\n      \"https:\/\/en.wikipedia.org\/wiki\/FreshBooks\",\r\n      \"https:\/\/www.youtube.com\/user\/freshbooks\",\r\n      \"https:\/\/ca.linkedin.com\/company\/freshbooks\",\r\n      \"https:\/\/www.facebook.com\/FreshBooks\",\r\n      \"https:\/\/twitter.com\/freshbooks\",\r\n      \"https:\/\/plus.google.com\/+freshbooks\",\r\n\"https:\/\/www.instagram.com\/freshbooks\/\"\r\n    ],\r\n    \"owns\": {\r\n      \"name\": \"FreshBooks\",\r\n      \"url\": \"https:\/\/www.freshbooks.com\/\"\r\n    }\r\n  }\r\n<\/script>",
+            "placeholder": "",
+            "maxlength": "",
+            "rows": 30,
+            "new_lines": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "post"
+            }
+        ],
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "page"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "acf_after_title",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": 1,
+    "description": "",
+    "modified": 1536173269
+}

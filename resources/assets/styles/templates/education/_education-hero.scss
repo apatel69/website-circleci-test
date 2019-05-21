@@ -1,0 +1,101 @@
+.hero {
+    align-items: initial;
+    height: auto;
+
+    section {
+        padding: 45px 0;
+
+        @media (min-width: 1025px) {
+            padding-top: 10%;
+        }
+    }
+
+    @media (min-width: 1025px) {
+        height: 450px;
+    }
+
+    @media (max-width: $tablet) {
+        background: #fff !important;
+    }
+
+    .content {
+        width: 45%;
+        margin-left: 20px;
+
+        @media (max-width: $desktop-sm) {
+            margin-left: 0;
+        }
+
+        @media (max-width: $tablet) {
+            text-align: center;
+            width: 100%;
+        }
+    }
+
+    h1 {
+        margin-bottom: 32px;
+    }
+
+    p {
+        font-size: 1.8rem;
+        line-height: 28/18;
+        margin-bottom: 25px;
+
+        br {
+            content: "";
+            display: block;
+            margin: 1.8rem 0;
+        }
+    }
+
+    .cta-subtext-assurance {
+        display: none;
+
+        @media (max-width: $desktop-sm) {
+            display: block;
+        }
+    }
+
+    .cta-only {
+        display: none;
+
+        @media (max-width: $desktop-sm) {
+            margin-left: 0;
+            display: block;
+        }
+
+        @media (max-width: $tablet) {
+            text-align: center;
+        }
+    }
+}
+
+.mobile-hero-img,
+.education-mobile-img {
+    @media (max-width: $tablet) {
+        background-size: cover;
+        background-position: top right;
+    }
+}
+
+.mobile-hero-img {
+    @media (max-width: $tablet) {
+        height: 350px;
+        display: block;
+    }
+
+    @media (max-width: $mobile) {
+        display: none;
+    }
+}
+
+.education-mobile-img {
+    @media (max-width: $tablet) {
+        display: none;
+    }
+
+    @media (max-width: $mobile) {
+        height: 275px;
+        display: block;
+    }
+}

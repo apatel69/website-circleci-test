@@ -1,0 +1,142 @@
+.tax-support_categories,
+.single-support,
+.support {
+    font-family: $font-main;
+
+    h2 {
+        font-family: $font-main;
+    }
+
+    a {
+        text-decoration: none;
+    }
+
+    .support-post-page-heading,
+    .support-post-heading {
+        margin-top: 0;
+    }
+
+    .support-post-page-heading {
+        margin-bottom: 0;
+    }
+
+    .support-post-content {
+        font-size: 1.8rem;
+
+        img {
+            margin: 30px 0;
+        }
+
+        ul {
+            list-style: disc outside none;
+
+            ul {
+                list-style-type: circle;
+
+                ul {
+                    list-style-type: square;
+                }
+            }
+        }
+
+        ol {
+            list-style: decimal outside none;
+
+            ol {
+                list-style-type: lower-alpha;
+
+                ol {
+                    list-style-type: lower-roman;
+                }
+            }
+
+            ul {
+                list-style-type: circle;
+
+                ul {
+                    list-style-type: square;
+                }
+            }
+        }
+
+        ul,
+        ol {
+            display: block;
+            line-height: (22 / 18);
+            padding-left: 35px;
+
+            li {
+                display: list-style;
+                background: none;
+                padding-left: 5px;
+                margin-bottom: 5px;
+            }
+        }
+
+        table {
+            border-collapse: collapse;
+            border-spacing: 0;
+            font-size: 1.6rem;
+            border: 0;
+        }
+
+        .support-focus-message {
+            background-color: $background-blue;
+            padding: 5px 8px;
+            line-height: 1.5;
+        }
+
+        .video-wrapper {
+            position: relative;
+            padding-top: 56.25%;
+
+            iframe {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+            }
+        }
+    }
+
+    @media screen and (max-width: $tablet - 1) {
+        .support-sidebar {
+            display: none;
+        }
+
+        .nav-col {
+            margin: 10px 0 30px;
+        }
+    }
+
+    @media screen and (min-width: $tablet) {
+        .support-mobile-nav {
+            display: none;
+        }
+    }
+
+    .two-col {
+        margin-top: 30px;
+        width: 100%;
+        display: flex;
+
+        @media screen and (max-width: $tablet - 1) {
+            margin-top: 0;
+            display: block;
+        }
+
+        .col {
+            &:first-child {
+                width: 254px;
+                margin-right: 34px;
+                flex-shrink: 0;
+
+                @media screen and (max-width: $tablet - 1) {
+                    width: auto;
+                    margin-right: 0;
+                }
+            }
+        }
+    }
+}

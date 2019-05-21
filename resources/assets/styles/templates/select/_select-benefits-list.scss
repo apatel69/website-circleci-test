@@ -1,0 +1,138 @@
+.select-feature,
+.select {
+    align-items: flex-start;
+}
+
+.select-feature {
+    justify-content: space-between;
+    padding-top: 92px;
+    padding-bottom: 52px;
+    max-width: 1115px;
+    margin: 0 auto;
+
+    @media (max-width: $tablet) {
+        padding-top: 10%;
+        padding-bottom: 20px;
+        display: block;
+    }
+}
+
+.select-benefits-list {
+    .select {
+        padding: 80px 0;
+        justify-content: space-around;
+
+        @media (max-width: $tablet) {
+            flex-direction: column;
+            align-items: center;
+            padding: 10% 0;
+        }
+    }
+}
+
+.select-column {
+    &:first-child {
+        width: 48%;
+
+        @media (max-width: $tablet) {
+            width: 100%;
+            text-align: center;
+        }
+    }
+
+    &:last-child {
+        width: 32.5%;
+
+        @media (max-width: $tablet) {
+            width: 90%;
+        }
+    }
+}
+
+.feature-header {
+    @media (max-width: $tablet) {
+        width: 100%;
+        text-align: center;
+    }
+
+    @media (max-width: mobile) {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    h2,
+    h3 {
+        color: $midnight-blue;
+        margin-top: 0;
+    }
+}
+
+.feature-header:first-child {
+    flex-basis: 18.75%;
+}
+
+.feature-header:nth-last-child(2),
+.feature-header:last-child {
+    flex-basis: 33.75%;
+
+    @media (max-width: $tablet) {
+        flex-basis: 0;
+    }
+
+    h3 {
+        max-width: 240px;
+        margin-bottom: 10px;
+        font-size: 2rem;
+        text-transform: uppercase;
+
+        @media (max-width: $tablet) {
+            margin: 0 auto 10px;
+            max-width: 275px;
+            text-align: left;
+        }
+    }
+
+    ul {
+        @media (max-width: $tablet) {
+            min-width: 275px;
+        }
+    }
+}
+
+.feature-header:nth-last-child(2) {
+    padding: 42px 2.9%;
+    color: white;
+    background: $select-blue;
+
+    h3 {
+        color: white;
+    }
+
+    ul li {
+        background-image: url("~images/icons/white-list.svg");
+    }
+
+    @media (max-width: $tablet) {
+        padding: 42px 15px;
+    }
+}
+
+.feature-header:last-child {
+    padding: 42px 0;
+
+    h3 {
+        padding-top: 27px;
+
+        @media (max-width: $tablet) {
+            padding-top: 0;
+        }
+    }
+
+    @media (max-width: $tablet) {
+        padding: 42px 15px 0;
+    }
+
+    ul li {
+        background-image: url("~images/icons/black-list.svg");
+    }
+}

@@ -1,0 +1,65 @@
+.overview-two-col-content {
+    .overview {
+        justify-content: space-between;
+        margin: 0 6.75% 50px;
+        padding-top: 25px;
+        flex-direction: row;
+
+        @media (max-width: $desktop-sm) {
+            margin: 0 3.375% 50px;
+        }
+
+        @media (max-width: $tablet) {
+            display: block;
+        }
+    }
+
+    .overview > .content {
+        width: 40%;
+
+        @media (max-width: $desktop-sm) {
+            width: 45%;
+        }
+
+        @media (max-width: $tablet) {
+            margin: 0 auto;
+            width: 85%;
+            padding-right: 0;
+            text-align: center;
+        }
+
+        @media (max-width: $mobile) {
+            width: 100%;
+        }
+
+        h2 {
+            margin-top: 0;
+        }
+
+        p {
+            margin-top: 0;
+            margin-bottom: 0;
+
+            @media (max-width: $tablet) {
+                margin-bottom: 16px;
+            }
+        }
+    }
+
+    .overview > .image {
+        width: 50%;
+        text-align: center;
+
+        @media (max-width: $tablet) {
+            width: 100%;
+        }
+
+        img {
+            border-radius: 5px;
+        }
+
+        @media (max-width: $tablet) {
+            text-align: center;
+        }
+    }
+}

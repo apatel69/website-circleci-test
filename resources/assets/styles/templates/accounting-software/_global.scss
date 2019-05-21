@@ -1,0 +1,233 @@
+.hero {
+    @media screen and (max-width: $tablet) {
+        background-color: white;
+
+        .content {
+            text-align: center;
+            width: 100%;
+        }
+    }
+}
+
+.hero-short {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    text-align: center;
+
+    h1,
+    p {
+        color: white;
+    }
+
+    section {
+        padding: 90px 0;
+    }
+
+    .content {
+        h1,
+        p {
+            max-width: 540px;
+            margin: 0 auto;
+        }
+
+        p {
+            margin-top: 18px;
+            margin-bottom: 25px;
+        }
+    }
+}
+
+.trustpilot-widget {
+    margin: 14px 0;
+}
+
+.two-col {
+    .content {
+        width: 40%;
+
+        @media screen and (max-width: $desktop-sm) {
+            width: 45%;
+        }
+
+        @media screen and (max-width: $tablet) {
+            width: 100%;
+        }
+    }
+
+    .hero-image {
+        width: 50%;
+
+        @media screen and (max-width: $tablet) {
+            width: 90%;
+            margin: 0 auto;
+        }
+
+        @media screen and (max-width: $mobile) {
+            width: 100%;
+        }
+
+        img {
+            display: block;
+
+            @media screen and (max-width: $tablet) {
+                margin: 35px auto 0;
+            }
+        }
+    }
+}
+
+.cta-mobile {
+    max-width: 328px;
+    position: relative;
+    margin: 0 auto;
+
+    .primary-cta {
+        width: 100%;
+    }
+}
+
+.cta-mobile-buttons {
+    display: flex;
+    justify-content: space-around;
+    margin: 20px auto 0;
+    width: 295px;
+    flex-direction: row-reverse;
+
+    @media screen and (max-width: $tablet) {
+        display: none;
+    }
+}
+
+.cta-join-image {
+    position: absolute;
+    top: 30px;
+    right: -190px;
+
+    @media screen and (max-width: $tablet) {
+        display: none;
+    }
+}
+
+.main-content {
+    h2 {
+        width: 55%;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 0;
+    }
+
+    p {
+        width: 65%;
+    }
+
+    h2,
+    p {
+        @media screen and (max-width: $tablet) {
+            width: 85%;
+        }
+
+        @media screen and (max-width: $mobile) {
+            width: 100%;
+        }
+    }
+
+    .extra-padding {
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+}
+
+.column-parent {
+    &#cpy-addons {
+        flex-direction: row;
+    }
+}
+
+.min-award {
+    margin: 25px auto;
+}
+
+.card-container {
+    .card {
+        height: 207px;
+        text-decoration: none;
+    }
+}
+
+.card {
+    .color {
+        height: 10px;
+        border-radius: 4px 4px 0 0;
+    }
+
+    .card-content {
+        display: flex;
+        align-items: center;
+        height: 200px;
+        justify-content: center;
+
+        &:hover {
+            span {
+                color: $fresh-blue;
+            }
+        }
+
+        span {
+            padding: 0 20px;
+            font-size: 3rem;
+            color: $midnight-blue;
+            line-height: 40/30;
+            text-transform: capitalize;
+        }
+    }
+}
+
+.sevenths {
+    margin-bottom: 20px;
+
+    @media screen and (max-width: $tablet) {
+        margin-top: 20px;
+    }
+}
+
+.third:last-child {
+    p {
+        @media screen and (max-width: $tablet) {
+            margin-bottom: 0;
+        }
+    }
+}
+
+.breadcrumbs {
+    font-size: 1.6rem;
+    color: $fresh-blue;
+    margin-left: 20px;
+
+    @media screen and (max-width: $desktop-sm) {
+        margin-left: 0;
+    }
+
+    @media screen and (max-width: $tablet) {
+        text-align: center;
+    }
+
+    a {
+        margin-right: 7px;
+        text-decoration: none;
+
+        &:hover {
+            color: $midnight-blue;
+        }
+    }
+
+    .current {
+        color: $dark-grey;
+    }
+
+    .arrow {
+        vertical-align: middle;
+        margin-right: 6px;
+        height: 16px;
+    }
+}

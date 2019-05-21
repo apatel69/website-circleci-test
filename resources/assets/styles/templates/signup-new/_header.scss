@@ -1,0 +1,59 @@
+.responsive-header {
+    padding: 40px 40px 0;
+    margin-bottom: 65px;
+
+    @media screen and (max-width: $tablet) {
+        padding-left: 15px;
+        padding-right: 15px;
+        margin-bottom: 55px;
+    }
+}
+
+.header-banner {
+    display: block;
+    text-align: center;
+    background: $blue;
+    color: #fff;
+    padding: 11px;
+
+    @media screen and (max-width: $tablet - 1) {
+        display: none;
+    }
+
+    p {
+        margin: 0;
+        font-size: 15px;
+        line-height: 22px;
+        font-family: $font-classic;
+    }
+
+    a {
+        color: #fff;
+        text-decoration: none;
+
+        &:hover {
+            text-decoration: none;
+        }
+    }
+}
+
+.banner-phone {
+    a::before {
+        content: "\e601";
+        font-family: $font-icon;
+        position: relative;
+        display: inline-block;
+        top: -1px;
+        margin: 0 5px;
+        font-size: 11px;
+        line-height: 22px;
+        -webkit-font-smoothing: antialiased;
+    }
+}
+
+.freshbooks-logo {
+    padding: 0;
+    margin: 0 auto;
+    width: 130px;
+    display: block;
+}

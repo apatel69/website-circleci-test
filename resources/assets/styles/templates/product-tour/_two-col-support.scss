@@ -1,0 +1,68 @@
+.anchored-content.content-right {
+    .two-col {
+        flex-direction: row-reverse;
+    }
+}
+
+.support {
+    h2 {
+        margin-top: 0;
+    }
+
+    .two-col {
+        justify-content: space-around;
+        display: flex;
+        align-items: center;
+        width: 100%;
+        padding: 25px 20px 90px;
+        margin: 0;
+
+        @media screen and (max-width: $tablet) {
+            padding: 0 20px;
+            display: block;
+        }
+
+        .col {
+            width: 53%;
+
+            @media (max-width: $tablet) {
+                width: 100%;
+            }
+
+            &:first-child {
+                width: 34%;
+                padding: 0;
+                margin-top: 0;
+
+                @media (max-width: $tablet) {
+                    width: 100%;
+                }
+            }
+        }
+    }
+
+    .support-heading {
+        margin-bottom: 12px;
+    }
+
+    .contact-details {
+        p {
+            margin: 0;
+        }
+    }
+
+    .support-img {
+        width: 100%;
+        margin: 0 auto;
+        display: block;
+
+        @media (max-width: $tablet) {
+            max-width: initial;
+            width: 75%;
+        }
+
+        @media (max-width: $mobile) {
+            width: 100%;
+        }
+    }
+}

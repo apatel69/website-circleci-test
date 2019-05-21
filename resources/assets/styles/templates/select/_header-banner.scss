@@ -1,0 +1,38 @@
+// Header Banner
+.header-phone {
+    color: white;
+    margin-left: 5px;
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+.icon-tel::before {
+    position: relative;
+    display: inline-block;
+    top: -1px;
+    margin: 0 5px 0 0;
+    font-size: 11px;
+    line-height: 22px;
+}
+
+.header-banner {
+    display: block;
+    text-align: center;
+    background: $midnight-blue;
+    color: white;
+    padding: 11px;
+    font-size: 1.6rem;
+    line-height: calc(24 / 16);
+
+    a {
+        font-size: 1.6rem;
+        color: white;
+        line-height: calc(24 / 16);
+    }
+
+    .phone::before {
+        margin-right: 4px;
+        vertical-align: middle;
+        content: url("~images/icons/phone.svg");
+    }
+}

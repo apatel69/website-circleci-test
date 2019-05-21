@@ -1,0 +1,51 @@
+.hero-short section {
+    padding: 50px 0 25px;
+}
+
+.content {
+    text-align: center;
+
+    h2 {
+        padding-bottom: 10px;
+        font-family: $font-med;
+        color: $midnight-blue;
+        max-width: 768px;
+        margin: 0 auto;
+    }
+
+    p {
+        display: block;
+        max-width: 768px;
+        margin: 0 auto;
+        padding-bottom: 20px;
+
+        @media screen and (max-width: $desktop-sm) {
+            padding-bottom: 10px;
+        }
+
+        @media screen and (max-width: $tablet) {
+            width: 100%;
+        }
+    }
+
+    @media screen and (max-width: $tablet) {
+        padding-top: 60px;
+    }
+}
+
+.cta-subtext-assurance {
+    text-align: center;
+    margin-top: 20px;
+
+    .primary-cta {
+        min-width: 275px;
+    }
+}
+
+.cpy-hero {
+    .content {
+        .content {
+            padding-top: 0;
+        }
+    }
+}

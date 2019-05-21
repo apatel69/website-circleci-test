@@ -1,0 +1,139 @@
+@import "../../global";
+@import "../../flexible-content/global/custom-header";
+
+.nice-reply-hide {
+    display: none;
+}
+
+.nice-reply-show {
+    display: block;
+}
+
+.nice-reply-paragraph,
+.nice-reply-paragraph p {
+    font-family: "Franklin-Gothic-URW-Book";
+}
+
+.survey-items {
+    max-width: 542px;
+    margin: 0 auto;
+    background: white;
+    border: 1px solid $med-grey;
+    border-radius: 5px;
+    padding: 27px 25px;
+    justify-content: space-between;
+    align-items: flex-start;
+    box-shadow: 4px 4px 0 rgba(6, 41, 66, 0.25);
+
+    @media (max-width: $mobile) {
+        flex-wrap: wrap;
+    }
+}
+
+.survey-item {
+    flex-basis: 30px;
+
+    @media (max-width: $mobile) {
+        flex-basis: 16.75%;
+
+        &:nth-child(1n+6) {
+            margin-top: 40px;
+        }
+    }
+
+    img {
+        width: 30px;
+        height: 30px;
+        display: block;
+        margin-top: 18px;
+
+        @media (max-width: $mobile) {
+            display: none;
+        }
+    }
+}
+
+label {
+    display: block;
+    text-align: center;
+    font-family: $font-med;
+    font-size: 1.8rem;
+    color: $fresh-blue;
+    cursor: pointer;
+
+    @media (max-width: $mobile) {
+        margin-bottom: 0;
+    }
+}
+
+input[type="radio"] {
+    display: block;
+    margin: 12px auto 0;
+    cursor: pointer;
+}
+
+.nice-reply-cta {
+    margin-top: 40px;
+    text-align: center;
+}
+
+.nav-dots {
+    max-width: 26px;
+    margin: 30px auto 0;
+    justify-content: space-between;
+}
+
+.nav-dot {
+    width: 6px;
+    height: 6px;
+    fill: $med-grey;
+
+    &.active {
+        fill: $fresh-blue;
+    }
+}
+
+textarea {
+    resize: none;
+    display: block;
+    max-width: 475px;
+    width: 100%;
+    height: 148px;
+    margin: 0 auto;
+    border-radius: 5px;
+    border: 1px solid $med-grey;
+    font-size: 1.6rem;
+    color: $midnight-blue;
+    padding: 15px;
+}
+
+.thankyou-image {
+    display: block;
+    width: 142px;
+    height: 142px;
+    margin: 40px auto 37px;
+}
+
+.thankyou {
+    max-width: 541.37px;
+    margin: 0 auto 40px;
+}
+
+.error-state p {
+    display: none;
+    color: $error-state;
+}
+
+.primary-cta {
+    cursor: pointer;
+}
+
+.nice-reply-paragraph:nth-of-type(2) {
+    margin-top: 40px;
+}
+
+@media (max-width: $mobile) {
+    .nav-wrapper nav .header-text {
+        display: none;
+    }
+}

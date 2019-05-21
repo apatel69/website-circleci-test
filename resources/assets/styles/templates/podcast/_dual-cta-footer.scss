@@ -1,0 +1,58 @@
+.dual-cta-footer-podcast {
+    background: $fresh-blue;
+
+    section {
+        min-height: 350px;
+        display: flex;
+        flex-wrap: nowrap;
+
+        .col {
+            width: 50%;
+            text-align: center;
+            margin: auto;
+            padding: 0 4em;
+
+            h3 {
+                font-size: 3.6rem;
+                line-height: (43 / 36);
+                color: #fff;
+            }
+
+            p {
+                font-size: 1.8rem;
+                line-height: 1;
+                color: #fff;
+                margin-top: -12px;
+
+                &:empty {
+                    display: none;
+                }
+            }
+        }
+
+        @media screen and (max-width: $tablet - 1) {
+            flex-wrap: wrap;
+            padding: 3em 0 7em;
+
+            .col {
+                width: 100%;
+                padding: 1em 2em;
+
+                .primary-cta {
+                    width: 100%;
+                    max-width: 360px;
+                }
+            }
+        }
+    }
+}
+
+.hide-mobile {
+    font-family: $font-book;
+}
+
+h3 {
+    > .hide-mobile {
+        display: inline;
+    }
+}

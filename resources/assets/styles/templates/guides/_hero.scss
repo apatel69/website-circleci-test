@@ -1,0 +1,23 @@
+.hero-bg-solid {
+    background-color: $header-background;
+    padding: 75px 40px;
+    text-align: center;
+
+    h1 {
+        font-size: 42px;
+        line-height: 50px;
+        color: $midnight-blue;
+        font-family: $font-med;
+        margin: 0;
+        display: inline-block;
+
+        @media screen and (max-width: $tablet) {
+            font-size: 32px;
+            line-height: 40px;
+        }
+    }
+
+    & > section {
+        padding: 0;
+    }
+}

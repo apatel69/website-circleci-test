@@ -1,0 +1,47 @@
+.support {
+    h2 {
+        margin-top: 0;
+    }
+
+    .two-col {
+        justify-content: space-around;
+
+        .col {
+            width: 40%;
+
+            @media (max-width: $tablet) {
+                width: 100%;
+            }
+
+            &:first-child {
+                padding: 0;
+            }
+        }
+    }
+
+    .support-heading {
+        margin-bottom: 12px;
+    }
+
+    .contact-details {
+        p {
+            margin: 0 auto;
+        }
+    }
+
+    .support-img {
+        max-width: 480px;
+        width: 100%;
+        margin: 0 auto;
+        display: block;
+
+        @media (max-width: $tablet) {
+            max-width: initial;
+            width: 75%;
+        }
+
+        @media (max-width: $mobile) {
+            width: 100%;
+        }
+    }
+}

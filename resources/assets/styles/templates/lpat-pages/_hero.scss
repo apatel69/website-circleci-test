@@ -1,0 +1,82 @@
+.hero.lpat_hero {
+    min-height: 522px;
+
+    @media screen and (max-width: $tablet) {
+        background-position: bottom;
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-color: $lighter-blue;
+    }
+
+    section {
+        padding: 60px 0 80px;
+
+        @media screen and (max-width: $tablet) {
+            padding: 20px 0 347px;
+        }
+
+        @media screen and (max-width: $mobile) {
+            padding-bottom: 288px;
+        }
+    }
+
+    #cpy-hero .content {
+        width: 100%;
+    }
+
+    #cpy-hero .hero_intro_heading h1 {
+        max-width: 620px;
+        margin-bottom: 0.67em;
+
+        @media screen and (max-width: $tablet) {
+            max-width: 100%;
+        }
+
+        @media screen and (max-width: $mobile) {
+            margin-top: 0;
+            font-size: 4rem;
+            line-height: calc(52 / 40);
+            color: $fresh-blue;
+            font-family: $font-book;
+        }
+    }
+
+    #cpy-hero .content p {
+        max-width: 575px;
+        margin-bottom: 18px;
+
+        @media screen and (max-width: $tablet) {
+            max-width: 100%;
+        }
+
+        @media screen and (max-width: $mobile) {
+            display: block;
+        }
+    }
+
+    #cpy-hero .lpat_hero__cta {
+        padding-left: 85px;
+        padding-right: 85px;
+    }
+
+    #cpy-hero .lpat_hero__custom-cta {
+        margin-left: 20px;
+
+        @media screen and (max-width: $desktop-sm) {
+            margin-left: 0;
+        }
+
+        .subtext {
+            text-align: left;
+            font-size: 15px;
+        }
+    }
+
+    #cpy-hero .lpat_hero__cta,
+    #cpy-hero .lpat_hero__custom-cta,
+    #cpy-hero .lpat_hero__custom-cta .subtext {
+        @media screen and (max-width: $tablet) {
+            text-align: center;
+        }
+    }
+}

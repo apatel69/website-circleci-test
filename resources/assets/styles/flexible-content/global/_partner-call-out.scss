@@ -1,0 +1,47 @@
+.partner-call-out-body {
+    align-items: center;
+    background: #fff;
+    border-radius: 5px;
+    border: 1px solid #c5c7ce;
+    box-shadow: 4px 4px 0 rgba(6, 41, 66, 0.07);
+    display: flex;
+    margin: 0 auto;
+    max-width: 680px;
+    padding: 20px 30px;
+    justify-content: space-between;
+
+    @media screen and (max-width: $mobile) {
+        margin: 0 15px;
+        display: block;
+        text-align: center;
+        padding: 10px 20px;
+    }
+
+    .partner-call-out-text {
+        h2 {
+            color: $midnight-blue;
+            font-size: 2.7em;
+        }
+    }
+
+    .partner-call-out-image,
+    .partner-call-out-text {
+        margin: 0 15px;
+    }
+
+    .partner-call-out-image {
+        @media screen and (max-width: $mobile) {
+            display: none;
+        }
+
+        img {
+            max-width: none;
+        }
+    }
+}
+
+.hero + .partner-call-out {
+    .partner-call-out-body {
+        margin-top: -40px;
+    }
+}
