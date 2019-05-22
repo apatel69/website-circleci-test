@@ -27,95 +27,95 @@ jobs:
       - store_artifacts:
           path: /tmp/artifacts/
 
-  installPHPPackages:
-    docker:
-      - image: php:7.2
-    steps:
-      - checkout
-      - run:
-          command: |
-            apt-get update && apt-get install -y unzip curl libmcrypt-dev mysql-client
-            docker-php-ext-install pdo_mysql
-            curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
-            composer install --no-ansi --no-dev --no-interaction --no-progress --optimize-autoloader --no-scripts
-
-  deployToFreshBooksStaging_Kinsta:
-    docker:
-      - image: php:7.2
-    steps:
-      - checkout
-      - run:
-          command: |
-            apt-get update && apt-get install -y unzip curl libmcrypt-dev mysql-client rsync ssh
-            docker-php-ext-install pdo_mysql
-            curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
-            composer install --no-ansi --no-dev --no-interaction --no-progress --optimize-autoloader --no-scripts
-            rsync -avzp --exclude="node_modules" --exclude="/*.*" ./* -e 'ssh -p '$SSH_PORT_STAGING $SSH_USER@$HOST:$SSH_PATH_STAGING/wp-content/themes/freshbooks --delete
-
-  deployToFreshBooksProduction_Kinsta:
-    docker:
-      - image: php:7.2
-    steps:
-      - checkout
-      - run:
-          command: |
-            apt-get update && apt-get install -y unzip curl libmcrypt-dev mysql-client rsync ssh
-            docker-php-ext-install pdo_mysql
-            curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
-            composer install --no-ansi --no-dev --no-interaction --no-progress --optimize-autoloader --no-scripts
-            rsync -avzp --exclude="node_modules" --exclude="/*.*" ./* -e 'ssh -p '$SSH_PORT $SSH_USER@$HOST:$SSH_PATH_PROD/wp-content/themes/freshbooks --delete
-
-  deployInvoiceTemplatesGalleryFeatureTo_invoicetemplates.kinsta.cloud:
-    docker:
-      - image: php:7.2
-    steps:
-      - checkout
-      - run:
-          command: |
-            apt-get update && apt-get install -y unzip curl libmcrypt-dev mysql-client rsync ssh
-            docker-php-ext-install pdo_mysql
-            curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
-            composer install --no-ansi --no-dev --no-interaction --no-progress --optimize-autoloader --no-scripts
-            rsync -avzp --exclude="node_modules" ./* -e 'ssh -p '$IT_SSH_PORT_STAGING $IT_SSH_USER@$IT_HOST:/www/invoicetemplate_289/public/wp-content/themes/freshbooks --delete
-
-  deployToFreshBooksUAT-Kinsta:
-    docker:
-      - image: php:7.2
-    steps:
-      - checkout
-      - run:
-           command: |
-             apt-get update && apt-get install -y unzip curl libmcrypt-dev mysql-client rsync ssh
-             docker-php-ext-install pdo_mysql
-             curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
-             composer install --no-ansi --no-dev --no-interaction --no-progress --optimize-autoloader --no-scripts
-             rsync -avzp --exclude="node_modules" --exclude="/*.*" ./* -e 'ssh -p '$SSH_PORT_UAT $SSH_USER_UAT@$HOST:$SSH_PATH_UAT/wp-content/themes/freshbooks --delete
-
-  deployTo_clstaging.kinsta.com:
-    docker:
-      - image: php:7.2
-    steps:
-      - checkout
-      - run:
-          command: |
-            apt-get update && apt-get install -y unzip curl libmcrypt-dev mysql-client rsync ssh
-            docker-php-ext-install pdo_mysql
-            curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
-            composer install --no-ansi --no-dev --no-interaction --no-progress --optimize-autoloader --no-scripts
-            rsync -avzp --exclude="node_modules" ./* -e 'ssh -p '$SSH_PORT_CL_STAGING $SSH_USER_CL_STAGING@$SSH_HOST_CL_STAGING:/www/clstaging_876/public/wp-content/themes/freshbooks --delete
-
-  deployTo_freshdev.kinsta.com:
-    docker:
-      - image: php:7.2
-    steps:
-      - checkout
-      - run:
-          command: |
-            apt-get update && apt-get install -y unzip curl libmcrypt-dev mysql-client rsync ssh
-            docker-php-ext-install pdo_mysql
-            curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
-            composer install --no-ansi --no-dev --no-interaction --no-progress --optimize-autoloader --no-scripts
-            rsync -avzp --exclude="node_modules" ./* -e 'ssh -p '$SSH_PORT_DEV $SSH_USER_DEV@$HOST:$SSH_PATH_DEV/wp-content/themes/freshbooks --delete
+#  installPHPPackages:
+#    docker:
+#      - image: php:7.2
+#    steps:
+#      - checkout
+#      - run:
+#          command: |
+#            apt-get update && apt-get install -y unzip curl libmcrypt-dev mysql-client
+#            docker-php-ext-install pdo_mysql
+#            curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
+#            composer install --no-ansi --no-dev --no-interaction --no-progress --optimize-autoloader --no-scripts
+#
+#  deployToFreshBooksStaging_Kinsta:
+#    docker:
+#      - image: php:7.2
+#    steps:
+#      - checkout
+#      - run:
+#          command: |
+#            apt-get update && apt-get install -y unzip curl libmcrypt-dev mysql-client rsync ssh
+#            docker-php-ext-install pdo_mysql
+#            curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
+#            composer install --no-ansi --no-dev --no-interaction --no-progress --optimize-autoloader --no-scripts
+#            rsync -avzp --exclude="node_modules" --exclude="/*.*" ./* -e 'ssh -p '$SSH_PORT_STAGING $SSH_USER@$HOST:$SSH_PATH_STAGING/wp-content/themes/freshbooks --delete
+#
+#  deployToFreshBooksProduction_Kinsta:
+#    docker:
+#      - image: php:7.2
+#    steps:
+#      - checkout
+#      - run:
+#          command: |
+#            apt-get update && apt-get install -y unzip curl libmcrypt-dev mysql-client rsync ssh
+#            docker-php-ext-install pdo_mysql
+#            curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
+#            composer install --no-ansi --no-dev --no-interaction --no-progress --optimize-autoloader --no-scripts
+#            rsync -avzp --exclude="node_modules" --exclude="/*.*" ./* -e 'ssh -p '$SSH_PORT $SSH_USER@$HOST:$SSH_PATH_PROD/wp-content/themes/freshbooks --delete
+#
+#  deployInvoiceTemplatesGalleryFeatureTo_invoicetemplates.kinsta.cloud:
+#    docker:
+#      - image: php:7.2
+#    steps:
+#      - checkout
+#      - run:
+#          command: |
+#            apt-get update && apt-get install -y unzip curl libmcrypt-dev mysql-client rsync ssh
+#            docker-php-ext-install pdo_mysql
+#            curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
+#            composer install --no-ansi --no-dev --no-interaction --no-progress --optimize-autoloader --no-scripts
+#            rsync -avzp --exclude="node_modules" ./* -e 'ssh -p '$IT_SSH_PORT_STAGING $IT_SSH_USER@$IT_HOST:/www/invoicetemplate_289/public/wp-content/themes/freshbooks --delete
+#
+#  deployToFreshBooksUAT-Kinsta:
+#    docker:
+#      - image: php:7.2
+#    steps:
+#      - checkout
+#      - run:
+#           command: |
+#             apt-get update && apt-get install -y unzip curl libmcrypt-dev mysql-client rsync ssh
+#             docker-php-ext-install pdo_mysql
+#             curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
+#             composer install --no-ansi --no-dev --no-interaction --no-progress --optimize-autoloader --no-scripts
+#             rsync -avzp --exclude="node_modules" --exclude="/*.*" ./* -e 'ssh -p '$SSH_PORT_UAT $SSH_USER_UAT@$HOST:$SSH_PATH_UAT/wp-content/themes/freshbooks --delete
+#
+#  deployTo_clstaging.kinsta.com:
+#    docker:
+#      - image: php:7.2
+#    steps:
+#      - checkout
+#      - run:
+#          command: |
+#            apt-get update && apt-get install -y unzip curl libmcrypt-dev mysql-client rsync ssh
+#            docker-php-ext-install pdo_mysql
+#            curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
+#            composer install --no-ansi --no-dev --no-interaction --no-progress --optimize-autoloader --no-scripts
+#            rsync -avzp --exclude="node_modules" ./* -e 'ssh -p '$SSH_PORT_CL_STAGING $SSH_USER_CL_STAGING@$SSH_HOST_CL_STAGING:/www/clstaging_876/public/wp-content/themes/freshbooks --delete
+#
+#  deployTo_freshdev.kinsta.com:
+#    docker:
+#      - image: php:7.2
+#    steps:
+#      - checkout
+#      - run:
+#          command: |
+#            apt-get update && apt-get install -y unzip curl libmcrypt-dev mysql-client rsync ssh
+#            docker-php-ext-install pdo_mysql
+#            curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
+#            composer install --no-ansi --no-dev --no-interaction --no-progress --optimize-autoloader --no-scripts
+#            rsync -avzp --exclude="node_modules" ./* -e 'ssh -p '$SSH_PORT_DEV $SSH_USER_DEV@$HOST:$SSH_PATH_DEV/wp-content/themes/freshbooks --delete
 
 workflows:
 
