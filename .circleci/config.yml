@@ -140,7 +140,7 @@ workflows:
         filters:
           branches:
             only:
-            - master
+              - master
 
   branches_fbseo-develop:
     jobs:
@@ -169,5 +169,5 @@ workflows:
         filters:
           branches:
             only:
-            - freshdev
+              - freshdev
 
