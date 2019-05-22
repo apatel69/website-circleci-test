@@ -124,15 +124,15 @@ workflows:
       - defaultBuildProductionTheme
       - installPHPPackages
 
-  branches_develop:
-    jobs:
-      - buildProductionTheme
-      - deployToFreshBooksStaging_Kinsta
-        filters:
-          branches:
-            only:
-              - develop
-
+#  branches_develop:
+#    jobs:
+#      - buildProductionTheme
+#      - deployToFreshBooksStaging_Kinsta
+#        filters:
+#          branches:
+#            only:
+#              - develop
+#
 #  braches_master:
 #    jobs:
 #      - buildProductionTheme
