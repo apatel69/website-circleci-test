@@ -128,16 +128,18 @@ workflows:
     jobs:
       - buildProductionTheme
       - deployToFreshBooksStaging_Kinsta
-        branches:
-          only:
-            - develop
+        filters:
+          branches:
+            only:
+              - develop
 
   braches_master:
     jobs:
       - buildProductionTheme
       - deployToFreshBooksProduction_Kinsta
-        branches:
-          only:
+        filters:
+          branches:
+            only:
             - master
 
   branches_fbseo-develop:
@@ -164,7 +166,8 @@ workflows:
     jobs:
       - buildProductionTheme
       - deployTo_freshdev.kinsta.com
-        branches:
-          only:
+        filters:
+          branches:
+            only:
             - freshdev
 
