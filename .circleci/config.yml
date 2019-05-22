@@ -133,41 +133,41 @@ workflows:
             only:
               - develop
 
-  braches_master:
-    jobs:
-      - buildProductionTheme
-      - deployToFreshBooksProduction_Kinsta
-        filters:
-          branches:
-            only:
-              - master
-
-  branches_fbseo-develop:
-    jobs:
-      - buildProductionTheme
-      - deployInvoiceTemplatesGalleryFeatureTo_invoicetemplates.kinsta.cloud
-
-  custom_desploy-to-prod:
-    jobs:
-      - buildProductionTheme
-      - deployToFreshBooksProduction_Kinsta
-
-  custom_deploy-to-uat:
-    jobs:
-      - buildProductionTheme
-      - deployToFreshBooksUAT-Kinsta
-
-  custom_deploy-to-clstaging:
-    jobs:
-      - buildProductionTheme
-      - deployTo_clstaging.kinsta.com
-
-  customer_deploy-to-freshdev:
-    jobs:
-      - buildProductionTheme
-      - deployTo_freshdev.kinsta.com
-        filters:
-          branches:
-            only:
-              - freshdev
-
+#  braches_master:
+#    jobs:
+#      - buildProductionTheme
+#      - deployToFreshBooksProduction_Kinsta
+#        filters:
+#          branches:
+#            only:
+#              - master
+#
+#  branches_fbseo-develop:
+#    jobs:
+#      - buildProductionTheme
+#      - deployInvoiceTemplatesGalleryFeatureTo_invoicetemplates.kinsta.cloud
+#
+#  custom_desploy-to-prod:
+#    jobs:
+#      - buildProductionTheme
+#      - deployToFreshBooksProduction_Kinsta
+#
+#  custom_deploy-to-uat:
+#    jobs:
+#      - buildProductionTheme
+#      - deployToFreshBooksUAT-Kinsta
+#
+#  custom_deploy-to-clstaging:
+#    jobs:
+#      - buildProductionTheme
+#      - deployTo_clstaging.kinsta.com
+#
+#  customer_deploy-to-freshdev:
+#    jobs:
+#      - buildProductionTheme
+#      - deployTo_freshdev.kinsta.com
+#        filters:
+#          branches:
+#            only:
+#              - freshdev
+#
